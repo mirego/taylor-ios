@@ -6,7 +6,7 @@ Suggestion? Create an issue or open a pull request!
 
 ## License
 
-`MRGLocale` is © 2016 [Mirego](http://www.mirego.com).
+`Taylor` is © 2016 [Mirego](http://www.mirego.com).
 
 ## About Mirego
 
