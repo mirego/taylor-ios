@@ -31,4 +31,9 @@ public extension UIEdgeInsets
     {
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: margin)
     }
+
+    static func margins(margin: CGFloat) -> UIEdgeInsets
+    {
+        return UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin)
+    }
 }
