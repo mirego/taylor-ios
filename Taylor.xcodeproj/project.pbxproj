@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A3FC2B11CAC2ACC007A4063 /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3FC2B01CAC2ACC007A4063 /* UIEdgeInsets.swift */; };
+		7A3FC2B31CAC2B0B007A4063 /* UIEdgeInsetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3FC2B21CAC2B0B007A4063 /* UIEdgeInsetsTests.swift */; };
 		7A44D05C1C187E030063575B /* Taylor.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A44D05B1C187E030063575B /* Taylor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A44D0631C187E030063575B /* Taylor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A44D0581C187E030063575B /* Taylor.framework */; };
-		7A44D0681C187E030063575B /* TaylorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A44D0671C187E030063575B /* TaylorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,11 +24,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A3FC2B01CAC2ACC007A4063 /* UIEdgeInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIEdgeInsets.swift; sourceTree = "<group>"; };
+		7A3FC2B21CAC2B0B007A4063 /* UIEdgeInsetsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIEdgeInsetsTests.swift; sourceTree = "<group>"; };
 		7A44D0581C187E030063575B /* Taylor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Taylor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A44D05B1C187E030063575B /* Taylor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Taylor.h; sourceTree = "<group>"; };
 		7A44D05D1C187E030063575B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A44D0621C187E030063575B /* TaylorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaylorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A44D0671C187E030063575B /* TaylorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaylorTests.swift; sourceTree = "<group>"; };
 		7A44D0691C187E030063575B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +75,7 @@
 			children = (
 				7A44D05B1C187E030063575B /* Taylor.h */,
 				7A44D05D1C187E030063575B /* Info.plist */,
+				7A3FC2B01CAC2ACC007A4063 /* UIEdgeInsets.swift */,
 			);
 			path = Taylor;
 			sourceTree = "<group>";
@@ -80,8 +83,8 @@
 		7A44D0661C187E030063575B /* TaylorTests */ = {
 			isa = PBXGroup;
 			children = (
-				7A44D0671C187E030063575B /* TaylorTests.swift */,
 				7A44D0691C187E030063575B /* Info.plist */,
+				7A3FC2B21CAC2B0B007A4063 /* UIEdgeInsetsTests.swift */,
 			);
 			path = TaylorTests;
 			sourceTree = "<group>";
@@ -142,7 +145,7 @@
 		7A44D04F1C187E030063575B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0710;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = Mirego;
 				TargetAttributes = {
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A3FC2B11CAC2ACC007A4063 /* UIEdgeInsets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A44D0681C187E030063575B /* TaylorTests.swift in Sources */,
+				7A3FC2B31CAC2B0B007A4063 /* UIEdgeInsetsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +312,7 @@
 		7A44D06D1C187E030063575B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -319,12 +324,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mirego.Taylor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		7A44D06E1C187E030063575B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -342,16 +349,19 @@
 		7A44D0701C187E030063575B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TaylorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mirego.TaylorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		7A44D0711C187E030063575B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TaylorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mirego.TaylorTests;
@@ -378,6 +388,7 @@
 				7A44D06E1C187E030063575B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7A44D06F1C187E030063575B /* Build configuration list for PBXNativeTarget "TaylorTests" */ = {
 			isa = XCConfigurationList;
@@ -386,6 +397,7 @@
 				7A44D0711C187E030063575B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
