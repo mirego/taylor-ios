@@ -17,6 +17,7 @@ class UIEdgeInsetsTests: XCTestCase {
         XCTAssertEqual(UIEdgeInsets.left(5), UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 0))
         XCTAssertEqual(UIEdgeInsets.right(5), UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 5))
         XCTAssertEqual(UIEdgeInsets.bottom(5), UIEdgeInsets(top: 0, left: 0, bottom: 5, right: 0))
+        XCTAssertEqual(UIEdgeInsets.margins(5), UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5))
         XCTAssertEqual(UIEdgeInsets.zero, UIEdgeInsetsZero)
     }
     
