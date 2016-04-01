@@ -28,32 +28,29 @@
 import Foundation
 
 
-public extension UIEdgeInsets
+// swiftlint:disable variable_name
+
+extension CGRect
 {
-    static public var zero: UIEdgeInsets { return UIEdgeInsetsZero }
+    public var x: CGFloat {
+        set {
+            origin.x = newValue
+        }
 
-    static public func top(margin: CGFloat) -> UIEdgeInsets
-    {
-        return UIEdgeInsets(top: margin, left: 0, bottom: 0, right: 0)
+        get {
+            return origin.x
+        }
     }
 
-    static public func left(margin: CGFloat) -> UIEdgeInsets
-    {
-        return UIEdgeInsets(top: 0, left: margin, bottom: 0, right: 0)
-    }
+    public var y: CGFloat {
+        set {
+            origin.y = newValue
+        }
 
-    static public func bottom(margin: CGFloat) -> UIEdgeInsets
-    {
-        return UIEdgeInsets(top: 0, left: 0, bottom: margin, right: 0)
-    }
-
-    static public func right(margin: CGFloat) -> UIEdgeInsets
-    {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: margin)
-    }
-
-    static func margins(margin: CGFloat) -> UIEdgeInsets
-    {
-        return UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin)
+        get {
+            return origin.y
+        }
     }
 }
+
+// swiftlint:enable variable_name

@@ -25,35 +25,42 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-import Foundation
+import UIKit
 
 
-public extension UIEdgeInsets
+extension NSDate
 {
-    static public var zero: UIEdgeInsets { return UIEdgeInsetsZero }
-
-    static public func top(margin: CGFloat) -> UIEdgeInsets
+    public func isSameDay(anotherDate: NSDate)
     {
-        return UIEdgeInsets(top: margin, left: 0, bottom: 0, right: 0)
+        NSCalendar.currentCalendar().isDate(self, equalToDate: anotherDate, toUnitGranularity: .Day)
     }
 
-    static public func left(margin: CGFloat) -> UIEdgeInsets
+
+    public func daysBetween(toDate toDate: NSDate) -> Int
     {
-        return UIEdgeInsets(top: 0, left: margin, bottom: 0, right: 0)
+        let components = NSCalendar.currentCalendar().components(.Day, fromDate: self, toDate: toDate, options: [])
+        return components.day
     }
 
-    static public func bottom(margin: CGFloat) -> UIEdgeInsets
+    public func addDaysToDate(daysToAdd: Int) -> NSDate
     {
-        return UIEdgeInsets(top: 0, left: 0, bottom: margin, right: 0)
+        return NSCalendar.currentCalendar().dateByAddingUnit(.Day, value: daysToAdd, toDate: self, options: [])!
     }
 
-    static public func right(margin: CGFloat) -> UIEdgeInsets
+    public func getStartOfTheWeek() -> NSDate
     {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: margin)
+        let calendar = NSCalendar.currentCalendar()
+        var startOfTheWeek: NSDate?
+        var interval = NSTimeInterval(0)
+
+        calendar.rangeOfUnit(.WeekOfMonth, startDate: &startOfTheWeek, interval: &interval, forDate: self)
+
+        return startOfTheWeek!
     }
 
-    static func margins(margin: CGFloat) -> UIEdgeInsets
+    public func getWeekDay() -> Int
     {
-        return UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin)
+        let components = NSCalendar.currentCalendar().components(.Weekday, fromDate: self)
+        return components.weekday
     }
 }

@@ -28,32 +28,20 @@
 import Foundation
 
 
-public extension UIEdgeInsets
+extension CGSize
 {
-    static public var zero: UIEdgeInsets { return UIEdgeInsetsZero }
-
-    static public func top(margin: CGFloat) -> UIEdgeInsets
+    public func inset(xOffset: CGFloat, yOffset: CGFloat) -> CGSize
     {
-        return UIEdgeInsets(top: margin, left: 0, bottom: 0, right: 0)
+        return CGSize(width: self.width + xOffset, height: self.height + yOffset)
     }
 
-    static public func left(margin: CGFloat) -> UIEdgeInsets
+    public func scale(xOffset: CGFloat, yOffset: CGFloat) -> CGSize
     {
-        return UIEdgeInsets(top: 0, left: margin, bottom: 0, right: 0)
+        return CGSize(width: self.width * xOffset, height: self.height * yOffset)
     }
 
-    static public func bottom(margin: CGFloat) -> UIEdgeInsets
+    static public func minimalTapableSize() -> CGSize
     {
-        return UIEdgeInsets(top: 0, left: 0, bottom: margin, right: 0)
-    }
-
-    static public func right(margin: CGFloat) -> UIEdgeInsets
-    {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: margin)
-    }
-
-    static func margins(margin: CGFloat) -> UIEdgeInsets
-    {
-        return UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin)
+        return CGSize(width: 44, height: 44)
     }
 }

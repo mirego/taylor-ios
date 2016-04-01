@@ -25,35 +25,30 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-import Foundation
+import UIKit
 
 
-public extension UIEdgeInsets
+extension UIScreen
 {
-    static public var zero: UIEdgeInsets { return UIEdgeInsetsZero }
-
-    static public func top(margin: CGFloat) -> UIEdgeInsets
+    // Returns the point size of one pixel for the current screen
+    public class var onePixel: CGFloat
     {
-        return UIEdgeInsets(top: margin, left: 0, bottom: 0, right: 0)
+        return CGFloat(1.0) / self.mainScreen().scale
     }
 
-    static public func left(margin: CGFloat) -> UIEdgeInsets
+    // Returns a float value rounded to the nearest pixel for the current screen
+    static public func roundFloatToPixel(value: CGFloat) -> CGFloat
     {
-        return UIEdgeInsets(top: 0, left: margin, bottom: 0, right: 0)
+        return round(value * self.mainScreen().scale) / self.mainScreen().scale
     }
 
-    static public func bottom(margin: CGFloat) -> UIEdgeInsets
+    static public func isBiggerThanIPhone5() -> Bool
     {
-        return UIEdgeInsets(top: 0, left: 0, bottom: margin, right: 0)
+        return mainScreen().bounds.height > 568
     }
 
-    static public func right(margin: CGFloat) -> UIEdgeInsets
+    static public func isIPhone4() -> Bool
     {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: margin)
-    }
-
-    static func margins(margin: CGFloat) -> UIEdgeInsets
-    {
-        return UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin)
+        return mainScreen().bounds.height < 568
     }
 }

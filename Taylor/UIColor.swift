@@ -1,4 +1,4 @@
-// Copyright (c) 2016, Mirego
+/// Copyright (c) 2016, Mirego
 // All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
@@ -25,35 +25,36 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-import Foundation
+import UIKit
 
 
-public extension UIEdgeInsets
+extension UIColor
 {
-    static public var zero: UIEdgeInsets { return UIEdgeInsetsZero }
-
-    static public func top(margin: CGFloat) -> UIEdgeInsets
+    static public func colorBetweenColors(startColor startColor: UIColor, endColor: UIColor, percentage: CGFloat) -> UIColor
     {
-        return UIEdgeInsets(top: margin, left: 0, bottom: 0, right: 0)
-    }
+        if percentage <= 0 {
+            return startColor
+        } else if percentage >= 1 {
+            return endColor
+        }
 
-    static public func left(margin: CGFloat) -> UIEdgeInsets
-    {
-        return UIEdgeInsets(top: 0, left: margin, bottom: 0, right: 0)
-    }
+        var startRed: CGFloat = 0
+        var startGreen: CGFloat = 0
+        var startBlue: CGFloat = 0
+        var startAlpha: CGFloat = 0
+        startColor.getRed(&startRed, green: &startGreen, blue: &startBlue, alpha: &startAlpha)
 
-    static public func bottom(margin: CGFloat) -> UIEdgeInsets
-    {
-        return UIEdgeInsets(top: 0, left: 0, bottom: margin, right: 0)
-    }
+        var endRed: CGFloat = 0
+        var endGreen: CGFloat = 0
+        var endBlue: CGFloat = 0
+        var endAlpha: CGFloat = 0
+        endColor.getRed(&endRed, green: &endGreen, blue: &endBlue, alpha: &endAlpha)
 
-    static public func right(margin: CGFloat) -> UIEdgeInsets
-    {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: margin)
-    }
+        let middleRed = Float(startRed + (percentage * (endRed - startRed)))
+        let middleGreen = Float(startGreen + (percentage * (endGreen - startGreen)))
+        let middleBlue = Float(startBlue + (percentage * (endBlue - startBlue)))
+        let middleAlpha = Float(startAlpha + (percentage * (endAlpha - startAlpha)))
 
-    static func margins(margin: CGFloat) -> UIEdgeInsets
-    {
-        return UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin)
+        return UIColor(colorLiteralRed: middleRed, green: middleGreen, blue: middleBlue, alpha: middleAlpha)
     }
 }

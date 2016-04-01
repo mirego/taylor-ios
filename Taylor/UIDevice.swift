@@ -28,32 +28,21 @@
 import Foundation
 
 
-public extension UIEdgeInsets
+extension UIDevice
 {
-    static public var zero: UIEdgeInsets { return UIEdgeInsetsZero }
-
-    static public func top(margin: CGFloat) -> UIEdgeInsets
+    // Returns true if the current device is an iPad (or an iPhone for isIPhone())
+    static public func isIPad() -> Bool
     {
-        return UIEdgeInsets(top: margin, left: 0, bottom: 0, right: 0)
+        return UIDevice.currentDevice().userInterfaceIdiom == .Pad
     }
 
-    static public func left(margin: CGFloat) -> UIEdgeInsets
+    static public func isIPadPro() -> Bool
     {
-        return UIEdgeInsets(top: 0, left: margin, bottom: 0, right: 0)
+        return isIPad() && UIScreen.mainScreen().bounds.size.height == 1024
     }
 
-    static public func bottom(margin: CGFloat) -> UIEdgeInsets
+    static public func isIPhone() -> Bool
     {
-        return UIEdgeInsets(top: 0, left: 0, bottom: margin, right: 0)
-    }
-
-    static public func right(margin: CGFloat) -> UIEdgeInsets
-    {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: margin)
-    }
-
-    static func margins(margin: CGFloat) -> UIEdgeInsets
-    {
-        return UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin)
+        return UIDevice.currentDevice().userInterfaceIdiom == .Phone
     }
 }

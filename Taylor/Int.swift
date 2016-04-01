@@ -28,32 +28,21 @@
 import Foundation
 
 
-public extension UIEdgeInsets
+// swiftlint:disable variable_name
+
+extension Int
 {
-    static public var zero: UIEdgeInsets { return UIEdgeInsetsZero }
+    /**
+     This method is usefull to convert an Int into a CGFloat.
 
-    static public func top(margin: CGFloat) -> UIEdgeInsets
-    {
-        return UIEdgeInsets(top: margin, left: 0, bottom: 0, right: 0)
-    }
-
-    static public func left(margin: CGFloat) -> UIEdgeInsets
-    {
-        return UIEdgeInsets(top: 0, left: margin, bottom: 0, right: 0)
-    }
-
-    static public func bottom(margin: CGFloat) -> UIEdgeInsets
-    {
-        return UIEdgeInsets(top: 0, left: 0, bottom: margin, right: 0)
-    }
-
-    static public func right(margin: CGFloat) -> UIEdgeInsets
-    {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: margin)
-    }
-
-    static func margins(margin: CGFloat) -> UIEdgeInsets
-    {
-        return UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin)
+     It can replace the following line:
+     let padding: CGFloat = 10
+     To:
+     let padding = 10.f
+     */
+    public var f: CGFloat {
+        return CGFloat(self)
     }
 }
+
+// swiftlint:enable variable_name

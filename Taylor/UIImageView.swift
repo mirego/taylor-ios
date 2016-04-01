@@ -25,35 +25,28 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-import Foundation
+import UIKit
 
 
-public extension UIEdgeInsets
+extension UIImageView
 {
-    static public var zero: UIEdgeInsets { return UIEdgeInsetsZero }
-
-    static public func top(margin: CGFloat) -> UIEdgeInsets
+    public func setImageAndFit(image: UIImage?)
     {
-        return UIEdgeInsets(top: margin, left: 0, bottom: 0, right: 0)
+        self.image = image
+        sizeToFit()
     }
 
-    static public func left(margin: CGFloat) -> UIEdgeInsets
+    // Returns the maximum size to perfectly fit the contained image using ScaleAspectFit content mode
+    public func sizeThatFitsAspectFit(size: CGSize) -> CGSize
     {
-        return UIEdgeInsets(top: 0, left: margin, bottom: 0, right: 0)
-    }
+        if let image = self.image {
+            if image.size.height / size.height > image.size.width / size.width {
+                return CGSize(width: size.height / image.size.height * image.size.width, height: size.height)
+            } else {
+                return CGSize(width: size.width, height: size.width / image.size.width * image.size.height)
+            }
+        }
 
-    static public func bottom(margin: CGFloat) -> UIEdgeInsets
-    {
-        return UIEdgeInsets(top: 0, left: 0, bottom: margin, right: 0)
-    }
-
-    static public func right(margin: CGFloat) -> UIEdgeInsets
-    {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: margin)
-    }
-
-    static func margins(margin: CGFloat) -> UIEdgeInsets
-    {
-        return UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin)
+        return CGSize.zero
     }
 }
