@@ -51,22 +51,6 @@ extension CGRect
             return origin.y
         }
     }
-
-    public var midX: CGFloat {
-        return x + width / 2
-    }
-
-    public var midY: CGFloat {
-        return y + height / 2
-    }
-
-    public var maxX: CGFloat {
-        return x + width
-    }
-
-    public var maxY: CGFloat {
-        return y + height
-    }
 }
 
 // swiftlint:enable variable_name

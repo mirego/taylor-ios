@@ -15,7 +15,6 @@
 		DFBC07AE1CAC399700A7A665 /* CGSize+Taylor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC07A01CAC399700A7A665 /* CGSize+Taylor.swift */; };
 		DFBC07B01CAC399700A7A665 /* Double+Taylor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC07A21CAC399700A7A665 /* Double+Taylor.swift */; };
 		DFBC07B21CAC399700A7A665 /* NSDate+Taylor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC07A41CAC399700A7A665 /* NSDate+Taylor.swift */; };
-		DFBC07B31CAC399700A7A665 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC07A51CAC399700A7A665 /* Time.swift */; };
 		DFBC07B41CAC399700A7A665 /* UIButton+Taylor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC07A61CAC399700A7A665 /* UIButton+Taylor.swift */; };
 		DFBC07B51CAC399700A7A665 /* UIColor+Taylor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC07A71CAC399700A7A665 /* UIColor+Taylor.swift */; };
 		DFBC07B61CAC399700A7A665 /* UIDevice+Taylor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC07A81CAC399700A7A665 /* UIDevice+Taylor.swift */; };
@@ -47,7 +46,6 @@
 		DFBC07A01CAC399700A7A665 /* CGSize+Taylor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGSize+Taylor.swift"; sourceTree = "<group>"; };
 		DFBC07A21CAC399700A7A665 /* Double+Taylor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Taylor.swift"; sourceTree = "<group>"; };
 		DFBC07A41CAC399700A7A665 /* NSDate+Taylor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Taylor.swift"; sourceTree = "<group>"; };
-		DFBC07A51CAC399700A7A665 /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		DFBC07A61CAC399700A7A665 /* UIButton+Taylor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Taylor.swift"; sourceTree = "<group>"; };
 		DFBC07A71CAC399700A7A665 /* UIColor+Taylor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Taylor.swift"; sourceTree = "<group>"; };
 		DFBC07A81CAC399700A7A665 /* UIDevice+Taylor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Taylor.swift"; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 				DFBC07A21CAC399700A7A665 /* Double+Taylor.swift */,
 				DFBFDA3E1CAEF4B600623836 /* Int+Taylor.swift */,
 				DFBC07A41CAC399700A7A665 /* NSDate+Taylor.swift */,
-				DFBC07A51CAC399700A7A665 /* Time.swift */,
 				DFBC07A61CAC399700A7A665 /* UIButton+Taylor.swift */,
 				DFBC07A71CAC399700A7A665 /* UIColor+Taylor.swift */,
 				DFBC07A81CAC399700A7A665 /* UIDevice+Taylor.swift */,
@@ -241,7 +238,6 @@
 				DFBC07B01CAC399700A7A665 /* Double+Taylor.swift in Sources */,
 				DFBC07B81CAC399700A7A665 /* UILabel+Taylor.swift in Sources */,
 				DFBC07B41CAC399700A7A665 /* UIButton+Taylor.swift in Sources */,
-				DFBC07B31CAC399700A7A665 /* Time.swift in Sources */,
 				DFBFDA3F1CAEF4B600623836 /* Int+Taylor.swift in Sources */,
 				DFBC07B71CAC399700A7A665 /* UIImageView+Taylor.swift in Sources */,
 				DFBC07B91CAC399700A7A665 /* UIScreen+Taylor.swift in Sources */,
