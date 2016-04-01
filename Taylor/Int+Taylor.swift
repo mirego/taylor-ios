@@ -30,16 +30,15 @@ import Foundation
 
 // swiftlint:disable variable_name
 
-
-extension Double
+extension Int
 {
     /**
-     This method is usefull to convert a Double into a CGFloat.
-     
+     This method is usefull to convert an Int into a CGFloat.
+
      It can replace the following line:
-        let padding: CGFloat = 10
+     let padding: CGFloat = 10
      To:
-        let padding = 10.f
+     let padding = 10.f
      */
     public var f: CGFloat {
         return CGFloat(self)
