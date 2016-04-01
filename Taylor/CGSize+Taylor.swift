@@ -30,17 +30,17 @@ import Foundation
 
 extension CGSize
 {
-    func inset(xOffset: CGFloat, yOffset: CGFloat) -> CGSize
+    public func inset(xOffset: CGFloat, yOffset: CGFloat) -> CGSize
     {
         return CGSize(width: self.width + xOffset, height: self.height + yOffset)
     }
 
-    func scale(xOffset: CGFloat, yOffset: CGFloat) -> CGSize
+    public func scale(xOffset: CGFloat, yOffset: CGFloat) -> CGSize
     {
         return CGSize(width: self.width * xOffset, height: self.height * yOffset)
     }
 
-    static func minimalTapableSize() -> CGSize
+    static public func minimalTapableSize() -> CGSize
     {
         return CGSize(width: 44, height: 44)
     }

@@ -31,17 +31,17 @@ import Foundation
 extension UIDevice
 {
     // Returns true if the current device is an iPad (or an iPhone for isIPhone())
-    class func isIPad() -> Bool
+    static public func isIPad() -> Bool
     {
         return UIDevice.currentDevice().userInterfaceIdiom == .Pad
     }
 
-    class func isIPadPro() -> Bool
+    static public func isIPadPro() -> Bool
     {
         return isIPad() && UIScreen.mainScreen().bounds.size.height == 1024
     }
 
-    class func isIPhone() -> Bool
+    static public func isIPhone() -> Bool
     {
         return UIDevice.currentDevice().userInterfaceIdiom == .Phone
     }

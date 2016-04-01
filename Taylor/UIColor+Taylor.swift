@@ -30,7 +30,7 @@ import UIKit
 
 extension UIColor
 {
-    class func colorBetweenColors(startColor startColor: UIColor, endColor: UIColor, percentage: CGFloat) -> UIColor
+    static public func colorBetweenColors(startColor startColor: UIColor, endColor: UIColor, percentage: CGFloat) -> UIColor
     {
         if percentage <= 0 {
             return startColor

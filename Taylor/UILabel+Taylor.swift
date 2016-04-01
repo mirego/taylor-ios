@@ -41,7 +41,7 @@ extension UILabel
 
      and also optionnaly calls sizeToFit() to adjust the label size.
      */
-    func setProperties(text text: String? = nil, font: UIFont? = nil, textColor: UIColor? = nil, highlightedTextColor: UIColor? = nil, lineSpacing: CGFloat? = nil, textAlignment: NSTextAlignment? = nil, fit: Bool = false, multiline: Bool? = nil)
+    public func setProperties(text text: String? = nil, font: UIFont? = nil, textColor: UIColor? = nil, highlightedTextColor: UIColor? = nil, lineSpacing: CGFloat? = nil, textAlignment: NSTextAlignment? = nil, fit: Bool = false, multiline: Bool? = nil)
     {
         if let text = text {
             if let lineSpacing = lineSpacing {
@@ -80,7 +80,7 @@ extension UILabel
         }
     }
 
-    func setAttributedText(text: NSAttributedString?, fit: Bool = false)
+    public func setAttributedText(text: NSAttributedString?, fit: Bool = false)
     {
         attributedText = text
 

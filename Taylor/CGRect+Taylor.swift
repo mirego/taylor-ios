@@ -32,7 +32,7 @@ import Foundation
 
 extension CGRect
 {
-    var x: CGFloat {
+    public var x: CGFloat {
         set {
             origin.x = newValue
         }
@@ -42,7 +42,7 @@ extension CGRect
         }
     }
 
-    var y: CGFloat {
+    public var y: CGFloat {
         set {
             origin.y = newValue
         }
@@ -52,19 +52,19 @@ extension CGRect
         }
     }
 
-    var midX: CGFloat {
+    public var midX: CGFloat {
         return x + width / 2
     }
 
-    var midY: CGFloat {
+    public var midY: CGFloat {
         return y + height / 2
     }
 
-    var maxX: CGFloat {
+    public var maxX: CGFloat {
         return x + width
     }
 
-    var maxY: CGFloat {
+    public var maxY: CGFloat {
         return y + height
     }
 }

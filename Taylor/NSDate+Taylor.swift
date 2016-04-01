@@ -30,24 +30,24 @@ import UIKit
 
 extension NSDate
 {
-    func isSameDay(anotherDate: NSDate)
+    public func isSameDay(anotherDate: NSDate)
     {
         NSCalendar.currentCalendar().isDate(self, equalToDate: anotherDate, toUnitGranularity: .Day)
     }
 
 
-    func daysBetween(toDate toDate: NSDate) -> Int
+    public func daysBetween(toDate toDate: NSDate) -> Int
     {
         let components = NSCalendar.currentCalendar().components(.Day, fromDate: self, toDate: toDate, options: [])
         return components.day
     }
 
-    func addDaysToDate(daysToAdd: Int) -> NSDate
+    public func addDaysToDate(daysToAdd: Int) -> NSDate
     {
         return NSCalendar.currentCalendar().dateByAddingUnit(.Day, value: daysToAdd, toDate: self, options: [])!
     }
 
-    func getStartOfTheWeek() -> NSDate
+    public func getStartOfTheWeek() -> NSDate
     {
         let calendar = NSCalendar.currentCalendar()
         var startOfTheWeek: NSDate?
@@ -58,7 +58,7 @@ extension NSDate
         return startOfTheWeek!
     }
 
-    func getWeekDay() -> Int
+    public func getWeekDay() -> Int
     {
         let components = NSCalendar.currentCalendar().components(.Weekday, fromDate: self)
         return components.weekday

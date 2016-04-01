@@ -31,23 +31,23 @@ import UIKit
 extension UIScreen
 {
     // Returns the point size of one pixel for the current screen
-    class var onePixel: CGFloat
+    public class var onePixel: CGFloat
     {
         return CGFloat(1.0) / self.mainScreen().scale
     }
 
     // Returns a float value rounded to the nearest pixel for the current screen
-    class func roundFloatToPixel(value: CGFloat) -> CGFloat
+    static public func roundFloatToPixel(value: CGFloat) -> CGFloat
     {
         return round(value * self.mainScreen().scale) / self.mainScreen().scale
     }
 
-    class func isBiggerThanIPhone5() -> Bool
+    static public func isBiggerThanIPhone5() -> Bool
     {
         return mainScreen().bounds.height > 568
     }
 
-    class func isIPhone4() -> Bool
+    static public func isIPhone4() -> Bool
     {
         return mainScreen().bounds.height < 568
     }

@@ -40,7 +40,7 @@ extension UIButton
 
      and also optionnaly calls sizeToFit() to adjust the button's size.
      */
-    func setProperties(text text: String? = nil, font: UIFont? = nil,
+    public func setProperties(text text: String? = nil, font: UIFont? = nil,
                             normalTextColor: UIColor? = nil, highlightedTextColor: UIColor? = nil, selectedTextColor: UIColor? = nil, disabledTextColor: UIColor? = nil,
                             textAlignment: NSTextAlignment? = nil, backgroundColor: UIColor? = nil, fit: Bool = false)
     {
@@ -80,7 +80,7 @@ extension UIButton
     /**
      Set the UIButton image and call sizeToFit() to adjust the button size.
      */
-    func setImageAndFit(image: UIImage?, forState state: UIControlState, fit: Bool = false)
+    public func setImageAndFit(image: UIImage?, forState state: UIControlState, fit: Bool = false)
     {
         setImage(image, forState: state)
         
