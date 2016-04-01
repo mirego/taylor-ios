@@ -41,7 +41,7 @@ extension Double
      To:
         let padding = 10.f
      */
-    var f: CGFloat {
+    public var f: CGFloat {
         return CGFloat(self)
     }
 }
