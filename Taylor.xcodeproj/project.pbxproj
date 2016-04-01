@@ -7,10 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7A3FC2B11CAC2ACC007A4063 /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3FC2B01CAC2ACC007A4063 /* UIEdgeInsets.swift */; };
+		7A3FC2B11CAC2ACC007A4063 /* UIEdgeInsets+Taylor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3FC2B01CAC2ACC007A4063 /* UIEdgeInsets+Taylor.swift */; };
 		7A3FC2B31CAC2B0B007A4063 /* UIEdgeInsetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3FC2B21CAC2B0B007A4063 /* UIEdgeInsetsTests.swift */; };
 		7A44D05C1C187E030063575B /* Taylor.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A44D05B1C187E030063575B /* Taylor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A44D0631C187E030063575B /* Taylor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A44D0581C187E030063575B /* Taylor.framework */; };
+		DFBC07AD1CAC399700A7A665 /* CGRect+Taylor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC079F1CAC399700A7A665 /* CGRect+Taylor.swift */; };
+		DFBC07AE1CAC399700A7A665 /* CGSize+Taylor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC07A01CAC399700A7A665 /* CGSize+Taylor.swift */; };
+		DFBC07B01CAC399700A7A665 /* Double+Taylor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC07A21CAC399700A7A665 /* Double+Taylor.swift */; };
+		DFBC07B21CAC399700A7A665 /* NSDate+Taylor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC07A41CAC399700A7A665 /* NSDate+Taylor.swift */; };
+		DFBC07B31CAC399700A7A665 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC07A51CAC399700A7A665 /* Time.swift */; };
+		DFBC07B41CAC399700A7A665 /* UIButton+Taylor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC07A61CAC399700A7A665 /* UIButton+Taylor.swift */; };
+		DFBC07B51CAC399700A7A665 /* UIColor+Taylor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC07A71CAC399700A7A665 /* UIColor+Taylor.swift */; };
+		DFBC07B61CAC399700A7A665 /* UIDevice+Taylor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC07A81CAC399700A7A665 /* UIDevice+Taylor.swift */; };
+		DFBC07B71CAC399700A7A665 /* UIImageView+Taylor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC07A91CAC399700A7A665 /* UIImageView+Taylor.swift */; };
+		DFBC07B81CAC399700A7A665 /* UILabel+Taylor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC07AA1CAC399700A7A665 /* UILabel+Taylor.swift */; };
+		DFBC07B91CAC399700A7A665 /* UIScreen+Taylor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC07AB1CAC399700A7A665 /* UIScreen+Taylor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,13 +35,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7A3FC2B01CAC2ACC007A4063 /* UIEdgeInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIEdgeInsets.swift; sourceTree = "<group>"; };
+		7A3FC2B01CAC2ACC007A4063 /* UIEdgeInsets+Taylor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Taylor.swift"; sourceTree = "<group>"; };
 		7A3FC2B21CAC2B0B007A4063 /* UIEdgeInsetsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIEdgeInsetsTests.swift; sourceTree = "<group>"; };
 		7A44D0581C187E030063575B /* Taylor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Taylor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A44D05B1C187E030063575B /* Taylor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Taylor.h; sourceTree = "<group>"; };
 		7A44D05D1C187E030063575B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A44D0621C187E030063575B /* TaylorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaylorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A44D0691C187E030063575B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFBC079F1CAC399700A7A665 /* CGRect+Taylor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Taylor.swift"; sourceTree = "<group>"; };
+		DFBC07A01CAC399700A7A665 /* CGSize+Taylor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGSize+Taylor.swift"; sourceTree = "<group>"; };
+		DFBC07A21CAC399700A7A665 /* Double+Taylor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Taylor.swift"; sourceTree = "<group>"; };
+		DFBC07A41CAC399700A7A665 /* NSDate+Taylor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Taylor.swift"; sourceTree = "<group>"; };
+		DFBC07A51CAC399700A7A665 /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		DFBC07A61CAC399700A7A665 /* UIButton+Taylor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Taylor.swift"; sourceTree = "<group>"; };
+		DFBC07A71CAC399700A7A665 /* UIColor+Taylor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Taylor.swift"; sourceTree = "<group>"; };
+		DFBC07A81CAC399700A7A665 /* UIDevice+Taylor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Taylor.swift"; sourceTree = "<group>"; };
+		DFBC07A91CAC399700A7A665 /* UIImageView+Taylor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Taylor.swift"; sourceTree = "<group>"; };
+		DFBC07AA1CAC399700A7A665 /* UILabel+Taylor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Taylor.swift"; sourceTree = "<group>"; };
+		DFBC07AB1CAC399700A7A665 /* UIScreen+Taylor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+Taylor.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,9 +95,20 @@
 		7A44D05A1C187E030063575B /* Taylor */ = {
 			isa = PBXGroup;
 			children = (
+				DFBC079F1CAC399700A7A665 /* CGRect+Taylor.swift */,
+				DFBC07A01CAC399700A7A665 /* CGSize+Taylor.swift */,
+				DFBC07A21CAC399700A7A665 /* Double+Taylor.swift */,
+				DFBC07A41CAC399700A7A665 /* NSDate+Taylor.swift */,
+				DFBC07A51CAC399700A7A665 /* Time.swift */,
+				DFBC07A61CAC399700A7A665 /* UIButton+Taylor.swift */,
+				DFBC07A71CAC399700A7A665 /* UIColor+Taylor.swift */,
+				DFBC07A81CAC399700A7A665 /* UIDevice+Taylor.swift */,
+				7A3FC2B01CAC2ACC007A4063 /* UIEdgeInsets+Taylor.swift */,
+				DFBC07A91CAC399700A7A665 /* UIImageView+Taylor.swift */,
+				DFBC07AA1CAC399700A7A665 /* UILabel+Taylor.swift */,
+				DFBC07AB1CAC399700A7A665 /* UIScreen+Taylor.swift */,
 				7A44D05B1C187E030063575B /* Taylor.h */,
 				7A44D05D1C187E030063575B /* Info.plist */,
-				7A3FC2B01CAC2ACC007A4063 /* UIEdgeInsets.swift */,
 			);
 			path = Taylor;
 			sourceTree = "<group>";
@@ -197,7 +230,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A3FC2B11CAC2ACC007A4063 /* UIEdgeInsets.swift in Sources */,
+				DFBC07B61CAC399700A7A665 /* UIDevice+Taylor.swift in Sources */,
+				7A3FC2B11CAC2ACC007A4063 /* UIEdgeInsets+Taylor.swift in Sources */,
+				DFBC07AE1CAC399700A7A665 /* CGSize+Taylor.swift in Sources */,
+				DFBC07B21CAC399700A7A665 /* NSDate+Taylor.swift in Sources */,
+				DFBC07AD1CAC399700A7A665 /* CGRect+Taylor.swift in Sources */,
+				DFBC07B01CAC399700A7A665 /* Double+Taylor.swift in Sources */,
+				DFBC07B81CAC399700A7A665 /* UILabel+Taylor.swift in Sources */,
+				DFBC07B41CAC399700A7A665 /* UIButton+Taylor.swift in Sources */,
+				DFBC07B31CAC399700A7A665 /* Time.swift in Sources */,
+				DFBC07B71CAC399700A7A665 /* UIImageView+Taylor.swift in Sources */,
+				DFBC07B91CAC399700A7A665 /* UIScreen+Taylor.swift in Sources */,
+				DFBC07B51CAC399700A7A665 /* UIColor+Taylor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
