@@ -80,12 +80,9 @@ extension UIButton
     /**
      Set the UIButton image and call sizeToFit() to adjust the button size.
      */
-    public func setImageAndFit(image: UIImage?, forState state: UIControlState, fit: Bool = false)
+    public func setImageAndFit(image: UIImage?, forState state: UIControlState)
     {
         setImage(image, forState: state)
-        
-        if fit {
-            sizeToFit()
-        }
+        sizeToFit()
     }
 }
