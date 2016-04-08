@@ -15,7 +15,7 @@
 # update_fastlane
 
 # This is the minimum version number required.
-# Update this, if you use features of a newer version
+
 fastlane_version "1.68.0"
 
 default_platform :ios
@@ -31,8 +31,22 @@ platform :ios do
   end
 
   lane :release do
+    ensure_git_status_clean
+    increment_version_number(bump_type: "minor")
     jazzy
-    sh("mkdir -p Taylor.docset/Contents/Resources/Documents/")
+    commit_version_bump
+    add_git_tag(tag: "v#{lane_context[SharedValues::VERSION_NUMBER]}")
+    push_to_git_remote
+
+    set_github_release(
+      repository_name: "mirego/taylor-ios",
+      api_token: ENV['GITHUB_TOKEN'],
+      name: "Taylor v#{lane_context[SharedValues::VERSION_NUMBER]}",
+      tag_name: "v#{lane_context[SharedValues::VERSION_NUMBER]}",
+      upload_assets: ["docs/docsets/Taylor.tgz"]
+    )
+
+    reset_git_repo
   end
 
 end
