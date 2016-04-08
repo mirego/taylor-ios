@@ -58,7 +58,7 @@ public extension UIEdgeInsets
     }
 
     /**
-     Creates UIEdgeInsets but all properties are optional.
+     Method that creates an UIEdgeInsets. All parameters are optional.
 
      Examples:
         .margins(bottom: 20)
