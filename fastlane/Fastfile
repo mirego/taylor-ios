@@ -44,7 +44,8 @@ platform :ios do
       api_token: ENV['GITHUB_TOKEN'],
       name: "Taylor v#{lane_context[SharedValues::VERSION_NUMBER]}",
       tag_name: "v#{lane_context[SharedValues::VERSION_NUMBER]}",
-      upload_assets: ["docs/docsets/Taylor.tgz"]
+      upload_assets: ["docs/docsets/Taylor.tgz"],
+      description: "New release for Taylor"
     )
 
     reset_git_repo
