@@ -56,4 +56,25 @@ public extension UIEdgeInsets
     {
         return UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin)
     }
+
+    /**
+     Method that creates an UIEdgeInsets. All parameters are optional.
+
+     Examples:
+        .margins(bottom: 20)
+        .margins(bottom: 20, right: 12)
+        .margins(top: 20, left: 12, right: 12)
+        .margins(left: 12, right: 12)
+
+     - parameter top:    Optional top inset (default is 0)
+     - parameter left:   Optional left inset (default is 0)
+     - parameter bottom: Optional bottom inset (default is 0)
+     - parameter right:  Optional right inset (default is 0)
+
+     - returns: UIEdgeInsets
+     */
+    static public func margins(top top: CGFloat = 0, left: CGFloat = 0, bottom: CGFloat = 0, right: CGFloat = 0) -> UIEdgeInsets
+    {
+        return UIEdgeInsets(top: top, left: left, bottom: bottom, right: right)
+    }
 }
