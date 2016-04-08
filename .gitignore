@@ -33,3 +33,4 @@ DerivedData
 
 Carthage/Build
 docs
+fastlane/report.xml
