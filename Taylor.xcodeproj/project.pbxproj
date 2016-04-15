@@ -13,6 +13,8 @@
 		7A44D0631C187E030063575B /* Taylor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A44D0581C187E030063575B /* Taylor.framework */; };
 		7ACD09751CBFC641000FAAA0 /* ExtendedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACD09741CBFC641000FAAA0 /* ExtendedButton.swift */; };
 		7ACD098F1CC04264000FAAA0 /* ExtendedButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACD098E1CC04264000FAAA0 /* ExtendedButtonTests.swift */; };
+		7A48C4541CC134B70050817D /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A48C4531CC134B70050817D /* URL.swift */; };
+		7A48C4561CC134C90050817D /* URLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A48C4551CC134C90050817D /* URLTests.swift */; };
 		DFBC07AD1CAC399700A7A665 /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC079F1CAC399700A7A665 /* CGRect.swift */; };
 		DFBC07AE1CAC399700A7A665 /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC07A01CAC399700A7A665 /* CGSize.swift */; };
 		DFBC07B01CAC399700A7A665 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC07A21CAC399700A7A665 /* Double.swift */; };
@@ -47,6 +49,8 @@
 		7A44D0691C187E030063575B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7ACD09741CBFC641000FAAA0 /* ExtendedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendedButton.swift; sourceTree = "<group>"; };
 		7ACD098E1CC04264000FAAA0 /* ExtendedButtonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendedButtonTests.swift; sourceTree = "<group>"; };
+		7A48C4531CC134B70050817D /* URL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
+		7A48C4551CC134C90050817D /* URLTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLTests.swift; sourceTree = "<group>"; };
 		DFBC079F1CAC399700A7A665 /* CGRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRect.swift; sourceTree = "<group>"; };
 		DFBC07A01CAC399700A7A665 /* CGSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSize.swift; sourceTree = "<group>"; };
 		DFBC07A21CAC399700A7A665 /* Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 				7A44D05B1C187E030063575B /* Taylor.h */,
 				7A44D05D1C187E030063575B /* Info.plist */,
 				7ACD09741CBFC641000FAAA0 /* ExtendedButton.swift */,
+				7A48C4531CC134B70050817D /* URL.swift */,
 			);
 			path = Taylor;
 			sourceTree = "<group>";
@@ -127,6 +132,7 @@
 				7A44D0691C187E030063575B /* Info.plist */,
 				7A3FC2B21CAC2B0B007A4063 /* UIEdgeInsetsTests.swift */,
 				7ACD098E1CC04264000FAAA0 /* ExtendedButtonTests.swift */,
+				7A48C4551CC134C90050817D /* URLTests.swift */,
 			);
 			path = TaylorTests;
 			sourceTree = "<group>";
@@ -243,6 +249,7 @@
 				7ACD09751CBFC641000FAAA0 /* ExtendedButton.swift in Sources */,
 				7A3FC2B11CAC2ACC007A4063 /* UIEdgeInsets.swift in Sources */,
 				DFBC07AE1CAC399700A7A665 /* CGSize.swift in Sources */,
+				7A48C4541CC134B70050817D /* URL.swift in Sources */,
 				DFBC07B21CAC399700A7A665 /* NSDate.swift in Sources */,
 				DFBC07AD1CAC399700A7A665 /* CGRect.swift in Sources */,
 				DFBC07B01CAC399700A7A665 /* Double.swift in Sources */,
@@ -262,6 +269,7 @@
 			files = (
 				7ACD098F1CC04264000FAAA0 /* ExtendedButtonTests.swift in Sources */,
 				7A3FC2B31CAC2B0B007A4063 /* UIEdgeInsetsTests.swift in Sources */,
+				7A48C4561CC134C90050817D /* URLTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
