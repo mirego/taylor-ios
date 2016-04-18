@@ -12,7 +12,7 @@ import class Taylor.ExtendedButton
 
 class ExtendedButtonTests: XCTestCase {
 
-    func testExample() {
+    func testHitAreaIsExtended() {
         let button = ExtendedButton()
         button.frame = CGRect(origin: CGPoint(x: 100, y: 100), size: CGSize(width: 10, height: 10))
 
