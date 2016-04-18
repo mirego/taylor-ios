@@ -16,7 +16,7 @@ public func cleanURLForDisplay(url: NSURL) -> String? {
         cleaned.removeRange(cleaned.startIndex..<cleaned.startIndex.advancedBy(4))
     }
 
-    if let path = components.path {
+    if let path = components.path where path != "/" {
         cleaned += path
     }
 
