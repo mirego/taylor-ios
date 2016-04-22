@@ -2,7 +2,30 @@
 
 iOS Framework with a bunch of classes and helpers for Swift. 
 
-Suggestion? Create an issue or open a pull request!
+## Installation
+
+You will need [Carthage](github.com/carthage/carthage) to use Taylor in your project.
+
+	1. Create a `Cartfile`
+	2. Add `github "mirego/taylor-ios" "master"`
+	3. Run `carthage bootstrap --platform ios --use-ssh`
+	4. Drop the generated `Taylor.framework` into your project
+
+:warning: Don't forget to add the "Copy framework" build phase, as explained in [the official documentation](https://github.com/carthage/carthage#if-youre-building-for-ios-tvos-or-watchos).
+
+## What about Jenkins?
+
+Carthage is installed on all of our Jenkins slaves. Add the following to your build script:
+	
+```shell
+BUILD_PREBUILD_SCRIPT="carthage_bootstrap.sh"
+```
+
+In "carthage_bootstrap.sh":
+	
+```shell
+carthage bootstrap --platform ios --use-ssh
+```
 
 ## License
 
