@@ -46,23 +46,23 @@ class StringTests: XCTestCase {
         XCTAssertFalse("genius".matches("GENIUS", caseSensitive: true))
     }
 
-    func testIsEmailValid()
+    func testIsEmailAddress()
     {
         // General
-        XCTAssertTrue("genius@mirego.com".isEmailValid())
-        XCTAssertTrue("GENIUS@MIREGO.COM".isEmailValid())
-        XCTAssertTrue("genius@mirego.newtldwithlongname".isEmailValid())
-        XCTAssertFalse("genius_!mirego1q2312@mirego".isEmailValid())
-        XCTAssertFalse("@mirego".isEmailValid())
+        XCTAssertTrue("genius@mirego.com".isEmailAddress())
+        XCTAssertTrue("GENIUS@MIREGO.COM".isEmailAddress())
+        XCTAssertTrue("genius@mirego.newtldwithlongname".isEmailAddress())
+        XCTAssertFalse("genius_!mirego1q2312@mirego".isEmailAddress())
+        XCTAssertFalse("@mirego".isEmailAddress())
 
         // Missing parts
-        XCTAssertFalse("@mirego.com".isEmailValid())
-        XCTAssertFalse("genius.mirego.com".isEmailValid())
-        XCTAssertFalse("genius@mirego".isEmailValid())
-        XCTAssertFalse("genius@.com".isEmailValid())
+        XCTAssertFalse("@mirego.com".isEmailAddress())
+        XCTAssertFalse("genius.mirego.com".isEmailAddress())
+        XCTAssertFalse("genius@mirego".isEmailAddress())
+        XCTAssertFalse("genius@.com".isEmailAddress())
 
         // With Spaces
-        XCTAssertTrue("genius mirego@mirego.com".isEmailValid())
-        XCTAssertFalse("genius mirego@mirego domain.com".isEmailValid())
+        XCTAssertTrue("genius mirego@mirego.com".isEmailAddress())
+        XCTAssertFalse("genius mirego@mirego domain.com".isEmailAddress())
     }
 }
