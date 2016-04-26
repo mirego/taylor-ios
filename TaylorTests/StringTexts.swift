@@ -25,21 +25,44 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-import UIKit
+import XCTest
+import Taylor
 
-public class ExtendedButton: UIButton
-{
-    var minimalTapableSize = CGSize.minimalTapableSize()
 
-    override public func pointInside(point: CGPoint, withEvent event: UIEvent?) -> Bool
+class StringTests: XCTestCase {
+
+    func testRegExp()
     {
-        let yOffset = max(0, minimalTapableSize.width - frame.height)
-        let xOffset = max(0, minimalTapableSize.height - frame.width)
+        let emailRegExp = "^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,63}$"
+        XCTAssertTrue("genius@mirego.com".matches(emailRegExp))
+        XCTAssertFalse("genius@mirego".matches(emailRegExp))
+        XCTAssertFalse("genius@mirego".matches(""))
 
-        if(yOffset > 0 || xOffset > 0) {
-            return bounds.insetBy(dx: -xOffset / 2, dy: -yOffset / 2).contains(point)
-        }
+        XCTAssertFalse("".matches(""))
+        XCTAssertFalse("".matches(emailRegExp))
 
-        return super.pointInside(point, withEvent: event)
+        // Case sensitive
+        XCTAssertTrue("genius".matches("GENIUS", caseSensitive: false) )
+        XCTAssertFalse("genius".matches("GENIUS", caseSensitive: true))
+    }
+
+    func testIsEmailAddress()
+    {
+        // General
+        XCTAssertTrue("genius@mirego.com".isEmailAddress())
+        XCTAssertTrue("GENIUS@MIREGO.COM".isEmailAddress())
+        XCTAssertTrue("genius@mirego.newtldwithlongname".isEmailAddress())
+        XCTAssertFalse("genius_!mirego1q2312@mirego".isEmailAddress())
+        XCTAssertFalse("@mirego".isEmailAddress())
+
+        // Missing parts
+        XCTAssertFalse("@mirego.com".isEmailAddress())
+        XCTAssertFalse("genius.mirego.com".isEmailAddress())
+        XCTAssertFalse("genius@mirego".isEmailAddress())
+        XCTAssertFalse("genius@.com".isEmailAddress())
+
+        // With Spaces
+        XCTAssertTrue("genius mirego@mirego.com".isEmailAddress())
+        XCTAssertFalse("genius mirego@mirego domain.com".isEmailAddress())
     }
 }

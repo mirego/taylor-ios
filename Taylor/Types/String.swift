@@ -25,21 +25,36 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-import UIKit
+import Foundation
 
-public class ExtendedButton: UIButton
+
+public extension String
 {
-    var minimalTapableSize = CGSize.minimalTapableSize()
+    /**
+     Returns true if the string matches the specified regular expression.
 
-    override public func pointInside(point: CGPoint, withEvent event: UIEvent?) -> Bool
+     - parameter regExp:        Regular expression
+     - parameter caseSensitive: Specify if the comparison must be case sensitive (Default is true).
+
+     - returns: true if the string matches the specified regular expression
+     */
+    public func matches(regExp: String, caseSensitive: Bool = true) -> Bool
     {
-        let yOffset = max(0, minimalTapableSize.width - frame.height)
-        let xOffset = max(0, minimalTapableSize.height - frame.width)
-
-        if(yOffset > 0 || xOffset > 0) {
-            return bounds.insetBy(dx: -xOffset / 2, dy: -yOffset / 2).contains(point)
+        do {
+            let regex = try NSRegularExpression(pattern:regExp, options: caseSensitive ? [] : .CaseInsensitive)
+            return regex.firstMatchInString(self, options: NSMatchingOptions(rawValue: 0), range: NSRange(location: 0, length: self.characters.count)) != nil
+        } catch {
+            return false
         }
+    }
 
-        return super.pointInside(point, withEvent: event)
+    /**
+     Returns true if the string contains a valid email address.
+
+     - returns: true if valid
+     */
+    func isEmailAddress() -> Bool
+    {
+        return matches("[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,63}$")
     }
 }
