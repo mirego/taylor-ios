@@ -25,21 +25,42 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-import UIKit
+import XCTest
+import Taylor
 
-public class ExtendedButton: UIButton
-{
-    var minimalTapableSize = CGSize.minimalTapableSize()
 
-    override public func pointInside(point: CGPoint, withEvent event: UIEvent?) -> Bool
+class StringTests: XCTestCase {
+
+    func testRegExp()
     {
-        let yOffset = max(0, minimalTapableSize.width - frame.height)
-        let xOffset = max(0, minimalTapableSize.height - frame.width)
+        let emailRegExp = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
+        XCTAssertTrue("genius@mirego.com".isMatching(emailRegExp))
+        XCTAssertFalse("genius@mirego".isMatching(emailRegExp))
+        XCTAssertFalse("genius@mirego".isMatching(""))
 
-        if(yOffset > 0 || xOffset > 0) {
-            return bounds.insetBy(dx: -xOffset / 2, dy: -yOffset / 2).contains(point)
-        }
+        XCTAssertFalse("".isMatching(""))
+        XCTAssertFalse("".isMatching(emailRegExp))
 
-        return super.pointInside(point, withEvent: event)
+        // Case sensitive
+        XCTAssertTrue("genius".isMatching("GENIUS", caseSensitive: false) )
+        XCTAssertFalse("genius".isMatching("GENIUS", caseSensitive: true))
+    }
+
+    func testIsValidEmail()
+    {
+        // General
+        XCTAssertTrue("genius@mirego.com".isValidEmail())
+        XCTAssertTrue("GENIUS@MIREGO.COM".isValidEmail())
+        XCTAssertFalse("genius_!mirego1q2312@mirego".isValidEmail())
+
+        // Missing parts
+        XCTAssertFalse("@mirego.com".isValidEmail())
+        XCTAssertFalse("genius.mirego.com".isValidEmail())
+        XCTAssertFalse("genius@mirego".isValidEmail())
+        XCTAssertFalse("genius@.com".isValidEmail())
+
+        // With Spaces
+        XCTAssertTrue("genius mirego@mirego.com".isValidEmail())
+        XCTAssertFalse("genius mirego@mirego domain.com".isValidEmail())
     }
 }
