@@ -53,7 +53,7 @@ public extension String
 
      - returns: true if valid
      */
-    func isEmailAddress() -> Bool
+    public func isEmailAddress() -> Bool
     {
         return matches("[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,63}$")
     }
