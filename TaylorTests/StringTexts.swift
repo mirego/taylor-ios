@@ -33,34 +33,36 @@ class StringTests: XCTestCase {
 
     func testRegExp()
     {
-        let emailRegExp = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
-        XCTAssertTrue("genius@mirego.com".isMatching(emailRegExp))
-        XCTAssertFalse("genius@mirego".isMatching(emailRegExp))
-        XCTAssertFalse("genius@mirego".isMatching(""))
+        let emailRegExp = "^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,63}$"
+        XCTAssertTrue("genius@mirego.com".matches(emailRegExp))
+        XCTAssertFalse("genius@mirego".matches(emailRegExp))
+        XCTAssertFalse("genius@mirego".matches(""))
 
-        XCTAssertFalse("".isMatching(""))
-        XCTAssertFalse("".isMatching(emailRegExp))
+        XCTAssertFalse("".matches(""))
+        XCTAssertFalse("".matches(emailRegExp))
 
         // Case sensitive
-        XCTAssertTrue("genius".isMatching("GENIUS", caseSensitive: false) )
-        XCTAssertFalse("genius".isMatching("GENIUS", caseSensitive: true))
+        XCTAssertTrue("genius".matches("GENIUS", caseSensitive: false) )
+        XCTAssertFalse("genius".matches("GENIUS", caseSensitive: true))
     }
 
-    func testIsValidEmail()
+    func testIsEmailValid()
     {
         // General
-        XCTAssertTrue("genius@mirego.com".isValidEmail())
-        XCTAssertTrue("GENIUS@MIREGO.COM".isValidEmail())
-        XCTAssertFalse("genius_!mirego1q2312@mirego".isValidEmail())
+        XCTAssertTrue("genius@mirego.com".isEmailValid())
+        XCTAssertTrue("GENIUS@MIREGO.COM".isEmailValid())
+        XCTAssertTrue("genius@mirego.newtldwithlongname".isEmailValid())
+        XCTAssertFalse("genius_!mirego1q2312@mirego".isEmailValid())
+        XCTAssertFalse("@mirego".isEmailValid())
 
         // Missing parts
-        XCTAssertFalse("@mirego.com".isValidEmail())
-        XCTAssertFalse("genius.mirego.com".isValidEmail())
-        XCTAssertFalse("genius@mirego".isValidEmail())
-        XCTAssertFalse("genius@.com".isValidEmail())
+        XCTAssertFalse("@mirego.com".isEmailValid())
+        XCTAssertFalse("genius.mirego.com".isEmailValid())
+        XCTAssertFalse("genius@mirego".isEmailValid())
+        XCTAssertFalse("genius@.com".isEmailValid())
 
         // With Spaces
-        XCTAssertTrue("genius mirego@mirego.com".isValidEmail())
-        XCTAssertFalse("genius mirego@mirego domain.com".isValidEmail())
+        XCTAssertTrue("genius mirego@mirego.com".isEmailValid())
+        XCTAssertFalse("genius mirego@mirego domain.com".isEmailValid())
     }
 }
