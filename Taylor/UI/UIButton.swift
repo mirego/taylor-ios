@@ -31,7 +31,7 @@ import Foundation
 extension UIButton
 {
     /**
-     Set multiple UIButton's properties. All parameters are optionals:
+
      - text
      - font
      - text colors (Normal, Hightlighted, Selected, Disabled)
@@ -39,6 +39,19 @@ extension UIButton
      - backgroundColor
 
      and also optionally calls sizeToFit() to adjust the button's size.
+     */
+    /**
+     Set multiple UIButton's properties. All parameters are optionals.
+
+     - parameter text:                 Optional text value. (Default is nil)
+     - parameter font:                 Optional font value. (Default is nil)
+     - parameter normalTextColor:      Optional NORMAL text color. (Default is nil)
+     - parameter highlightedTextColor: Optional HIGHLIGHTED text color. (Default is nil)
+     - parameter selectedTextColor:    Optional SELECTED text color. (Default is nil)
+     - parameter disabledTextColor:    Optional DISABLED text color. (Default is nil)
+     - parameter textAlignment:        Optional text alignment value. (Default is nil)
+     - parameter backgroundColor:      Optional background color. (Default is nil)
+     - parameter fit:                  Optional boolean that indicate if the button's method sizeToFit should be called. (Default is false)
      */
     public func setProperties(text text: String? = nil, font: UIFont? = nil,
                             normalTextColor: UIColor? = nil, highlightedTextColor: UIColor? = nil, selectedTextColor: UIColor? = nil, disabledTextColor: UIColor? = nil,
@@ -119,7 +132,13 @@ extension UIButton
     }
 
     /**
+
+     */
+    /**
      Set the UIButton image and call sizeToFit() to adjust the button size.
+
+     - parameter image: New button's image
+     - parameter state: The state for which this image must be set.
      */
     public func setImageAndFit(image: UIImage?, forState state: UIControlState)
     {
