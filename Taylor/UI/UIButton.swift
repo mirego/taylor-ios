@@ -77,6 +77,28 @@ extension UIButton
         }
     }
 
+    public func setImages(image: UIImage, normalColor: UIColor? = nil, highlightedColor: UIColor? = nil, selectedColor: UIColor? = nil, disabledColor: UIColor? = nil,
+                          fit: Bool = false)
+    {
+        if let normalColor = normalColor {
+            setImage(image.imageWithTintColor(normalColor), forState: .Normal)
+        } else {
+            setImage(image, forState: .Normal)
+        }
+
+        if let highlightedColor = highlightedColor {
+            setImage(image.imageWithTintColor(highlightedColor), forState: .Highlighted)
+        }
+
+        if let selectedColor = selectedColor {
+            setImage(image.imageWithTintColor(selectedColor), forState: .Selected)
+        }
+
+        if let disabledColor = disabledColor {
+            setImage(image.imageWithTintColor(disabledColor), forState: .Disabled)
+        }
+    }
+
     /**
      Set the UIButton image and call sizeToFit() to adjust the button size.
      */
