@@ -82,7 +82,7 @@ extension UIButton
     }
 
     /**
-     Set the button's image for its normal state and optionally the tint of all its states (normal, highlighted, selected and disabled).
+     Set the button's image for its normal state and optionally the tint color of all its states (normal, highlighted, selected and disabled).
      Useful if the button used the same image for all its states but a different tint for each state.
 
      - parameter image:            Button's image
