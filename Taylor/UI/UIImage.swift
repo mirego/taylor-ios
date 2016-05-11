@@ -58,13 +58,13 @@ extension UIImage
      - parameter color: The image tint color
      - returns: New instance of UIImage
      */
-    public func imageWithTintColor(color : UIColor) -> UIImage?
+    public func imageWithTintColor(color: UIColor) -> UIImage?
     {
         var image = imageWithRenderingMode(.AlwaysTemplate)
 
-        UIGraphicsBeginImageContextWithOptions(size, false, image.scale);
+        UIGraphicsBeginImageContextWithOptions(size, false, image.scale)
         color.set()
-        image.drawInRect(CGRectMake(0, 0, self.size.width, image.size.height))
+        image.drawInRect(CGRect(x: 0, y: 0, width: size.width, height: image.size.height))
         image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         

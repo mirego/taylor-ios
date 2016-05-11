@@ -35,7 +35,7 @@ extension Double
 {
     /**
      This method is usefull to convert a Double into a CGFloat.
-     
+
      It can replace the following line:
         let padding: CGFloat = 10
      To:

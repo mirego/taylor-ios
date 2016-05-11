@@ -31,15 +31,16 @@ import UIKit
 extension UILabel
 {
     /**
-     Set multiple UILabel's properties. All parameters are optionals:
-     - text
-     - font
-     - text color
-     - text alignment
-     - line spacing
-     - multiline
+     Set multiple UILabel's properties. All parameters are optionals
 
-     and also optionally calls sizeToFit() to adjust the label size.
+     - parameter text:                 Optional text value. (Default is nil)
+     - parameter font:                 Optional font value. (Default is nil)
+     - parameter textColor:            Optional text color. (Default is nil)
+     - parameter highlightedTextColor: Optional highlighted text color. (Default is nil)
+     - parameter lineSpacing:          Optional line spacing. (Default is nil)
+     - parameter textAlignment:        Optional text alignment value. (Default is nil)
+     - parameter fit:                  Optional boolean that indicate if the button's method sizeToFit should be called. (Default is false)
+     - parameter multiline:            Optional boolean that indicate if label is multiline. (Default is nil)
      */
     public func setProperties(text text: String? = nil, font: UIFont? = nil, textColor: UIColor? = nil, highlightedTextColor: UIColor? = nil, lineSpacing: CGFloat? = nil, textAlignment: NSTextAlignment? = nil, fit: Bool = false, multiline: Bool? = nil)
     {
