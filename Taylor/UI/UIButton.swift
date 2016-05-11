@@ -31,16 +31,6 @@ import Foundation
 extension UIButton
 {
     /**
-
-     - text
-     - font
-     - text colors (Normal, Hightlighted, Selected, Disabled)
-     - text alignment
-     - backgroundColor
-
-     and also optionally calls sizeToFit() to adjust the button's size.
-     */
-    /**
      Set multiple UIButton's properties. All parameters are optionals.
 
      - parameter text:                 Optional text value. (Default is nil)
@@ -131,9 +121,6 @@ extension UIButton
         }
     }
 
-    /**
-
-     */
     /**
      Set the UIButton image and call sizeToFit() to adjust the button size.
 
