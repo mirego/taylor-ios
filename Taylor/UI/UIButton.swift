@@ -31,25 +31,25 @@ import Foundation
 extension UIButton
 {
     /**
-     Set multiple UIButton's properties. All parameters are optionnals:
+     Set multiple UIButton's properties. All parameters are optionals:
      - text
      - font
      - text colors (Normal, Hightlighted, Selected, Disabled)
      - text alignment
      - backgroundColor
 
-     and also optionnaly calls sizeToFit() to adjust the button's size.
+     and also optionally calls sizeToFit() to adjust the button's size.
      */
     public func setProperties(text text: String? = nil, font: UIFont? = nil,
                             normalTextColor: UIColor? = nil, highlightedTextColor: UIColor? = nil, selectedTextColor: UIColor? = nil, disabledTextColor: UIColor? = nil,
                             textAlignment: NSTextAlignment? = nil, backgroundColor: UIColor? = nil, fit: Bool = false)
     {
-        if let font = font {
-            titleLabel?.setProperties(font: font, textAlignment: textAlignment)
-        }
-
         if let text = text {
             setTitle(text, forState: .Normal)
+        }
+
+        if let font = font {
+            titleLabel?.font = font
         }
 
         if let normalTextColor = normalTextColor {
@@ -67,6 +67,10 @@ extension UIButton
         if let disabledTextColor = disabledTextColor {
             setTitleColor(disabledTextColor, forState: .Disabled)
         }
+        
+        if let textAlignment = textAlignment {
+            titleLabel?.textAlignment = textAlignment
+        }
 
         if let backgroundColor = backgroundColor {
             self.backgroundColor = backgroundColor
@@ -77,6 +81,17 @@ extension UIButton
         }
     }
 
+    /**
+     Set the button's image for its normal state and optionally the tint of all its states (normal, highlighted, selected and disabled).
+     Useful if the button used the same image for all its states but a different tint for each state.
+
+     - parameter image:            Button's image
+     - parameter normalColor:      Optional NORMAL state tint color. If not value is specified, the image well keep its current color. (Default is nil)
+     - parameter highlightedColor: Optional HIGHLIGHTED state tint color. (Default is nil)
+     - parameter selectedColor:    Optional SELECTED state tint color. (Default is nil)
+     - parameter disabledColor:    Optional DISABLED state tint color. (Default is nil)
+     - parameter fit:              Optional boolean that indicate if the button's method sizeToFit should be called. (Default is false)
+     */
     public func setImages(image: UIImage, normalColor: UIColor? = nil, highlightedColor: UIColor? = nil, selectedColor: UIColor? = nil, disabledColor: UIColor? = nil,
                           fit: Bool = false)
     {
@@ -96,6 +111,10 @@ extension UIButton
 
         if let disabledColor = disabledColor {
             setImage(image.imageWithTintColor(disabledColor), forState: .Disabled)
+        }
+
+        if fit {
+            sizeToFit()
         }
     }
 

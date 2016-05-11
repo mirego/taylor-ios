@@ -31,12 +31,34 @@ import UIKit
 extension UIImage
 {
     /**
-     Creates a new UIImage instance tinted with the specified color.
+     Creates a new UIImage with the specified tint color.
 
      - parameter color: The image tint color
      - returns: New instance of UIImage
      */
-    func imageWithTintColor(color : UIColor) -> UIImage?
+    public class func imageWithTintColor(color: UIColor) -> UIImage
+    {
+        let rect = CGRect(x: 0.0, y: 0.0, width: 1.0, height: 1.0)
+
+        UIGraphicsBeginImageContext(rect.size)
+
+        let context = UIGraphicsGetCurrentContext()
+        CGContextSetFillColorWithColor(context, color.CGColor)
+        CGContextFillRect(context, rect)
+
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        return image
+    }
+
+    /**
+     Creates a new instance of the image using the specified tint color.
+
+     - parameter color: The image tint color
+     - returns: New instance of UIImage
+     */
+    public func imageWithTintColor(color : UIColor) -> UIImage?
     {
         var image = imageWithRenderingMode(.AlwaysTemplate)
 

@@ -6,28 +6,56 @@
 //  Copyright © 2016 Mirego. All rights reserved.
 //
 
-import Foundation
-
+import UIKit
 import XCTest
 import Taylor
 
 class UIButtonTest: XCTestCase {
 
+    func testSetProperties() {
+        let button = UIButton()
+        let text = "hello"
+        let font = UIFont.boldSystemFontOfSize(10)
+        let textAlignment = NSTextAlignment.Center
+        let backgroundColor = UIColor.purpleColor()
 
-    func testShortcutsReturnsAValidInset() {
-//        XCTAssertEqual(UIEdgeInsets.top(5), UIEdgeInsets(top: 5, left: 0, bottom: 0, right: 0))
-//        XCTAssertEqual(UIEdgeInsets.left(5), UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 0))
-//        XCTAssertEqual(UIEdgeInsets.right(5), UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 5))
-//        XCTAssertEqual(UIEdgeInsets.bottom(5), UIEdgeInsets(top: 0, left: 0, bottom: 5, right: 0))
-//        XCTAssertEqual(UIEdgeInsets.margins(5), UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5))
-//        XCTAssertEqual(UIEdgeInsets.zero, UIEdgeInsetsZero)
-//
-//        XCTAssertEqual(UIEdgeInsets.margins(), UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
-//        XCTAssertEqual(UIEdgeInsets.margins(top: 5), UIEdgeInsets(top: 5, left: 0, bottom: 0, right: 0))
-//        XCTAssertEqual(UIEdgeInsets.margins(left: 5), UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 0))
-//        XCTAssertEqual(UIEdgeInsets.margins(bottom: 5), UIEdgeInsets(top: 0, left: 0, bottom: 5, right: 0))
-//        XCTAssertEqual(UIEdgeInsets.margins(right: 5), UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 5))
-//        XCTAssertEqual(UIEdgeInsets.margins(right: 1, bottom: 2, left: 3, top: 4), UIEdgeInsets(top: 4, left: 3, bottom: 2, right: 1))
+        button.setProperties(text: text, font: font, normalTextColor: .blueColor(), highlightedTextColor: .redColor(), selectedTextColor: .greenColor(), disabledTextColor: .grayColor(), textAlignment: textAlignment, backgroundColor: backgroundColor, fit: true)
+
+        XCTAssertEqual(button.titleLabel!.text, text)
+        XCTAssertEqual(button.titleLabel!.font.pointSize, font.pointSize)
+        XCTAssertEqual(button.titleLabel!.textAlignment, textAlignment)
+        XCTAssertEqual(button.backgroundColor, backgroundColor)
+
+        let buttonTextOnly = UIButton()
+        buttonTextOnly.setProperties(text: text)
+        XCTAssertEqual(buttonTextOnly.titleLabel!.text, text)
+
+        let buttonFontOnly = UIButton()
+        buttonFontOnly.setProperties(font: font)
+        XCTAssertEqual(buttonFontOnly.titleLabel!.font.pointSize, font.pointSize)
+
+        let buttonAlignmentOnly = UIButton()
+        buttonAlignmentOnly.setProperties(textAlignment: textAlignment)
+        XCTAssertEqual(buttonAlignmentOnly.titleLabel!.textAlignment, textAlignment)
+
+        let buttonBackgroundColorOnly = UIButton()
+        buttonBackgroundColorOnly.setProperties(backgroundColor: backgroundColor)
+        XCTAssertEqual(button.backgroundColor, backgroundColor)
+
+        let buttonWithoutFit = UIButton()
+        buttonWithoutFit.setProperties(text: text)
+        let buttonWithFit = UIButton()
+        buttonWithFit.setProperties(text: text, fit: true)
+        XCTAssertNotEqual(buttonWithoutFit.frame.width, buttonWithFit.frame.width)
     }
-    
+
+    func testSetImages() {
+        let image = UIImage.imageWithTintColor(UIColor.blueColor())
+
+        let buttonWithoutFit = UIButton()
+        buttonWithoutFit.setImages(image, normalColor: .blueColor(), highlightedColor: .redColor(), selectedColor: .greenColor(), disabledColor: .grayColor())
+        let buttonWithFit = UIButton()
+        buttonWithFit.setImages(image, normalColor: .blueColor(), highlightedColor: .redColor(), selectedColor: .greenColor(), disabledColor: .grayColor(), fit: true)
+        XCTAssertNotEqual(buttonWithoutFit.frame.width, buttonWithFit.frame.width)
+    }
 }

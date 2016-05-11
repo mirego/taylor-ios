@@ -31,7 +31,7 @@ import UIKit
 extension UILabel
 {
     /**
-     Set multiple UILabel's properties. All parameters are optionnals:
+     Set multiple UILabel's properties. All parameters are optionals:
      - text
      - font
      - text color
@@ -39,7 +39,7 @@ extension UILabel
      - line spacing
      - multiline
 
-     and also optionnaly calls sizeToFit() to adjust the label size.
+     and also optionally calls sizeToFit() to adjust the label size.
      */
     public func setProperties(text text: String? = nil, font: UIFont? = nil, textColor: UIColor? = nil, highlightedTextColor: UIColor? = nil, lineSpacing: CGFloat? = nil, textAlignment: NSTextAlignment? = nil, fit: Bool = false, multiline: Bool? = nil)
     {
