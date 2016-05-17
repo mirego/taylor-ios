@@ -99,4 +99,21 @@ extension UIView
         mask.path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius)).CGPath
         layer.mask = mask
     }
+
+    /**
+     Set the view's border.
+     
+     - parameter width: border's width. (Optional)
+     - parameter color: border's color. (Optional)
+     */
+    public func setBorder(width width: CGFloat? = nil, color: UIColor? = nil)
+    {
+        if let width = width {
+            layer.borderWidth = width
+        }
+
+        if let color = color {
+            layer.borderColor = color.CGColor
+        }
+    }
 }
