@@ -60,6 +60,6 @@ public extension String
 
     public func trim() -> String
     {
-        return stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        return stringByTrimmingCharactersInSet(.whitespaceCharacterSet())
     }
 }
