@@ -39,46 +39,46 @@ extension NSDate
      */
     public func isSameDay(anotherDate: NSDate) -> Bool
     {
-        return isEqual(anotherDate, unitGranularity: .Day)
+        return isEqual(to: anotherDate, unitGranularity: .Day)
     }
 
     /**
      Returns true if the date is equal to the specified date using the specified NSCalendarUnit.
 
-     - parameter anotherDate:     The second date.
+     - parameter to:              The comparison other date.
      - parameter unitGranularity: Optional NSCalendarUnit. Default is Second. 
 
      - returns: Returns true if the date is equal to the specified date using the specified NSCalendarUnit
      */
-    public func isEqual(anotherDate: NSDate, unitGranularity: NSCalendarUnit = .Second) -> Bool
+    public func isEqual(to toDate: NSDate, unitGranularity: NSCalendarUnit = .Second) -> Bool
     {
-        return NSCalendar.currentCalendar().compareDate(self, toDate: anotherDate, toUnitGranularity: unitGranularity) == NSComparisonResult.OrderedSame
+        return NSCalendar.currentCalendar().compareDate(self, toDate: toDate, toUnitGranularity: unitGranularity) == NSComparisonResult.OrderedSame
     }
 
     /**
      Returns true if the date is earlier than the specified date using the specified NSCalendarUnit.
 
-     - parameter anotherDate:     The second date.
+     - parameter than:            The comparison other date.
      - parameter unitGranularity: Optional NSCalendarUnit. Default is Second.
 
      - returns: Returns true if the date is earlier than the specified date using the specified NSCalendarUnit
      */
-    public func isEarlier(anotherDate: NSDate, unitGranularity: NSCalendarUnit = .Second) -> Bool
+    public func isEarlier(than thanDate: NSDate, unitGranularity: NSCalendarUnit = .Second) -> Bool
     {
-        return NSCalendar.currentCalendar().compareDate(self, toDate: anotherDate, toUnitGranularity: unitGranularity) == NSComparisonResult.OrderedAscending
+        return NSCalendar.currentCalendar().compareDate(self, toDate: thanDate, toUnitGranularity: unitGranularity) == NSComparisonResult.OrderedAscending
     }
 
     /**
      Returns true if the date is later than the specified date using the specified NSCalendarUnit.
 
-     - parameter anotherDate:     The second date.
+     - parameter than:            The comparison other date.
      - parameter unitGranularity: Optional NSCalendarUnit. Default is Second.
 
      - returns: Returns true if the date is later than the specified date using the specified NSCalendarUnit
      */
-    public func isLater(anotherDate: NSDate, unitGranularity: NSCalendarUnit = .Second) -> Bool
+    public func isLater(than thanDate: NSDate, unitGranularity: NSCalendarUnit = .Second) -> Bool
     {
-        return NSCalendar.currentCalendar().compareDate(self, toDate: anotherDate, toUnitGranularity: unitGranularity) == NSComparisonResult.OrderedDescending
+        return NSCalendar.currentCalendar().compareDate(self, toDate: thanDate, toUnitGranularity: unitGranularity) == NSComparisonResult.OrderedDescending
     }
 
     public func daysBetween(toDate toDate: NSDate) -> Int
