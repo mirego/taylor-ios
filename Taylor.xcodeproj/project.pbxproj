@@ -13,6 +13,8 @@
 		7A44D0631C187E030063575B /* Taylor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A44D0581C187E030063575B /* Taylor.framework */; };
 		7ACD09751CBFC641000FAAA0 /* ExtendedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACD09741CBFC641000FAAA0 /* ExtendedButton.swift */; };
 		7ACD098F1CC04264000FAAA0 /* ExtendedButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACD098E1CC04264000FAAA0 /* ExtendedButtonTests.swift */; };
+		DF2E93991CFF5F5C00AC3674 /* LabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2E93981CFF5F5C00AC3674 /* LabelTests.swift */; };
+		DF42A5A81D3EB07A00C2FE9B /* NSDateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF42A5A71D3EB07A00C2FE9B /* NSDateTest.swift */; };
 		DF45FE9D1CCFD1F90033F071 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45FE9C1CCFD1F90033F071 /* String.swift */; };
 		DF9F948B1CE35EF40008487F /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9F948A1CE35EF40008487F /* UIImage.swift */; };
 		DF9F948D1CE360520008487F /* UIButtonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9F948C1CE360520008487F /* UIButtonTest.swift */; };
@@ -51,6 +53,8 @@
 		7A44D0691C187E030063575B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7ACD09741CBFC641000FAAA0 /* ExtendedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendedButton.swift; sourceTree = "<group>"; };
 		7ACD098E1CC04264000FAAA0 /* ExtendedButtonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendedButtonTests.swift; sourceTree = "<group>"; };
+		DF2E93981CFF5F5C00AC3674 /* LabelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelTests.swift; sourceTree = "<group>"; };
+		DF42A5A71D3EB07A00C2FE9B /* NSDateTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateTest.swift; sourceTree = "<group>"; };
 		DF45FE9C1CCFD1F90033F071 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		DF9F948A1CE35EF40008487F /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		DF9F948C1CE360520008487F /* UIButtonTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonTest.swift; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 				7ACD098E1CC04264000FAAA0 /* ExtendedButtonTests.swift */,
 				7A44D0691C187E030063575B /* Info.plist */,
 				DF9F948C1CE360520008487F /* UIButtonTest.swift */,
+				DF2E93981CFF5F5C00AC3674 /* LabelTests.swift */,
+				DF42A5A71D3EB07A00C2FE9B /* NSDateTest.swift */,
 				7A3FC2B21CAC2B0B007A4063 /* UIEdgeInsetsTests.swift */,
 			);
 			path = TaylorTests;
@@ -327,6 +333,8 @@
 				DF9F948D1CE360520008487F /* UIButtonTest.swift in Sources */,
 				7ACD098F1CC04264000FAAA0 /* ExtendedButtonTests.swift in Sources */,
 				7A3FC2B31CAC2B0B007A4063 /* UIEdgeInsetsTests.swift in Sources */,
+				DF2E93991CFF5F5C00AC3674 /* LabelTests.swift in Sources */,
+				DF42A5A81D3EB07A00C2FE9B /* NSDateTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
