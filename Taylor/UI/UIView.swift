@@ -30,13 +30,16 @@ import UIKit
 
 extension UIView
 {
-    public func convertViewToImage(opaque opaque: Bool = true) -> UIImage
+    public func convertViewToImage(opaque opaque: Bool = true) -> UIImage?
     {
         UIGraphicsBeginImageContextWithOptions(bounds.size, opaque, 0.0)
-        layer.renderInContext(UIGraphicsGetCurrentContext()!)
+
+        guard let context = UIGraphicsGetCurrentContext() else { return nil }
+
+        layer.renderInContext(context)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return image!
+        return image
     }
 
     /**
