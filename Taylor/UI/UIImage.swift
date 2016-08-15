@@ -43,13 +43,13 @@ extension UIImage
         UIGraphicsBeginImageContext(rect.size)
 
         let context = UIGraphicsGetCurrentContext()
-        CGContextSetFillColorWithColor(context, color.CGColor)
-        CGContextFillRect(context, rect)
+        CGContextSetFillColorWithColor(context!, color.CGColor)
+        CGContextFillRect(context!, rect)
 
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
 
-        return image
+        return image!
     }
 
     /**
@@ -65,7 +65,7 @@ extension UIImage
         UIGraphicsBeginImageContextWithOptions(size, false, image.scale)
         color.set()
         image.drawInRect(CGRect(x: 0, y: 0, width: size.width, height: image.size.height))
-        image = UIGraphicsGetImageFromCurrentImageContext()
+        image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
         return image
