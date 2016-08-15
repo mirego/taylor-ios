@@ -1,6 +1,3 @@
-
-
-
 //
 //  NSDateTests.swift
 //  Taylor
