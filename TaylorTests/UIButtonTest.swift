@@ -53,9 +53,9 @@ class UIButtonTest: XCTestCase {
         let image = UIImage.imageWithTintColor(UIColor.blueColor())
 
         let buttonWithoutFit = UIButton()
-        buttonWithoutFit.setImages(image, normalColor: .blueColor(), highlightedColor: .redColor(), selectedColor: .greenColor(), disabledColor: .grayColor())
+        buttonWithoutFit.setImages(image!, normalColor: .blueColor(), highlightedColor: .redColor(), selectedColor: .greenColor(), disabledColor: .grayColor())
         let buttonWithFit = UIButton()
-        buttonWithFit.setImages(image, normalColor: .blueColor(), highlightedColor: .redColor(), selectedColor: .greenColor(), disabledColor: .grayColor(), fit: true)
+        buttonWithFit.setImages(image!, normalColor: .blueColor(), highlightedColor: .redColor(), selectedColor: .greenColor(), disabledColor: .grayColor(), fit: true)
         XCTAssertNotEqual(buttonWithoutFit.frame.width, buttonWithFit.frame.width)
     }
 }
