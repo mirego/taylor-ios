@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Taylor  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="Taylor  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">Taylor Docs</a> (48% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">Taylor Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Taylor  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/ExtendedButton.html">ExtendedButton</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/CGRect.html">CGRect</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/CGSize.html">CGSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/NSDate.html">NSDate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIButton.html">UIButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIDevice.html">UIDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIEdgeInsets.html">UIEdgeInsets</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIImage.html">UIImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIImageView.html">UIImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UILabel.html">UILabel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIScreen.html">UIScreen</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIView.html">UIView</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <a href='#taylor' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='taylor'>Taylor</h1>
+
+<p>iOS Framework with a bunch of classes and helpers for Swift. </p>
+<a href='#requirements' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='requirements'>Requirements</h2>
+
+<ul>
+<li>iOS 8.0+</li>
+<li>Xcode 7.3</li>
+<li>Swift 2.3 (use the <code>v1.1</code> tag if you need Swift &lt; 2.3 support)</li>
+</ul>
+<a href='#installation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='installation'>Installation</h2>
+
+<p>You can use <a href="github.com/carthage/carthage">Carthage</a> to install <code>Taylor</code> by adding it to your <code>Cartfile</code>:</p>
+<pre class="highlight plaintext"><code>github "mirego/taylor-ios"
+</code></pre>
+<a href='#cocoapods' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='cocoapods'>CocoaPods</h3>
+
+<p>You can use <a href="http://cocoapods.org/">CocoaPods</a> to install <code>YourLibrary</code> by adding it to your <code>Podfile</code>:</p>
+<pre class="highlight ruby"><code><span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'8.0'</span>
+<span class="n">use_frameworks!</span>
+<span class="n">pod</span> <span class="s1">'YourLibrary'</span>
+</code></pre>
+<a href='#manually' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='manually'>Manually</h3>
+
+<ol>
+<li>Download and drop the Swift file you need in your project.<br></li>
+<li>Congratulations!</li>
+</ol>
+<a href='#usage-example' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='usage-example'>Usage example</h2>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Taylor</span>
+
+<span class="k">let</span> <span class="nv">button</span> <span class="o">=</span> <span class="kt">UIButton</span><span class="p">(</span><span class="nv">type</span><span class="p">:</span> <span class="o">.</span><span class="kt">Custom</span><span class="p">)</span>
+<span class="n">button</span><span class="o">.</span><span class="nf">setBorder</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nv">color</span><span class="p">:</span> <span class="o">.</span><span class="nf">redColor</span><span class="p">())</span>
+</code></pre>
+<a href='#bonus' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='bonus'>Bonus</h2>
+
+<ul>
+<li>There is a <code>no-bitcode</code> branch that&rsquo;s (hopefully) kept up to date with the master.</li>
+</ul>
+<a href='#license' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='license'>License</h2>
+
+<p>Taylor is © 2016 <a href="http://www.mirego.com">Mirego</a> and may be freely
+distributed under the <a href="http://opensource.org/licenses/BSD-3-Clause">New BSD license</a>.
+See the <a href="https://github.com/mirego/taylor-ios/blob/master/LICENSE.md"><code>LICENSE.md</code></a> file.</p>
+<a href='#about-mirego' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='about-mirego'>About Mirego</h2>
+
+<p><a href="http://mirego.com">Mirego</a> is a team of passionate people who believe that work is a place where you can innovate and have fun. We&rsquo;re a team of <a href="http://life.mirego.com">talented people</a> who imagine and build beautiful Web and mobile applications. We come together to share ideas and <a href="http://mirego.org">change the world</a>.</p>
+
+<p>We also <a href="http://open.mirego.com">love open-source software</a> and we try to give back to the community as much as we can.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>2016 Mirego</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
