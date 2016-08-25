@@ -17,7 +17,7 @@ github "mirego/taylor-ios"
 ```
 
 ### CocoaPods
-You can use [CocoaPods](http://cocoapods.org/) to install `YourLibrary` by adding it to your `Podfile`:
+You can use [CocoaPods](http://cocoapods.org/) to install `Taylor` by adding it to your `Podfile`:
 
 ```ruby
 platform :ios, '8.0'
