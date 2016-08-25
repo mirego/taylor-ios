@@ -33,14 +33,14 @@ import Foundation
 
 extension Double
 {
-    /**
-     This method is usefull to convert a Double into a CGFloat.
-
-     It can replace the following line:
-        let padding: CGFloat = 10
-     To:
-        let padding = 10.f
-     */
+    /// Converts a `Double` to a CGFloat
+    /// 
+    /// ``` swift
+    /// let padding: CGFloat = 10
+    /// // Becomes
+    ///
+    /// let padding = 10.f
+    /// ```
     public var f: CGFloat {
         return CGFloat(self)
     }

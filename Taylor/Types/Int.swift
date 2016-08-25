@@ -32,14 +32,14 @@ import Foundation
 
 extension Int
 {
-    /**
-     This method is usefull to convert an Int into a CGFloat.
-
-     It can replace the following line:
-     let padding: CGFloat = 10
-     To:
-     let padding = 10.f
-     */
+    /// Converts an `Int` to a CGFloat
+    /// 
+    /// ``` swift
+    /// let padding: CGFloat = 10
+    /// // Becomes
+    ///
+    /// let padding = 10.f
+    /// ```
     public var f: CGFloat {
         return CGFloat(self)
     }
