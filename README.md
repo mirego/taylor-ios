@@ -2,34 +2,52 @@
 
 iOS Framework with a bunch of classes and helpers for Swift. 
 
+## Requirements
+
+- iOS 8.0+
+- Xcode 7.3
+- Swift 2.3 (use the `v1.1` tag if you need Swift < 2.3 support)
+
 ## Installation
 
-You will need [Carthage](github.com/carthage/carthage) to use Taylor in your project.
+You can use [Carthage](github.com/carthage/carthage) to install `Taylor` by adding it to your `Cartfile`:
 
-	1. Create a `Cartfile`
-	2. Add `github "mirego/taylor-ios" "master"`
-	3. Run `carthage bootstrap --platform ios --use-ssh`
-	4. Drop the generated `Taylor.framework` into your project
-
-:warning: Don't forget to add the "Copy framework" build phase, as explained in [the official documentation](https://github.com/carthage/carthage#if-youre-building-for-ios-tvos-or-watchos).
-
-## What about Jenkins?
-
-Carthage is installed on all of our Jenkins slaves. Add the following to your build script:
-	
-```shell
-BUILD_PREBUILD_SCRIPT="carthage_bootstrap.sh"
+```
+github "mirego/taylor-ios"
 ```
 
-In "carthage_bootstrap.sh":
-	
-```shell
-carthage bootstrap --platform ios --use-ssh
+### CocoaPods
+You can use [CocoaPods](http://cocoapods.org/) to install `YourLibrary` by adding it to your `Podfile`:
+
+```ruby
+platform :ios, '8.0'
+use_frameworks!
+pod 'YourLibrary'
 ```
+
+### Manually
+
+1. Download and drop the Swift file you need in your project.  
+2. Congratulations!
+
+## Usage example
+
+```swift
+import Taylor
+
+let button = UIButton(type: .Custom)
+button.setBorder(width: 2, color: .redColor())
+```
+
+## Bonus
+
+* There is a `no-bitcode` branch that's (hopefully) kept up to date with the master.
 
 ## License
 
-`Taylor` is © 2016 [Mirego](http://www.mirego.com).
+Taylor is © 2016 [Mirego](http://www.mirego.com) and may be freely
+distributed under the [New BSD license](http://opensource.org/licenses/BSD-3-Clause).
+See the [`LICENSE.md`](https://github.com/mirego/taylor-ios/blob/master/LICENSE.md) file.
 
 ## About Mirego
 
