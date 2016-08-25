@@ -14,7 +14,7 @@
     <a title="UIButton Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Taylor Docs</a> (48% documented)</p>
+        <p><a href="../index.html">Taylor Docs</a> (53% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -115,7 +115,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Set multiple UIButton&rsquo;s properties. All parameters are optionals.</p>
+                        <p>Set multiple UIButton&rsquo;s properties. All parameters are optionals.
+parameter text:                 Optional text value. (Default is nil)
+parameter font:                 Optional font value. (Default is nil)
+parameter normalTextColor:      Optional NORMAL text color. (Default is nil)
+parameter highlightedTextColor: Optional HIGHLIGHTED text color. (Default is nil)
+parameter selectedTextColor:    Optional SELECTED text color. (Default is nil)
+parameter disabledTextColor:    Optional DISABLED text color. (Default is nil)
+parameter textAlignment:        Optional text alignment value. (Default is nil)
+parameter backgroundColor:      Optional background color. (Default is nil)
+parameter fit:                  Optional boolean that indicate if the button&rsquo;s method sizeToFit should be called. (Default is false)</p>
 
                       </div>
                       <div class="declaration">
@@ -127,130 +136,6 @@
                             <span class="nv">textAlignment</span><span class="p">:</span> <span class="kt">NSTextAlignment</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">backgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">fit</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>text</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Optional text value. (Default is nil)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>font</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Optional font value. (Default is nil)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>normalTextColor</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Optional NORMAL text color. (Default is nil)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>highlightedTextColor</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Optional HIGHLIGHTED text color. (Default is nil)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>selectedTextColor</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Optional SELECTED text color. (Default is nil)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>disabledTextColor</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Optional DISABLED text color. (Default is nil)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>textAlignment</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Optional text alignment value. (Default is nil)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>backgroundColor</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Optional background color. (Default is nil)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>fit</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Optional boolean that indicate if the button&rsquo;s method sizeToFit should be called. (Default is false)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -269,7 +154,13 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Set the button&rsquo;s image for its normal state and optionally the tint color of all its states (normal, highlighted, selected and disabled).
-Useful if the button used the same image for all its states but with a different tint color for each state.</p>
+Useful if the button used the same image for all its states but with a different tint color for each state.
+parameter image:            Button&rsquo;s image
+parameter normalColor:      Optional NORMAL state tint color. If not value is specified, the image well keep its current color. (Default is nil)
+parameter highlightedColor: Optional HIGHLIGHTED state tint color. (Default is nil)
+parameter selectedColor:    Optional SELECTED state tint color. (Default is nil)
+parameter disabledColor:    Optional DISABLED state tint color. (Default is nil)
+parameter fit:              Optional boolean that indicate if the button&rsquo;s method sizeToFit should be called. (Default is false)</p>
 
                       </div>
                       <div class="declaration">
@@ -280,91 +171,6 @@ Useful if the button used the same image for all its states but with a different
                           <span class="nv">fit</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>image</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Button&rsquo;s image</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>normalColor</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Optional NORMAL state tint color. If not value is specified, the image well keep its current color. (Default is nil)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>highlightedColor</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Optional HIGHLIGHTED state tint color. (Default is nil)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>selectedColor</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Optional SELECTED state tint color. (Default is nil)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>disabledColor</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Optional DISABLED state tint color. (Default is nil)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>fit</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Optional boolean that indicate if the button&rsquo;s method sizeToFit should be called. (Default is false)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -382,7 +188,9 @@ Useful if the button used the same image for all its states but with a different
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Set the UIButton image and call sizeToFit() to adjust the button size.</p>
+                        <p>Set the UIButton image and call sizeToFit() to adjust the button size.
+parameter image: New button&rsquo;s image
+parameter state: The state for which this image must be set.</p>
 
                       </div>
                       <div class="declaration">
@@ -392,39 +200,6 @@ Useful if the button used the same image for all its states but with a different
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setImageAndFit</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?,</span> <span class="n">forState</span> <span class="nv">state</span><span class="p">:</span> <span class="kt">UIControlState</span><span class="p">)</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>image</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>New button&rsquo;s image</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>state</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The state for which this image must be set.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
