@@ -36,7 +36,7 @@ extension UIImage
      - parameter color: The image tint color
      - returns: New instance of UIImage
      */
-    public class func imageWithTintColor(color: UIColor) -> UIImage?
+    public class func imageWithTintColor(_ color: UIColor) -> UIImage?
     {
         let rect = CGRect(x: 0.0, y: 0.0, width: 1.0, height: 1.0)
 
@@ -44,8 +44,8 @@ extension UIImage
 
         guard let context = UIGraphicsGetCurrentContext() else { return nil }
 
-        CGContextSetFillColorWithColor(context, color.CGColor)
-        CGContextFillRect(context, rect)
+        context.setFillColor(color.cgColor)
+        context.fill(rect)
 
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
@@ -59,13 +59,13 @@ extension UIImage
      - parameter color: The image tint color
      - returns: New instance of UIImage
      */
-    public func imageWithTintColor(color: UIColor) -> UIImage?
+    public func imageWithTintColor(_ color: UIColor) -> UIImage?
     {
-        let sourceImage = imageWithRenderingMode(.AlwaysTemplate)
+        let sourceImage = withRenderingMode(.alwaysTemplate)
 
         UIGraphicsBeginImageContextWithOptions(size, false, sourceImage.scale)
         color.set()
-        sourceImage.drawInRect(CGRect(x: 0, y: 0, width: size.width, height: size.height))
+        sourceImage.draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
         let tintedImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         

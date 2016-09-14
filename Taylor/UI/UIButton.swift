@@ -40,12 +40,12 @@ extension UIButton
     /// parameter textAlignment:        Optional text alignment value. (Default is nil)
     /// parameter backgroundColor:      Optional background color. (Default is nil)
     /// parameter fit:                  Optional boolean that indicate if the button's method sizeToFit should be called. (Default is false)
-    public func setProperties(text text: String? = nil, font: UIFont? = nil,
+    public func setProperties(text: String? = nil, font: UIFont? = nil,
                             normalTextColor: UIColor? = nil, highlightedTextColor: UIColor? = nil, selectedTextColor: UIColor? = nil, disabledTextColor: UIColor? = nil,
                             textAlignment: NSTextAlignment? = nil, backgroundColor: UIColor? = nil, fit: Bool = false)
     {
         if let text = text {
-            setTitle(text, forState: .Normal)
+            setTitle(text, for: UIControlState())
         }
 
         if let font = font {
@@ -53,19 +53,19 @@ extension UIButton
         }
 
         if let normalTextColor = normalTextColor {
-            setTitleColor(normalTextColor, forState: .Normal)
+            setTitleColor(normalTextColor, for: UIControlState())
         }
 
         if let highlightedTextColor = highlightedTextColor {
-            setTitleColor(highlightedTextColor, forState: .Highlighted)
+            setTitleColor(highlightedTextColor, for: .highlighted)
         }
 
         if let selectedTextColor = selectedTextColor {
-            setTitleColor(selectedTextColor, forState: .Selected)
+            setTitleColor(selectedTextColor, for: .selected)
         }
 
         if let disabledTextColor = disabledTextColor {
-            setTitleColor(disabledTextColor, forState: .Disabled)
+            setTitleColor(disabledTextColor, for: .disabled)
         }
         
         if let textAlignment = textAlignment {
@@ -90,25 +90,25 @@ extension UIButton
     /// parameter selectedColor:    Optional SELECTED state tint color. (Default is nil)
     /// parameter disabledColor:    Optional DISABLED state tint color. (Default is nil)
     /// parameter fit:              Optional boolean that indicate if the button's method sizeToFit should be called. (Default is false)
-    public func setImages(image: UIImage, normalColor: UIColor? = nil, highlightedColor: UIColor? = nil, selectedColor: UIColor? = nil, disabledColor: UIColor? = nil,
+    public func setImages(_ image: UIImage, normalColor: UIColor? = nil, highlightedColor: UIColor? = nil, selectedColor: UIColor? = nil, disabledColor: UIColor? = nil,
                           fit: Bool = false)
     {
         if let normalColor = normalColor {
-            setImage(image.imageWithTintColor(normalColor), forState: .Normal)
+            setImage(image.imageWithTintColor(normalColor), for: UIControlState())
         } else {
-            setImage(image, forState: .Normal)
+            setImage(image, for: UIControlState())
         }
 
         if let highlightedColor = highlightedColor {
-            setImage(image.imageWithTintColor(highlightedColor), forState: .Highlighted)
+            setImage(image.imageWithTintColor(highlightedColor), for: .highlighted)
         }
 
         if let selectedColor = selectedColor {
-            setImage(image.imageWithTintColor(selectedColor), forState: .Selected)
+            setImage(image.imageWithTintColor(selectedColor), for: .selected)
         }
 
         if let disabledColor = disabledColor {
-            setImage(image.imageWithTintColor(disabledColor), forState: .Disabled)
+            setImage(image.imageWithTintColor(disabledColor), for: .disabled)
         }
 
         if fit {
@@ -119,9 +119,9 @@ extension UIButton
     /// Set the UIButton image and call sizeToFit() to adjust the button size.
     /// parameter image: New button's image
     /// parameter state: The state for which this image must be set.
-    public func setImageAndFit(image: UIImage?, forState state: UIControlState)
+    public func setImageAndFit(_ image: UIImage?, forState state: UIControlState)
     {
-        setImage(image, forState: state)
+        setImage(image, for: state)
         sizeToFit()
     }
 }

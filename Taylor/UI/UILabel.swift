@@ -42,13 +42,13 @@ extension UILabel
      - parameter fit:                  Optional boolean that indicate if the button's method sizeToFit should be called. (Default is false)
      - parameter multiline:            Optional boolean that indicate if label is multiline. (Default is nil)
      */
-    public func setProperties(text text: String? = nil, font: UIFont? = nil, textColor: UIColor? = nil, highlightedTextColor: UIColor? = nil, lineSpacing: CGFloat? = nil, textAlignment: NSTextAlignment? = nil, fit: Bool = false, multiline: Bool? = nil)
+    public func setProperties(text: String? = nil, font: UIFont? = nil, textColor: UIColor? = nil, highlightedTextColor: UIColor? = nil, lineSpacing: CGFloat? = nil, textAlignment: NSTextAlignment? = nil, fit: Bool = false, multiline: Bool? = nil)
     {
         if let text = text {
             if let lineSpacing = lineSpacing {
                 let paragraphStyle = NSMutableParagraphStyle()
                 paragraphStyle.lineSpacing = lineSpacing
-                paragraphStyle.lineBreakMode = .ByTruncatingTail
+                paragraphStyle.lineBreakMode = .byTruncatingTail
                 attributedText = NSAttributedString(string: text, attributes: [NSParagraphStyleAttributeName: paragraphStyle])
             } else {
                 self.text = text
@@ -73,7 +73,7 @@ extension UILabel
 
         if let multiline = multiline {
             numberOfLines = multiline ? 0 : 1
-            lineBreakMode = multiline ? .ByWordWrapping : .ByTruncatingTail
+            lineBreakMode = multiline ? .byWordWrapping : .byTruncatingTail
         }
 
         if fit {
@@ -81,7 +81,7 @@ extension UILabel
         }
     }
 
-    public func setAttributedText(text: NSAttributedString?, fit: Bool = false)
+    public func setAttributedText(_ text: NSAttributedString?, fit: Bool = false)
     {
         attributedText = text
 

@@ -34,11 +34,11 @@ public extension String
     /// parameter regExp:        Regular expression
     /// parameter caseSensitive: Specify if the comparison must be case sensitive (Default is true).
     /// returns: true if the string matches the specified regular expression
-    public func matches(regExp: String, caseSensitive: Bool = true) -> Bool
+    public func matches(_ regExp: String, caseSensitive: Bool = true) -> Bool
     {
         do {
-            let regex = try NSRegularExpression(pattern:regExp, options: caseSensitive ? [] : .CaseInsensitive)
-            return regex.firstMatchInString(self, options: NSMatchingOptions(rawValue: 0), range: NSRange(location: 0, length: self.characters.count)) != nil
+            let regex = try NSRegularExpression(pattern:regExp, options: caseSensitive ? [] : .caseInsensitive)
+            return regex.firstMatch(in: self, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSRange(location: 0, length: self.characters.count)) != nil
         } catch {
             return false
         }
@@ -54,6 +54,6 @@ public extension String
     /// Trims a string
     public func trim() -> String
     {
-        return stringByTrimmingCharactersInSet(.whitespaceCharacterSet())
+        return trimmingCharacters(in: .whitespaces)
     }
 }

@@ -16,7 +16,7 @@ class ExtendedButtonTests: XCTestCase {
         let button = ExtendedButton()
         button.frame = CGRect(origin: CGPoint(x: 100, y: 100), size: CGSize(width: 10, height: 10))
 
-        XCTAssertTrue(button.pointInside(CGPoint(x: 20, y: 20), withEvent: nil))
+        XCTAssertTrue(button.point(inside: CGPoint(x: 20, y: 20), with: nil))
     }
 
 }
