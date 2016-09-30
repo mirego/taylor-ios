@@ -29,7 +29,7 @@ import UIKit
 
 open class ExtendedButton: UIButton
 {
-    var minimalTapableSize = CGSize.minimalTapableSize()
+    public var minimalTapableSize = CGSize.minimalTapableSize()
 
     override open func point(inside point: CGPoint, with event: UIEvent?) -> Bool
     {
