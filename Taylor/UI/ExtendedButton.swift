@@ -33,8 +33,8 @@ public class ExtendedButton: UIButton
 
     override public func pointInside(point: CGPoint, withEvent event: UIEvent?) -> Bool
     {
-        let yOffset = max(0, minimalTapableSize.width - frame.height)
-        let xOffset = max(0, minimalTapableSize.height - frame.width)
+        let yOffset = max(0, minimalTapableSize.height - frame.height)
+        let xOffset = max(0, minimalTapableSize.width - frame.width)
 
         if yOffset > 0 || xOffset > 0 {
             return bounds.insetBy(dx: -xOffset / 2, dy: -yOffset / 2).contains(point)
