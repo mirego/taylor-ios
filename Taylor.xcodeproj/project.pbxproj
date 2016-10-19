@@ -297,7 +297,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"SwiftLint does not exist => Install it\"\n    brew install swiftlint\n    swiftlint\n\n    if which swiftlint >/dev/null; then\n        swiftlint\n    else\n        echo \"=========> Installation of SwiftLint has failed\"\n        exit 1\n    fi\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
