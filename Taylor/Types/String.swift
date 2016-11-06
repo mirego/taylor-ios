@@ -62,7 +62,7 @@ public extension String
     /// ``` swift
     /// let capitalizedString = "my senteent".capitalizedFirstLetter()
     /// ```
-    func capitalizedFirstLetter() -> String
+    var capitalizedFirstLetter: String
     {
         let first = String(characters.prefix(1)).capitalizedStringWithLocale(nil)
         let other = String(characters.dropFirst())
@@ -72,6 +72,6 @@ public extension String
     /// Capitalize the first letter of the string
     mutating func capitalizeFirstLetter()
     {
-        self = self.capitalizedFirstLetter()
+        self = self.capitalizedFirstLetter
     }
 }
