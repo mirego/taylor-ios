@@ -31,6 +31,7 @@
 		DFBFDA3F1CAEF4B600623836 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBFDA3E1CAEF4B600623836 /* Int.swift */; };
 		DFBFDA431CAF0B0900623836 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBFDA421CAF0B0900623836 /* UIView.swift */; };
 		DFC8727B1DCF8EC20007AE43 /* StringText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC8727A1DCF8EC20007AE43 /* StringText.swift */; };
+		DFC8727F1DCFB8790007AE43 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC8727E1DCFB8790007AE43 /* CGFloat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		DFBFDA3E1CAEF4B600623836 /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		DFBFDA421CAF0B0900623836 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		DFC8727A1DCF8EC20007AE43 /* StringText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringText.swift; sourceTree = "<group>"; };
+		DFC8727E1DCFB8790007AE43 /* CGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				DFBC07A21CAC399700A7A665 /* Double.swift */,
 				DFBFDA3E1CAEF4B600623836 /* Int.swift */,
 				DF45FE9C1CCFD1F90033F071 /* String.swift */,
+				DFC8727E1DCFB8790007AE43 /* CGFloat.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -239,7 +242,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Mirego;
 				TargetAttributes = {
 					7A44D0571C187E030063575B = {
@@ -320,6 +323,7 @@
 				DFBC07B41CAC399700A7A665 /* UIButton.swift in Sources */,
 				DF9F948B1CE35EF40008487F /* UIImage.swift in Sources */,
 				DFBFDA3F1CAEF4B600623836 /* Int.swift in Sources */,
+				DFC8727F1DCFB8790007AE43 /* CGFloat.swift in Sources */,
 				DFBC07B71CAC399700A7A665 /* UIImageView.swift in Sources */,
 				DFBC07B91CAC399700A7A665 /* UIScreen.swift in Sources */,
 				DF45FE9D1CCFD1F90033F071 /* String.swift in Sources */,
@@ -390,7 +394,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -434,7 +438,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -448,6 +452,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -460,7 +465,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
 		};
@@ -468,6 +473,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -480,7 +486,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Release;
 		};
