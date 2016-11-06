@@ -51,10 +51,16 @@ public extension String
         return matches("[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,63}$")
     }
 
-    /// Trims a string
-    public func trim() -> String
+    /// Creates a new trimmed string, i.e. removed all starting and ending white spaces.
+    var trimmed: String
     {
         return trimmingCharacters(in: .whitespaces)
+    }
+
+    /// Remove all starting and ending white spaces.
+    mutating func trim()
+    {
+        self = self.trimmed
     }
 
     /// Creates a new String with a capitalized first letter
