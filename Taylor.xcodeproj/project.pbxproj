@@ -130,8 +130,8 @@
 				7ACD098E1CC04264000FAAA0 /* ExtendedButtonTests.swift */,
 				7A44D0691C187E030063575B /* Info.plist */,
 				DF9F948C1CE360520008487F /* UIButtonTest.swift */,
-				DFC8727A1DCF8EC20007AE43 /* StringText.swift */,
 				DF42A5A71D3EB07A00C2FE9B /* NSDateTest.swift */,
+				DFC8727A1DCF8EC20007AE43 /* StringText.swift */,
 				7A3FC2B21CAC2B0B007A4063 /* UIEdgeInsetsTests.swift */,
 			);
 			path = TaylorTests;
