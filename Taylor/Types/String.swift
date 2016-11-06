@@ -56,4 +56,22 @@ public extension String
     {
         return stringByTrimmingCharactersInSet(.whitespaceCharacterSet())
     }
+
+    /// Creates a new String with a capitalized first letter
+    ///
+    /// ``` swift
+    /// let capitalizedString = "my senteent".capitalizedFirstLetter()
+    /// ```
+    func capitalizedFirstLetter() -> String
+    {
+        let first = String(characters.prefix(1)).capitalizedStringWithLocale(nil)
+        let other = String(characters.dropFirst())
+        return first + other
+    }
+
+    /// Capitalize the first letter of the string
+    mutating func capitalizeFirstLetter()
+    {
+        self = self.capitalizedFirstLetter()
+    }
 }
