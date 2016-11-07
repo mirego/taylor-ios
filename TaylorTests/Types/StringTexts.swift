@@ -65,4 +65,37 @@ class StringTests: XCTestCase {
         XCTAssertTrue("genius mirego@mirego.com".isEmailAddress())
         XCTAssertFalse("genius mirego@mirego domain.com".isEmailAddress())
     }
+
+    func testTrim() {
+        let trimmedString = "This is a string"
+        let stringWithSpaces = "\t \(trimmedString) \t  "
+        var string = String(stringWithSpaces)!
+
+        XCTAssertEqual(string.trimmed, trimmedString)
+        // Should not mutate the string
+        XCTAssertEqual(string, stringWithSpaces)
+
+        // Should mutate the string
+        string.trim()
+        XCTAssertEqual(string, trimmedString)
+
+        // Test empty string
+        XCTAssertEqual("".trimmed, "")
+    }
+
+    func testCapitalizeFirstLetter() {
+        let capitalizedString = "Capitalize first letter only"
+        var string = "capitalize first letter only"
+
+        XCTAssertEqual(string.capitalizedFirstLetterOnly, capitalizedString)
+        // Should not mutate the string
+        XCTAssertEqual(string, "capitalize first letter only")
+
+        // Should mutate the string
+        string.capitalizeFirstLetterOnly()
+        XCTAssertEqual(string, capitalizedString)
+
+        // Test empty string
+        XCTAssertEqual("".capitalizedFirstLetterOnly, "")
+    }
 }
