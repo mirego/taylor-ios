@@ -28,51 +28,11 @@
 import Foundation
 
 
-public extension UIEdgeInsets
+// swiftlint:disable variable_name
+
+extension CGFloat
 {
-    static public func top(_ margin: CGFloat) -> UIEdgeInsets
-    {
-        return UIEdgeInsets(top: margin, left: 0, bottom: 0, right: 0)
-    }
-
-    static public func left(_ margin: CGFloat) -> UIEdgeInsets
-    {
-        return UIEdgeInsets(top: 0, left: margin, bottom: 0, right: 0)
-    }
-
-    static public func bottom(_ margin: CGFloat) -> UIEdgeInsets
-    {
-        return UIEdgeInsets(top: 0, left: 0, bottom: margin, right: 0)
-    }
-
-    static public func right(_ margin: CGFloat) -> UIEdgeInsets
-    {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: margin)
-    }
-
-    static func margins(_ margin: CGFloat) -> UIEdgeInsets
-    {
-        return UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin)
-    }
-
-    /**
-     Method that creates an UIEdgeInsets. All parameters are optional.
-
-     Examples:
-        .margins(bottom: 20)
-        .margins(bottom: 20, right: 12)
-        .margins(top: 20, left: 12, right: 12)
-        .margins(left: 12, right: 12)
-
-     - parameter top:    Optional top inset (default is 0)
-     - parameter left:   Optional left inset (default is 0)
-     - parameter bottom: Optional bottom inset (default is 0)
-     - parameter right:  Optional right inset (default is 0)
-
-     - returns: UIEdgeInsets
-     */
-    static public func margins(top: CGFloat = 0, left: CGFloat = 0, bottom: CGFloat = 0, right: CGFloat = 0) -> UIEdgeInsets
-    {
-        return UIEdgeInsets(top: top, left: left, bottom: bottom, right: right)
-    }
+    public static var max = CGFloat.greatestFiniteMagnitude
 }
+
+// swiftlint:enable variable_name
