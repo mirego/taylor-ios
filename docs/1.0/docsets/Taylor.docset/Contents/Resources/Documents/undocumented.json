@@ -1,0 +1,194 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/lucdion/dev/taylor-ios/Taylor/Date/NSDate.swift",
+      "line": 84,
+      "symbol": "Date.daysBetween(toDate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lucdion/dev/taylor-ios/Taylor/Date/NSDate.swift",
+      "line": 90,
+      "symbol": "Date.addDaysToDate(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lucdion/dev/taylor-ios/Taylor/Date/NSDate.swift",
+      "line": 95,
+      "symbol": "Date.getWeekDay()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lucdion/dev/taylor-ios/Taylor/Geometry/CGSize.swift",
+      "line": 33,
+      "symbol": "CGSize.inset(_:yOffset:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lucdion/dev/taylor-ios/Taylor/Geometry/CGSize.swift",
+      "line": 38,
+      "symbol": "CGSize.scale(_:yOffset:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lucdion/dev/taylor-ios/Taylor/Geometry/CGSize.swift",
+      "line": 43,
+      "symbol": "CGSize.minimalTapableSize()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lucdion/dev/taylor-ios/Taylor/Types/CGFloat.swift",
+      "line": 35,
+      "symbol": "CGFloat.max",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lucdion/dev/taylor-ios/Taylor/UI/ExtendedButton.swift",
+      "line": 30,
+      "symbol": "ExtendedButton",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lucdion/dev/taylor-ios/Taylor/UI/ExtendedButton.swift",
+      "line": 32,
+      "symbol": "ExtendedButton.minimalTapableSize",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lucdion/dev/taylor-ios/Taylor/UI/ExtendedButton.swift",
+      "line": 34,
+      "symbol": "ExtendedButton.point(inside:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lucdion/dev/taylor-ios/Taylor/UI/UIColor.swift",
+      "line": 33,
+      "symbol": "UIColor.colorBetweenColors(startColor:endColor:percentage:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lucdion/dev/taylor-ios/Taylor/UI/UIDevice.swift",
+      "line": 34,
+      "symbol": "UIDevice.isIPad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lucdion/dev/taylor-ios/Taylor/UI/UIDevice.swift",
+      "line": 39,
+      "symbol": "UIDevice.isIPadPro()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lucdion/dev/taylor-ios/Taylor/UI/UIDevice.swift",
+      "line": 44,
+      "symbol": "UIDevice.isIPhone()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lucdion/dev/taylor-ios/Taylor/UI/UIEdgeInsets.swift",
+      "line": 33,
+      "symbol": "UIEdgeInsets.top(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lucdion/dev/taylor-ios/Taylor/UI/UIEdgeInsets.swift",
+      "line": 38,
+      "symbol": "UIEdgeInsets.left(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lucdion/dev/taylor-ios/Taylor/UI/UIEdgeInsets.swift",
+      "line": 43,
+      "symbol": "UIEdgeInsets.bottom(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lucdion/dev/taylor-ios/Taylor/UI/UIEdgeInsets.swift",
+      "line": 48,
+      "symbol": "UIEdgeInsets.right(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lucdion/dev/taylor-ios/Taylor/UI/UIEdgeInsets.swift",
+      "line": 53,
+      "symbol": "UIEdgeInsets.margins(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lucdion/dev/taylor-ios/Taylor/UI/UIImageView.swift",
+      "line": 33,
+      "symbol": "UIImageView.setImageAndFit(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lucdion/dev/taylor-ios/Taylor/UI/UIImageView.swift",
+      "line": 40,
+      "symbol": "UIImageView.sizeThatFitsAspectFit(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lucdion/dev/taylor-ios/Taylor/UI/UILabel.swift",
+      "line": 84,
+      "symbol": "UILabel.setAttributedText(_:fit:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lucdion/dev/taylor-ios/Taylor/UI/UIScreen.swift",
+      "line": 34,
+      "symbol": "UIScreen.onePixel",
+      "symbol_kind": "source.lang.swift.decl.var.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lucdion/dev/taylor-ios/Taylor/UI/UIScreen.swift",
+      "line": 40,
+      "symbol": "UIScreen.roundFloatToPixel(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lucdion/dev/taylor-ios/Taylor/UI/UIScreen.swift",
+      "line": 45,
+      "symbol": "UIScreen.isBiggerThanIPhone5()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lucdion/dev/taylor-ios/Taylor/UI/UIScreen.swift",
+      "line": 50,
+      "symbol": "UIScreen.isIPhone4()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lucdion/dev/taylor-ios/Taylor/UI/UIView.swift",
+      "line": 32,
+      "symbol": "UIView.convertViewToImage(opaque:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/lucdion/dev/taylor-ios"
+}
