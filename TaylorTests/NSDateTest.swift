@@ -13,9 +13,9 @@ import Taylor
 class NSDateTests: XCTestCase {
 
     func testEarlierAndLater() {
-        let now = NSDate()
-        let laterDate = NSDate(timeIntervalSinceNow: 1000)
-        let earlierDate = NSDate(timeIntervalSince1970: 1)
+        let now = Date()
+        let laterDate = Date(timeIntervalSinceNow: 1000)
+        let earlierDate = Date(timeIntervalSince1970: 1)
         XCTAssertTrue(laterDate.isLater(than: now))
         XCTAssertTrue(earlierDate.isEarlier(than: now))
 
@@ -26,28 +26,28 @@ class NSDateTests: XCTestCase {
         // Test unitGranularity
         let oneDayLaterDate = now.addDaysToDate(1)
         // Is at least one DAY later?
-        XCTAssertTrue(oneDayLaterDate.isLater(than: now, unitGranularity: .Day))
+        XCTAssertTrue(oneDayLaterDate.isLater(than: now, unitGranularity: .day))
         // Is at least one MONTH later?
-        XCTAssertFalse(oneDayLaterDate.isLater(than: now, unitGranularity: .Month))
+        XCTAssertFalse(oneDayLaterDate.isLater(than: now, unitGranularity: .month))
         // Is at least one YEAR later?
-        XCTAssertFalse(oneDayLaterDate.isLater(than: now, unitGranularity: .Year))
+        XCTAssertFalse(oneDayLaterDate.isLater(than: now, unitGranularity: .year))
 
         let oneDayEarlierDate = now.addDaysToDate(-1)
         // Is at least one DAY earlier?
-        XCTAssertTrue(oneDayEarlierDate.isEarlier(than: now, unitGranularity: .Day))
+        XCTAssertTrue(oneDayEarlierDate.isEarlier(than: now, unitGranularity: .day))
         // Is at least one MONTH earlier?
-        XCTAssertFalse(oneDayEarlierDate.isEarlier(than: now, unitGranularity: .Month))
+        XCTAssertFalse(oneDayEarlierDate.isEarlier(than: now, unitGranularity: .month))
         // Is at least one YEAR earlier?
-        XCTAssertFalse(oneDayEarlierDate.isEarlier(than: now, unitGranularity: .Year))
+        XCTAssertFalse(oneDayEarlierDate.isEarlier(than: now, unitGranularity: .year))
 
 
         // isEqual
-        XCTAssertTrue(now.isEqual(now))
+        XCTAssertTrue(now == now)
         // Is same DAY?
-        XCTAssertFalse(oneDayLaterDate.isEqual(to: now, unitGranularity: .Day))
+        XCTAssertFalse(oneDayLaterDate.isEqual(to: now, unitGranularity: .day))
         // Is same MONTH?
-        XCTAssertTrue(oneDayLaterDate.isEqual(to: now, unitGranularity: .Month))
+        XCTAssertTrue(oneDayLaterDate.isEqual(to: now, unitGranularity: .month))
         // Is same YEAR?
-        XCTAssertTrue(oneDayLaterDate.isEqual(to: now, unitGranularity: .Year))
+        XCTAssertTrue(oneDayLaterDate.isEqual(to: now, unitGranularity: .year))
     }
 }

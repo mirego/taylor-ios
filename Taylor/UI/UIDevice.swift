@@ -33,16 +33,16 @@ extension UIDevice
     // Returns true if the current device is an iPad (or an iPhone for isIPhone())
     static public func isIPad() -> Bool
     {
-        return UIDevice.currentDevice().userInterfaceIdiom == .Pad
+        return UIDevice.current.userInterfaceIdiom == .pad
     }
 
     static public func isIPadPro() -> Bool
     {
-        return isIPad() && UIScreen.mainScreen().bounds.size.height == 1024
+        return isIPad() && UIScreen.main.bounds.size.height == 1024
     }
 
     static public func isIPhone() -> Bool
     {
-        return UIDevice.currentDevice().userInterfaceIdiom == .Phone
+        return UIDevice.current.userInterfaceIdiom == .phone
     }
 }

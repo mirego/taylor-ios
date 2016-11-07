@@ -28,7 +28,7 @@
 import UIKit
 
 
-extension NSDate
+extension Date
 {
     /**
      Returns true if the date mathches the specified date's day.
@@ -37,9 +37,9 @@ extension NSDate
 
      - returns: Returns true if the date mathches the specified date's day
      */
-    public func isSameDay(anotherDate: NSDate) -> Bool
+    public func isSameDay(_ anotherDate: Date) -> Bool
     {
-        return isEqual(to: anotherDate, unitGranularity: .Day)
+        return isEqual(to: anotherDate, unitGranularity: .day)
     }
 
     /**
@@ -50,9 +50,9 @@ extension NSDate
 
      - returns: Returns true if the date is equal to the specified date using the specified NSCalendarUnit
      */
-    public func isEqual(to toDate: NSDate, unitGranularity: NSCalendarUnit = .Second) -> Bool
+    public func isEqual(to toDate: Date, unitGranularity: NSCalendar.Unit = .second) -> Bool
     {
-        return NSCalendar.currentCalendar().compareDate(self, toDate: toDate, toUnitGranularity: unitGranularity) == NSComparisonResult.OrderedSame
+        return (Calendar.current as NSCalendar).compare(self, to: toDate, toUnitGranularity: unitGranularity) == ComparisonResult.orderedSame
     }
 
     /**
@@ -63,9 +63,9 @@ extension NSDate
 
      - returns: Returns true if the date is earlier than the specified date using the specified NSCalendarUnit
      */
-    public func isEarlier(than thanDate: NSDate, unitGranularity: NSCalendarUnit = .Second) -> Bool
+    public func isEarlier(than thanDate: Date, unitGranularity: NSCalendar.Unit = .second) -> Bool
     {
-        return NSCalendar.currentCalendar().compareDate(self, toDate: thanDate, toUnitGranularity: unitGranularity) == NSComparisonResult.OrderedAscending
+        return (Calendar.current as NSCalendar).compare(self, to: thanDate, toUnitGranularity: unitGranularity) == ComparisonResult.orderedAscending
     }
 
     /**
@@ -76,36 +76,25 @@ extension NSDate
 
      - returns: Returns true if the date is later than the specified date using the specified NSCalendarUnit
      */
-    public func isLater(than thanDate: NSDate, unitGranularity: NSCalendarUnit = .Second) -> Bool
+    public func isLater(than thanDate: Date, unitGranularity: NSCalendar.Unit = .second) -> Bool
     {
-        return NSCalendar.currentCalendar().compareDate(self, toDate: thanDate, toUnitGranularity: unitGranularity) == NSComparisonResult.OrderedDescending
+        return (Calendar.current as NSCalendar).compare(self, to: thanDate, toUnitGranularity: unitGranularity) == ComparisonResult.orderedDescending
     }
 
-    public func daysBetween(toDate toDate: NSDate) -> Int
+    public func daysBetween(toDate: Date) -> Int
     {
-        let components = NSCalendar.currentCalendar().components(.Day, fromDate: self, toDate: toDate, options: [])
-        return components.day
+        let components = (Calendar.current as NSCalendar).components(.day, from: self, to: toDate, options: [])
+        return components.day!
     }
 
-    public func addDaysToDate(daysToAdd: Int) -> NSDate
+    public func addDaysToDate(_ daysToAdd: Int) -> Date
     {
-        return NSCalendar.currentCalendar().dateByAddingUnit(.Day, value: daysToAdd, toDate: self, options: [])!
-    }
-
-    public func getStartOfTheWeek() -> NSDate
-    {
-        let calendar = NSCalendar.currentCalendar()
-        var startOfTheWeek: NSDate?
-        var interval = NSTimeInterval(0)
-
-        calendar.rangeOfUnit(.WeekOfMonth, startDate: &startOfTheWeek, interval: &interval, forDate: self)
-
-        return startOfTheWeek!
+        return (Calendar.current as NSCalendar).date(byAdding: .day, value: daysToAdd, to: self, options: [])!
     }
 
     public func getWeekDay() -> Int
     {
-        let components = NSCalendar.currentCalendar().components(.Weekday, fromDate: self)
-        return components.weekday
+        let components = (Calendar.current as NSCalendar).components(.weekday, from: self)
+        return components.weekday!
     }
 }

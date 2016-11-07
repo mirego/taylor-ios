@@ -34,11 +34,11 @@ public extension String
     /// parameter regExp:        Regular expression
     /// parameter caseSensitive: Specify if the comparison must be case sensitive (Default is true).
     /// returns: true if the string matches the specified regular expression
-    public func matches(regExp: String, caseSensitive: Bool = true) -> Bool
+    public func matches(_ regExp: String, caseSensitive: Bool = true) -> Bool
     {
         do {
-            let regex = try NSRegularExpression(pattern:regExp, options: caseSensitive ? [] : .CaseInsensitive)
-            return regex.firstMatchInString(self, options: NSMatchingOptions(rawValue: 0), range: NSRange(location: 0, length: self.characters.count)) != nil
+            let regex = try NSRegularExpression(pattern:regExp, options: caseSensitive ? [] : .caseInsensitive)
+            return regex.firstMatch(in: self, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSRange(location: 0, length: self.characters.count)) != nil
         } catch {
             return false
         }
@@ -51,9 +51,33 @@ public extension String
         return matches("[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,63}$")
     }
 
-    /// Trims a string
-    public func trim() -> String
+    /// Creates a new trimmed string, i.e. removed all starting and ending white spaces.
+    var trimmed: String
     {
-        return stringByTrimmingCharactersInSet(.whitespaceCharacterSet())
+        return trimmingCharacters(in: .whitespaces)
+    }
+
+    /// Remove all starting and ending white spaces.
+    mutating func trim()
+    {
+        self = self.trimmed
+    }
+
+    /// Creates a new String with a capitalized first letter
+    ///
+    /// ``` swift
+    /// let capitalizedString = "my senteent".capitalizedFirstLetter()
+    /// ```
+    var capitalizedFirstLetter: String
+    {
+        let first = String(characters.prefix(1)).capitalized(with: NSLocale.current)
+        let other = String(characters.dropFirst())
+        return first + other
+    }
+
+    /// Capitalize the first letter of the string
+    mutating func capitalizeFirstLetter()
+    {
+        self = self.capitalizedFirstLetter
     }
 }

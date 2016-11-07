@@ -27,16 +27,15 @@
 
 import UIKit
 
-
 extension UIView
 {
-    public func convertViewToImage(opaque opaque: Bool = true) -> UIImage?
+    public func convertViewToImage(opaque: Bool = true) -> UIImage?
     {
         UIGraphicsBeginImageContextWithOptions(bounds.size, opaque, 0.0)
 
         guard let context = UIGraphicsGetCurrentContext() else { return nil }
 
-        layer.renderInContext(context)
+        layer.render(in: context)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return image
@@ -49,9 +48,9 @@ extension UIView
      - parameter delay:
      - parameter completion:
      */
-    public func fadeIn(duration: NSTimeInterval = 0.4, delay: NSTimeInterval = 0.0, completion: ((Bool) -> Void)? = nil)
+    public func fadeIn(_ duration: TimeInterval = 0.4, delay: TimeInterval = 0.0, completion: ((Bool) -> Void)? = nil)
     {
-        UIView.animateWithDuration(duration, delay: delay, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+        UIView.animate(withDuration: duration, delay: delay, options: UIViewAnimationOptions.curveEaseIn, animations: {
             self.alpha = 1.0
         }, completion: completion)
     }
@@ -63,9 +62,9 @@ extension UIView
      - parameter delay:
      - parameter completion:
      */
-    public func fadeOut(duration: NSTimeInterval = 0.4, delay: NSTimeInterval = 0.0, completion: ((Bool) -> Void)? = nil)
+    public func fadeOut(_ duration: TimeInterval = 0.4, delay: TimeInterval = 0.0, completion: ((Bool) -> Void)? = nil)
     {
-        UIView.animateWithDuration(duration, delay: delay, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+        UIView.animate(withDuration: duration, delay: delay, options: UIViewAnimationOptions.curveEaseIn, animations: {
             self.alpha = 0.0
         }, completion: completion)
     }
@@ -78,11 +77,11 @@ extension UIView
      - parameter opacity:
      - parameter color:
      */
-    public func setShadow(radius radius: CGFloat = 3, offset: CGSize = CGSize(width: 1, height: 1), opacity: CGFloat = 0.5, color: UIColor = .blackColor())
+    public func setShadow(radius: CGFloat = 3, offset: CGSize = CGSize(width: 1, height: 1), opacity: CGFloat = 0.5, color: UIColor = .black)
     {
         layer.shadowRadius = radius
         layer.shadowOffset = offset
-        layer.shadowColor = color.CGColor
+        layer.shadowColor = color.cgColor
         layer.shadowOpacity = Float(opacity)
     }
 
@@ -96,10 +95,10 @@ extension UIView
      - parameter corners: List of rounded corners
      - parameter radius:  Corners radius.
      */
-    public func setRoundCornersMask(corners corners: UIRectCorner = .AllCorners, radius: CGFloat = 3)
+    public func setRoundCornersMask(corners: UIRectCorner = .allCorners, radius: CGFloat = 3)
     {
         let mask = CAShapeLayer()
-        mask.path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius)).CGPath
+        mask.path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius)).cgPath
         layer.mask = mask
     }
 
@@ -109,14 +108,14 @@ extension UIView
      - parameter width: border's width. (Optional)
      - parameter color: border's color. (Optional)
      */
-    public func setBorder(width width: CGFloat? = nil, color: UIColor? = nil)
+    public func setBorder(width: CGFloat? = nil, color: UIColor? = nil)
     {
         if let width = width {
             layer.borderWidth = width
         }
 
         if let color = color {
-            layer.borderColor = color.CGColor
+            layer.borderColor = color.cgColor
         }
     }
 }

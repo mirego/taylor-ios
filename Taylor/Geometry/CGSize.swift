@@ -30,12 +30,12 @@ import Foundation
 
 extension CGSize
 {
-    public func inset(xOffset: CGFloat, yOffset: CGFloat) -> CGSize
+    public func inset(_ xOffset: CGFloat, yOffset: CGFloat) -> CGSize
     {
         return CGSize(width: self.width + xOffset, height: self.height + yOffset)
     }
 
-    public func scale(xOffset: CGFloat, yOffset: CGFloat) -> CGSize
+    public func scale(_ xOffset: CGFloat, yOffset: CGFloat) -> CGSize
     {
         return CGSize(width: self.width * xOffset, height: self.height * yOffset)
     }

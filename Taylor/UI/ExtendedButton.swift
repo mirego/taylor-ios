@@ -27,11 +27,11 @@
 
 import UIKit
 
-public class ExtendedButton: UIButton
+open class ExtendedButton: UIButton
 {
     public var minimalTapableSize = CGSize.minimalTapableSize()
 
-    override public func pointInside(point: CGPoint, withEvent event: UIEvent?) -> Bool
+    override open func point(inside point: CGPoint, with event: UIEvent?) -> Bool
     {
         let yOffset = max(0, minimalTapableSize.height - frame.height)
         let xOffset = max(0, minimalTapableSize.width - frame.width)
@@ -40,6 +40,6 @@ public class ExtendedButton: UIButton
             return bounds.insetBy(dx: -xOffset / 2, dy: -yOffset / 2).contains(point)
         }
 
-        return super.pointInside(point, withEvent: event)
+        return super.point(inside: point, with: event)
     }
 }

@@ -15,11 +15,11 @@ class UIButtonTest: XCTestCase {
     func testSetProperties() {
         let button = UIButton()
         let text = "hello"
-        let font = UIFont.boldSystemFontOfSize(10)
-        let textAlignment = NSTextAlignment.Center
-        let backgroundColor = UIColor.purpleColor()
+        let font = UIFont.boldSystemFont(ofSize: 10)
+        let textAlignment = NSTextAlignment.center
+        let backgroundColor = UIColor.purple
 
-        button.setProperties(text: text, font: font, normalTextColor: .blueColor(), highlightedTextColor: .redColor(), selectedTextColor: .greenColor(), disabledTextColor: .grayColor(), textAlignment: textAlignment, backgroundColor: backgroundColor, fit: true)
+        button.setProperties(text: text, font: font, normalTextColor: .blue, highlightedTextColor: .red, selectedTextColor: .green, disabledTextColor: .gray, textAlignment: textAlignment, backgroundColor: backgroundColor, fit: true)
 
         XCTAssertEqual(button.titleLabel!.text, text)
         XCTAssertEqual(button.titleLabel!.font.pointSize, font.pointSize)
@@ -50,12 +50,12 @@ class UIButtonTest: XCTestCase {
     }
 
     func testSetImages() {
-        let image = UIImage.imageWithTintColor(UIColor.blueColor())
+        let image = UIImage.imageWithTintColor(UIColor.blue)
 
         let buttonWithoutFit = UIButton()
-        buttonWithoutFit.setImages(image!, normalColor: .blueColor(), highlightedColor: .redColor(), selectedColor: .greenColor(), disabledColor: .grayColor())
+        buttonWithoutFit.setImages(image!, normalColor: .blue, highlightedColor: .red, selectedColor: .green, disabledColor: .gray)
         let buttonWithFit = UIButton()
-        buttonWithFit.setImages(image!, normalColor: .blueColor(), highlightedColor: .redColor(), selectedColor: .greenColor(), disabledColor: .grayColor(), fit: true)
+        buttonWithFit.setImages(image!, normalColor: .blue, highlightedColor: .red, selectedColor: .green, disabledColor: .gray, fit: true)
         XCTAssertNotEqual(buttonWithoutFit.frame.width, buttonWithFit.frame.width)
     }
 }
