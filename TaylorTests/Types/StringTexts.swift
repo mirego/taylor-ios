@@ -87,15 +87,15 @@ class StringTests: XCTestCase {
         let capitalizedString = "Capitalize first letter only"
         var string = "capitalize first letter only"
 
-        XCTAssertEqual(string.capitalizedFirstLetterOnly, capitalizedString)
+        XCTAssertEqual(string.capitalizedFirstLetter, capitalizedString)
         // Should not mutate the string
         XCTAssertEqual(string, "capitalize first letter only")
 
         // Should mutate the string
-        string.capitalizeFirstLetterOnly()
+        string.capitalizeFirstLetter()
         XCTAssertEqual(string, capitalizedString)
 
         // Test empty string
-        XCTAssertEqual("".capitalizedFirstLetterOnly, "")
+        XCTAssertEqual("".capitalizedFirstLetter, "")
     }
 }
