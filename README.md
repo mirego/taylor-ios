@@ -22,7 +22,7 @@ You can use [CocoaPods](http://cocoapods.org/) to install `Taylor` by adding it 
 ```ruby
 platform :ios, '8.0'
 use_frameworks!
-pod 'YourLibrary'
+pod 'MRGTaylor'
 ```
 
 ### Manually
