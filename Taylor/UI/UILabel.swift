@@ -48,6 +48,9 @@ extension UILabel
             if let lineSpacing = lineSpacing {
                 let paragraphStyle = NSMutableParagraphStyle()
                 paragraphStyle.lineSpacing = lineSpacing
+                if let textAlignment = textAlignment {
+                    paragraphStyle.alignment = textAlignment
+                }
                 paragraphStyle.lineBreakMode = .byTruncatingTail
                 attributedText = NSAttributedString(string: text, attributes: [NSParagraphStyleAttributeName: paragraphStyle])
             } else {
