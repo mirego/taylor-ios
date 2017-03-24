@@ -200,7 +200,6 @@
 				7A44D0541C187E030063575B /* Frameworks */,
 				7A44D0551C187E030063575B /* Headers */,
 				7A44D0561C187E030063575B /* Resources */,
-				DF9F948E1CE37B680008487F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -284,22 +283,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		DF9F948E1CE37B680008487F /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nfi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7A44D0531C187E030063575B /* Sources */ = {
