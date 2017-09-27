@@ -27,7 +27,6 @@
 
 import UIKit
 
-
 extension UIScreen
 {
     // Returns the point size of one pixel for the current screen

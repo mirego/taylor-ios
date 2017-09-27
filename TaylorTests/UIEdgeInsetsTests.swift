@@ -10,7 +10,6 @@ import XCTest
 import Taylor
 
 class UIEdgeInsetsTests: XCTestCase {
-    
 
     func testShortcutsReturnsAValidInset() {
         XCTAssertEqual(UIEdgeInsets.top(5), UIEdgeInsets(top: 5, left: 0, bottom: 0, right: 0))
