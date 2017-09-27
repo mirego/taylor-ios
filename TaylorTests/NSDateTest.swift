@@ -22,7 +22,6 @@ class NSDateTests: XCTestCase {
         XCTAssertFalse(now.isLater(than: now))
         XCTAssertFalse(now.isEarlier(than: now))
 
-
         // Test unitGranularity
         let oneDayLaterDate = now.addDaysToDate(1)
         // Is at least one DAY later?
@@ -39,7 +38,6 @@ class NSDateTests: XCTestCase {
         XCTAssertFalse(oneDayEarlierDate.isEarlier(than: now, unitGranularity: .month))
         // Is at least one YEAR earlier?
         XCTAssertFalse(oneDayEarlierDate.isEarlier(than: now, unitGranularity: .year))
-
 
         // isEqual
         XCTAssertTrue(now == now)

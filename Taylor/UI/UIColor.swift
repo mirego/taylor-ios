@@ -27,7 +27,6 @@
 
 import UIKit
 
-
 extension UIColor
 {
     static public func colorBetweenColors(startColor: UIColor, endColor: UIColor, percentage: CGFloat) -> UIColor
@@ -50,11 +49,11 @@ extension UIColor
         var endAlpha: CGFloat = 0
         endColor.getRed(&endRed, green: &endGreen, blue: &endBlue, alpha: &endAlpha)
 
-        let middleRed = Float(startRed + (percentage * (endRed - startRed)))
-        let middleGreen = Float(startGreen + (percentage * (endGreen - startGreen)))
-        let middleBlue = Float(startBlue + (percentage * (endBlue - startBlue)))
-        let middleAlpha = Float(startAlpha + (percentage * (endAlpha - startAlpha)))
+        let middleRed = CGFloat(startRed + (percentage * (endRed - startRed)))
+        let middleGreen = CGFloat(startGreen + (percentage * (endGreen - startGreen)))
+        let middleBlue = CGFloat(startBlue + (percentage * (endBlue - startBlue)))
+        let middleAlpha = CGFloat(startAlpha + (percentage * (endAlpha - startAlpha)))
 
-        return UIColor(colorLiteralRed: middleRed, green: middleGreen, blue: middleBlue, alpha: middleAlpha)
+        return UIColor(red: middleRed, green: middleGreen, blue: middleBlue, alpha: middleAlpha)
     }
 }

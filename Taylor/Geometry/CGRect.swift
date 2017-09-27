@@ -27,7 +27,6 @@
 
 import Foundation
 
-
 // swiftlint:disable variable_name
 
 extension CGRect

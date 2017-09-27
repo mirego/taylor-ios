@@ -27,7 +27,6 @@
 
 import Foundation
 
-
 public extension String
 {
     /// Checks if the string matches the specified regular expression.

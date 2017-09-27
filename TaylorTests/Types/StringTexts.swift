@@ -28,7 +28,6 @@
 import XCTest
 import Taylor
 
-
 class StringTests: XCTestCase {
 
     func testRegExp()

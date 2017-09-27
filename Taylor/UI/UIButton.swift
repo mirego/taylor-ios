@@ -27,7 +27,6 @@
 
 import Foundation
 
-
 extension UIButton
 {
     /// Set multiple UIButton's properties. All parameters are optionals.
@@ -80,7 +79,6 @@ extension UIButton
             sizeToFit()
         }
     }
-
 
     /// Set the button's image for its normal state and optionally the tint color of all its states (normal, highlighted, selected and disabled).
     /// Useful if the button used the same image for all its states but with a different tint color for each state.

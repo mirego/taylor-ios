@@ -27,7 +27,6 @@
 
 import Foundation
 
-
 extension CGSize
 {
     public func inset(_ xOffset: CGFloat, yOffset: CGFloat) -> CGSize
