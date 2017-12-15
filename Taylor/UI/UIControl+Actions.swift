@@ -41,11 +41,11 @@ private class ActionTrampoline<T>: NSObject {
 
 private var UIControlActionAssociatedObjectKeys: [UInt: UnsafeMutablePointer<Int8>] = [:]
 
-protocol UIControlActionFunctionProtocol {}
+public protocol UIControlActionFunctionProtocol {}
 extension UIControl: UIControlActionFunctionProtocol {}
 
 extension UIControlActionFunctionProtocol where Self: UIControl {
-    func addAction(events: UIControlEvents, _ action: @escaping (Self)  -> Void) {
+    public func addAction(events: UIControlEvents, _ action: @escaping (Self)  -> Void) {
         let trampoline = ActionTrampoline(action: action)
         addTarget(trampoline, action: #selector(trampoline.performAction(sender:)), for: events)
         objc_setAssociatedObject(self, actionKey(forEvents: events), trampoline, .OBJC_ASSOCIATION_RETAIN)
