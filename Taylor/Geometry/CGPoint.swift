@@ -37,18 +37,30 @@ func += (left: inout CGPoint, right: CGPoint) {
 
 extension CGPoint
 {
-    mutating func round() {
+    public mutating func round() {
         x = Darwin.round(x)
         y = Darwin.round(y)
     }
 
-    mutating func floor() {
+    public func rounded() -> CGPoint {
+        return CGPoint(x: Darwin.round(x), y: Darwin.round(y))
+    }
+
+    public mutating func floor() {
         x = Darwin.floor(x)
         y = Darwin.floor(y)
     }
 
-    mutating func ceil() {
+    public func floored() -> CGPoint {
+        return CGPoint(x: Darwin.floor(x), y: Darwin.floor(y))
+    }
+
+    public mutating func ceil() {
         x = Darwin.ceil(x)
         y = Darwin.ceil(y)
+    }
+
+    public func ceiled() -> CGPoint {
+        return CGPoint(x: Darwin.ceil(x), y: Darwin.ceil(y))
     }
 }

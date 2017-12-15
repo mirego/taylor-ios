@@ -51,19 +51,31 @@ extension CGSize
         return CGSize(width: self.width * sx, height: self.height * sy)
     }
 
-    mutating func round() {
+    public mutating func round() {
         width = Darwin.round(width)
         height = Darwin.round(height)
     }
 
-    mutating func floor() {
+    public func rounded() -> CGSize {
+        return CGSize(width: Darwin.round(width), height: Darwin.round(height))
+    }
+
+    public mutating func floor() {
         width = Darwin.floor(width)
         height = Darwin.floor(height)
     }
 
-    mutating func ceil() {
+    public func floored() -> CGSize {
+        return CGSize(width: Darwin.floor(width), height: Darwin.floor(height))
+    }
+
+    public mutating func ceil() {
         width = Darwin.ceil(width)
         height = Darwin.ceil(height)
+    }
+
+    public func ceiled() -> CGSize {
+        return CGSize(width: Darwin.ceil(width), height: Darwin.ceil(height))
     }
 
     static public func minimalTapableSize() -> CGSize {
