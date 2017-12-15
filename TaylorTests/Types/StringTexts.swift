@@ -68,7 +68,7 @@ class StringTests: XCTestCase {
     func testTrim() {
         let trimmedString = "This is a string"
         let stringWithSpaces = "\t \(trimmedString) \t  "
-        var string = String(stringWithSpaces)!
+        var string = String(stringWithSpaces)
 
         XCTAssertEqual(string.trimmed, trimmedString)
         // Should not mutate the string

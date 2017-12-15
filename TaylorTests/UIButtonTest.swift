@@ -50,7 +50,7 @@ class UIButtonTest: XCTestCase {
     }
 
     func testSetImages() {
-        let image = UIImage.imageWithTintColor(UIColor.blue)
+        let image = UIImage.image(from: UIColor.blue)
 
         let buttonWithoutFit = UIButton()
         buttonWithoutFit.setImages(image!, normalColor: .blue, highlightedColor: .red, selectedColor: .green, disabledColor: .gray)
