@@ -28,7 +28,7 @@ platform :ios do
     #)
 
     xcodebuild(
-      workspace: "Taylor.xcworkspace",
+      project: "Taylor.xcodeproj",
       scheme: "Taylor",
       configuration: "Debug",
       build: true,
@@ -38,7 +38,7 @@ platform :ios do
 
   lane :tests do
     scan(scheme: "Taylor", 
-         workspace: "Taylor.xcworkspace")
+         project: "Taylor.xcodeproj")
   end
 
   lane :doc do 
@@ -48,6 +48,6 @@ platform :ios do
   lane :travis do
     build
     tests
-    pod_lib_lint(allow_warnings: true, verbose: false)
+    #pod_lib_lint(allow_warnings: true, verbose: false)
   end
 end
