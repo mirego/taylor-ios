@@ -25,57 +25,39 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-import Foundation
+import UIKit
 
-// swiftlint:disable variable_name
+private class ActionTrampoline<T>: NSObject {
+    private let action: (T) -> Void
 
-extension CGRect
-{
-    /// Expose the x origin of the `CGRect`
-    public var x: CGFloat {
-        set {
-            origin.x = newValue
-        }
-
-        get {
-            return origin.x
-        }
+    init(action: @escaping (T) -> Void) {
+        self.action = action
     }
 
-    /// Expose the y origin of the `CGRect`
-    public var y: CGFloat {
-        set {
-            origin.y = newValue
-        }
-
-        get {
-            return origin.y
-        }
-    }
-
-    mutating func roundSize() {
-        size.round()
-    }
-
-    mutating func floorSize() {
-        size.floor()
-    }
-
-    mutating func ceilSize() {
-        size.ceil()
-    }
-
-    mutating func roundOrigin() {
-        origin.round()
-    }
-
-    mutating func floorOrigin() {
-        origin.floor()
-    }
-
-    mutating func ceilOrigin() {
-        origin.ceil()
+    @objc func performAction(sender: UIControl) {
+        action(sender as! T)
     }
 }
 
-// swiftlint:enable variable_name
+private var UIControlActionAssociatedObjectKeys: [UInt: UnsafeMutablePointer<Int8>] = [:]
+
+protocol UIControlActionFunctionProtocol {}
+extension UIControl: UIControlActionFunctionProtocol {}
+
+extension UIControlActionFunctionProtocol where Self: UIControl {
+    func addAction(events: UIControlEvents, _ action: @escaping (Self)  -> Void) {
+        let trampoline = ActionTrampoline(action: action)
+        addTarget(trampoline, action: #selector(trampoline.performAction(sender:)), for: events)
+        objc_setAssociatedObject(self, actionKey(forEvents: events), trampoline, .OBJC_ASSOCIATION_RETAIN)
+    }
+
+    private func actionKey(forEvents events: UIControlEvents) -> UnsafeMutablePointer<Int8> {
+        if let key = UIControlActionAssociatedObjectKeys[events.rawValue] {
+            return key
+        } else {
+            let key = UnsafeMutablePointer<Int8>.allocate(capacity: 1)
+            UIControlActionAssociatedObjectKeys[events.rawValue] = key
+            return key
+        }
+    }
+}

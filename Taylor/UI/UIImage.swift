@@ -29,27 +29,32 @@ import UIKit
 
 extension UIImage
 {
+    @available(*, deprecated, message: "Use image(from: color) instead")
+    public class func imageWithTintColor(_ color: UIColor) -> UIImage? {
+        return UIImage.image(from: color)
+    }
+
     /**
      Creates a new UIImage with the specified tint color.
 
      - parameter color: The image tint color
      - returns: New instance of UIImage
      */
-    public class func imageWithTintColor(_ color: UIColor) -> UIImage?
-    {
-        let rect = CGRect(x: 0.0, y: 0.0, width: 1.0, height: 1.0)
+    public class func image(from color: UIColor?) -> UIImage? {
+        if let color = color {
+            let rect = CGRect(origin: CGPoint.zero, size: CGSize(width: 1, height: 1))
 
-        UIGraphicsBeginImageContext(rect.size)
+            UIGraphicsBeginImageContext(rect.size)
+            guard let context = UIGraphicsGetCurrentContext() else { return nil }
+            context.setFillColor(color.cgColor)
+            context.fill(rect)
 
-        guard let context = UIGraphicsGetCurrentContext() else { return nil }
+            let image = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
 
-        context.setFillColor(color.cgColor)
-        context.fill(rect)
-
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-
-        return image
+            return image
+        }
+        return nil
     }
 
     /**
@@ -58,8 +63,7 @@ extension UIImage
      - parameter color: The image tint color
      - returns: New instance of UIImage
      */
-    public func imageWithTintColor(_ color: UIColor) -> UIImage?
-    {
+    public func imageWithTintColor(_ color: UIColor) -> UIImage? {
         let sourceImage = withRenderingMode(.alwaysTemplate)
 
         UIGraphicsBeginImageContextWithOptions(size, false, sourceImage.scale)

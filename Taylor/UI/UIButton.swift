@@ -122,4 +122,14 @@ extension UIButton
         setImage(image, for: state)
         sizeToFit()
     }
+
+    /**
+     Sets the background color to use for the specified button state.
+
+     - parameter color: The background color to use for the specified state
+     - parameter state: The state that uses the specified image. The values are described in UIControlState
+     */
+    func setBackgroundColor(_ color: UIColor?, for state: UIControlState) {
+        setBackgroundImage(UIImage.image(from: color), for: state)
+    }
 }

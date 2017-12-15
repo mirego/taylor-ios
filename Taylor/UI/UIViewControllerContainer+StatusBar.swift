@@ -25,57 +25,22 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-import Foundation
+import UIKit
 
-// swiftlint:disable variable_name
-
-extension CGRect
-{
-    /// Expose the x origin of the `CGRect`
-    public var x: CGFloat {
-        set {
-            origin.x = newValue
-        }
-
-        get {
-            return origin.x
-        }
-    }
-
-    /// Expose the y origin of the `CGRect`
-    public var y: CGFloat {
-        set {
-            origin.y = newValue
-        }
-
-        get {
-            return origin.y
-        }
-    }
-
-    mutating func roundSize() {
-        size.round()
-    }
-
-    mutating func floorSize() {
-        size.floor()
-    }
-
-    mutating func ceilSize() {
-        size.ceil()
-    }
-
-    mutating func roundOrigin() {
-        origin.round()
-    }
-
-    mutating func floorOrigin() {
-        origin.floor()
-    }
-
-    mutating func ceilOrigin() {
-        origin.ceil()
+extension UINavigationController {
+    open override var childViewControllerForStatusBarStyle: UIViewController? {
+        return self.topViewController
     }
 }
 
-// swiftlint:enable variable_name
+extension UITabBarController {
+    open override var childViewControllerForStatusBarStyle: UIViewController? {
+        return self.selectedViewController
+    }
+}
+
+extension UISplitViewController {
+    open override var childViewControllerForStatusBarStyle: UIViewController? {
+        return self.viewControllers.first
+    }
+}
