@@ -27,6 +27,10 @@
 
 import UIKit
 
+// Provide an automatic way for UIViewController common containers to forward
+// status bar appearance calls to their child. UIKit does not perform that
+// forwarding automatically.
+
 extension UINavigationController {
     open override var childViewControllerForStatusBarStyle: UIViewController? {
         return self.topViewController
