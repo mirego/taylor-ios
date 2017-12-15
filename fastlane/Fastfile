@@ -50,5 +50,4 @@ platform :ios do
     tests
     pod_lib_lint(allow_warnings: true, verbose: false)
   end
-
 end
