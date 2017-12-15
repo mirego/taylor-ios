@@ -37,7 +37,7 @@ public extension String
     {
         do {
             let regex = try NSRegularExpression(pattern:regExp, options: caseSensitive ? [] : .caseInsensitive)
-            return regex.firstMatch(in: self, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSRange(location: 0, length: self.characters.count)) != nil
+            return regex.firstMatch(in: self, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSRange(location: 0, length: count)) != nil
         } catch {
             return false
         }
@@ -69,8 +69,8 @@ public extension String
     /// ```
     var capitalizedFirstLetter: String
     {
-        let first = String(characters.prefix(1)).capitalized(with: NSLocale.current)
-        let other = String(characters.dropFirst())
+        let first = String(prefix(1)).capitalized(with: NSLocale.current)
+        let other = String(dropFirst())
         return first + other
     }
 

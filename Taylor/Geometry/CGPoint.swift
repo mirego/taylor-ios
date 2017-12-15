@@ -1,4 +1,4 @@
-// Copyright (c) 2016, Mirego
+// Copyright (c) 2017, Mirego
 // All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
@@ -27,55 +27,40 @@
 
 import Foundation
 
-// swiftlint:disable variable_name
-
-extension CGRect
-{
-    /// Expose the x origin of the `CGRect`
-    public var x: CGFloat {
-        set {
-            origin.x = newValue
-        }
-
-        get {
-            return origin.x
-        }
-    }
-
-    /// Expose the y origin of the `CGRect`
-    public var y: CGFloat {
-        set {
-            origin.y = newValue
-        }
-
-        get {
-            return origin.y
-        }
-    }
-
-    mutating func roundSize() {
-        size.round()
-    }
-
-    mutating func floorSize() {
-        size.floor()
-    }
-
-    mutating func ceilSize() {
-        size.ceil()
-    }
-
-    mutating func roundOrigin() {
-        origin.round()
-    }
-
-    mutating func floorOrigin() {
-        origin.floor()
-    }
-
-    mutating func ceilOrigin() {
-        origin.ceil()
-    }
+func + (left: CGPoint, right: CGPoint) -> CGPoint {
+    return CGPoint(x: left.x + right.x, y: left.y + right.y)
 }
 
-// swiftlint:enable variable_name
+func += (left: inout CGPoint, right: CGPoint) {
+    left = left + right
+}
+
+extension CGPoint
+{
+    public mutating func round() {
+        x = Darwin.round(x)
+        y = Darwin.round(y)
+    }
+
+    public func rounded() -> CGPoint {
+        return CGPoint(x: Darwin.round(x), y: Darwin.round(y))
+    }
+
+    public mutating func floor() {
+        x = Darwin.floor(x)
+        y = Darwin.floor(y)
+    }
+
+    public func floored() -> CGPoint {
+        return CGPoint(x: Darwin.floor(x), y: Darwin.floor(y))
+    }
+
+    public mutating func ceil() {
+        x = Darwin.ceil(x)
+        y = Darwin.ceil(y)
+    }
+
+    public func ceiled() -> CGPoint {
+        return CGPoint(x: Darwin.ceil(x), y: Darwin.ceil(y))
+    }
+}

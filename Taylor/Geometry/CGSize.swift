@@ -27,20 +27,58 @@
 
 import Foundation
 
+func + (left: CGSize, right: CGSize) -> CGSize {
+    return CGSize(width: left.width + right.width, height: left.height + right.height)
+}
+
+func += (left: inout CGSize, right: CGSize) {
+    left = left + right
+}
+
 extension CGSize
 {
-    public func inset(_ xOffset: CGFloat, yOffset: CGFloat) -> CGSize
-    {
+    @available(*, deprecated, message: "This function was not performing an inset operation but had the effect of adding values to its components, you should use the + operator on two CGSize as a direct replacement. To perform a real inset operation, use insetBy provided by CoreGraphics.")
+    public func inset(_ xOffset: CGFloat, yOffset: CGFloat) -> CGSize {
         return CGSize(width: self.width + xOffset, height: self.height + yOffset)
     }
 
-    public func scale(_ xOffset: CGFloat, yOffset: CGFloat) -> CGSize
-    {
+    @available(*, deprecated, message: "Use scaleBy instead of this function, its naming is more in line with naming conventions.")
+    public func scale(_ xOffset: CGFloat, yOffset: CGFloat) -> CGSize {
         return CGSize(width: self.width * xOffset, height: self.height * yOffset)
     }
 
-    static public func minimalTapableSize() -> CGSize
-    {
+    public func scaleBy(sx: CGFloat, sy: CGFloat) -> CGSize {
+        return CGSize(width: self.width * sx, height: self.height * sy)
+    }
+
+    public mutating func round() {
+        width = Darwin.round(width)
+        height = Darwin.round(height)
+    }
+
+    public func rounded() -> CGSize {
+        return CGSize(width: Darwin.round(width), height: Darwin.round(height))
+    }
+
+    public mutating func floor() {
+        width = Darwin.floor(width)
+        height = Darwin.floor(height)
+    }
+
+    public func floored() -> CGSize {
+        return CGSize(width: Darwin.floor(width), height: Darwin.floor(height))
+    }
+
+    public mutating func ceil() {
+        width = Darwin.ceil(width)
+        height = Darwin.ceil(height)
+    }
+
+    public func ceiled() -> CGSize {
+        return CGSize(width: Darwin.ceil(width), height: Darwin.ceil(height))
+    }
+
+    static public func minimalTapableSize() -> CGSize {
         return CGSize(width: 44, height: 44)
     }
 }
