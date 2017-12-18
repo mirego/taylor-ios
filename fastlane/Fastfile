@@ -1,0 +1,53 @@
+# Change the syntax highlighting to Ruby
+# All lines starting with a # are ignored when running `fastlane`
+
+# If you want to automatically update fastlane if a new version is available:
+# update_fastlane
+
+# This is the minimum version number required.
+# Update this, if you use features of a newer version
+fastlane_version "2.29.0"
+
+default_platform :ios
+
+platform :ios do
+  before_all do
+  end
+
+  lane :install do
+    bundle_install
+  end
+
+  lane :build do
+    install
+
+    #swiftlint(
+    #  mode: :lint, 
+    #  config_file: ".swiftlint.yml",
+    #  executable: "Pods/SwiftLint/swiftlint"
+    #)
+
+    xcodebuild(
+      project: "Taylor.xcodeproj",
+      scheme: "Taylor",
+      configuration: "Debug",
+      build: true,
+      clean: true
+    )
+  end
+
+  lane :tests do
+    scan(scheme: "Taylor", 
+         project: "Taylor.xcodeproj")
+  end
+
+  lane :doc do 
+    jazzy
+  end
+
+  lane :travis do
+    build
+    tests
+    #pod_lib_lint(allow_warnings: true, verbose: false)
+  end
+end
