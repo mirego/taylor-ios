@@ -55,19 +55,16 @@ extension UIView {
             }
         }
         set {
+            let didChange: Bool = compatibilitySafeAreaInsets != newValue
             objc_setAssociatedObject(self, &AssociatedKeys.compatibilitySafeAreaInsets, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            if didChange, let updatable = self as? CompatibilitySafeAreaInsetsUpdate {
+                updatable.compatibilitySafeAreaInsetsDidChange()
+            }
         }
     }
 
     fileprivate func assignSafeAreaInsetsRecursively(insets: UIEdgeInsets) {
-        let didChange: Bool = compatibilitySafeAreaInsets != insets
         compatibilitySafeAreaInsets = insets
-        if didChange {
-            if let updatable = self as? CompatibilitySafeAreaInsetsUpdate {
-                updatable.compatibilitySafeAreaInsetsDidChange()
-            }
-        }
-
         for subview in subviews {
             let topSafeInsetValue = max(insets.top - subview.frame.origin.y, 0)
             let leftSafeInsetValue = max(insets.left - subview.frame.origin.x, 0)
