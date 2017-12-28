@@ -39,6 +39,36 @@ let button = UIButton(type: .Custom)
 button.setBorder(width: 2, color: .redColor())
 ```
 
+## Safe area insets
+
+Taylor provides a backward compatible version of `safeAreaInsets` property for UIView. The original API is available on iOS 11 and above and the replacement fills the gap on older OS version (iOS 7 to 10 inclusively). It is an opt-in feature that requires to be enabled in order to work.
+
+To enable the feature, place this piece of code the earliest possible in your AppDelegate's `application:didFinishLaunching:withOptions` method:
+```swift
+UIViewController.enableCompatibilitySafeAreaInsets()
+```
+
+Your can now access the `compatibilitySafeAreaInsets` property from any UIView. On iOS 11 and above, this property returns `safeAreaInsets`. To receive safe area update callbacks, your view must conform to the `CompatibilitySafeAreaInsetsUpdate` protocol.
+
+To cover every iOS version, your subview could look like this example:
+```swift
+class BaseView: UIView, CompatibilitySafeAreaInsetsUpdate {
+    func compatibilitySafeAreaInsetsDidChange() {
+        commonSafeAreaInsetsDidChange()
+    }
+
+    @available(iOS 11.0, *)
+    override func safeAreaInsetsDidChange() {
+        super.safeAreaInsetsDidChange()
+        commonSafeAreaInsetsDidChange()
+    }
+
+    func commonSafeAreaInsetsDidChange() {
+        setNeedsLayout()
+    }
+}
+```
+
 ## Bonus
 
 * There is a `no-bitcode` branch that's (hopefully) kept up to date with the master.
