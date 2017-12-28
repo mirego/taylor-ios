@@ -1,6 +1,6 @@
 # Taylor
 
-iOS Framework with a bunch of classes and helpers for Swift. 
+iOS Framework with a bunch of classes and helpers for Swift.
 
 ## Requirements
 
@@ -50,7 +50,7 @@ UIViewController.enableCompatibilitySafeAreaInsets()
 
 Your can now access the `compatibilitySafeAreaInsets` property from any UIView. On iOS 11 and above, this property returns `safeAreaInsets`. To receive safe area update callbacks, your view must conform to the `CompatibilitySafeAreaInsetsUpdate` protocol.
 
-To cover every iOS version, your subview could look like this example:
+To cover every iOS versions, your subview could look like this:
 ```swift
 class BaseView: UIView, CompatibilitySafeAreaInsetsUpdate {
     func compatibilitySafeAreaInsetsDidChange() {
