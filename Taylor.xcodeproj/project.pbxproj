@@ -16,6 +16,8 @@
 		C82DD1D81FE414B0002C3942 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82DD1D71FE414B0002C3942 /* CGPoint.swift */; };
 		C82DD1DA1FE41FB1002C3942 /* UIViewControllerContainer+StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82DD1D91FE41FB1002C3942 /* UIViewControllerContainer+StatusBar.swift */; };
 		C82DD1DC1FE42012002C3942 /* UIControl+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82DD1DB1FE42012002C3942 /* UIControl+Actions.swift */; };
+		C8E5946B1FF515D4000C184D /* UIView+SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E5946A1FF515D4000C184D /* UIView+SafeArea.swift */; };
+		C8E5946D1FF5183E000C184D /* UIViewSafeAreaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E5946C1FF5183E000C184D /* UIViewSafeAreaTests.swift */; };
 		DF42A5A81D3EB07A00C2FE9B /* NSDateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF42A5A71D3EB07A00C2FE9B /* NSDateTest.swift */; };
 		DF45FE9D1CCFD1F90033F071 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45FE9C1CCFD1F90033F071 /* String.swift */; };
 		DF9AE4C71DD0C1EE0061B155 /* CGFloatText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9AE4C61DD0C1EE0061B155 /* CGFloatText.swift */; };
@@ -61,6 +63,8 @@
 		C82DD1D71FE414B0002C3942 /* CGPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
 		C82DD1D91FE41FB1002C3942 /* UIViewControllerContainer+StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewControllerContainer+StatusBar.swift"; sourceTree = "<group>"; };
 		C82DD1DB1FE42012002C3942 /* UIControl+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Actions.swift"; sourceTree = "<group>"; };
+		C8E5946A1FF515D4000C184D /* UIView+SafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SafeArea.swift"; sourceTree = "<group>"; };
+		C8E5946C1FF5183E000C184D /* UIViewSafeAreaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSafeAreaTests.swift; sourceTree = "<group>"; };
 		DF42A5A71D3EB07A00C2FE9B /* NSDateTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateTest.swift; sourceTree = "<group>"; };
 		DF45FE9C1CCFD1F90033F071 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		DF9AE4C61DD0C1EE0061B155 /* CGFloatText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGFloatText.swift; path = Types/CGFloatText.swift; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 				DF9F948C1CE360520008487F /* UIButtonTest.swift */,
 				DF42A5A71D3EB07A00C2FE9B /* NSDateTest.swift */,
 				7A3FC2B21CAC2B0B007A4063 /* UIEdgeInsetsTests.swift */,
+				C8E5946C1FF5183E000C184D /* UIViewSafeAreaTests.swift */,
 			);
 			path = TaylorTests;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 				DFBFDA421CAF0B0900623836 /* UIView.swift */,
 				C82DD1D91FE41FB1002C3942 /* UIViewControllerContainer+StatusBar.swift */,
 				C82DD1DB1FE42012002C3942 /* UIControl+Actions.swift */,
+				C8E5946A1FF515D4000C184D /* UIView+SafeArea.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -334,6 +340,7 @@
 				DFBC07B91CAC399700A7A665 /* UIScreen.swift in Sources */,
 				DF45FE9D1CCFD1F90033F071 /* String.swift in Sources */,
 				DFBFDA431CAF0B0900623836 /* UIView.swift in Sources */,
+				C8E5946B1FF515D4000C184D /* UIView+SafeArea.swift in Sources */,
 				DFBC07B51CAC399700A7A665 /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,6 +353,7 @@
 				DF9F948D1CE360520008487F /* UIButtonTest.swift in Sources */,
 				DF9AE4C71DD0C1EE0061B155 /* CGFloatText.swift in Sources */,
 				7ACD098F1CC04264000FAAA0 /* ExtendedButtonTests.swift in Sources */,
+				C8E5946D1FF5183E000C184D /* UIViewSafeAreaTests.swift in Sources */,
 				7A3FC2B31CAC2B0B007A4063 /* UIEdgeInsetsTests.swift in Sources */,
 				DF42A5A81D3EB07A00C2FE9B /* NSDateTest.swift in Sources */,
 			);
