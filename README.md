@@ -10,7 +10,7 @@ iOS Framework with a bunch of classes and helpers for Swift.
 
 ## Installation
 
-You can use [Carthage](github.com/carthage/carthage) to install `Taylor` by adding it to your `Cartfile`:
+You can use [Carthage](//github.com/carthage/carthage) to install `Taylor` by adding it to your `Cartfile`:
 
 ```
 github "mirego/taylor-ios"
