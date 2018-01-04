@@ -52,7 +52,6 @@ extension UIView {
         set {
             bounds.size.width = newValue
         }
-
         get {
             return bounds.width
         }
@@ -62,7 +61,6 @@ extension UIView {
         set {
             bounds.size.height = newValue
         }
-
         get {
             return bounds.height
         }
@@ -72,7 +70,6 @@ extension UIView {
         set {
             bounds.size = newValue
         }
-
         get {
             return bounds.size
         }
@@ -82,7 +79,6 @@ extension UIView {
         set {
             frame.origin = newValue
         }
-
         get {
             return frame.origin
         }
