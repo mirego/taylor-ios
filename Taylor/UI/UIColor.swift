@@ -30,40 +30,41 @@ import UIKit
 extension UIColor
 {
     /// Create color from hexadecimal value with optional transparency.
-    /// parameter red:          amount of red (between 0 and 1)
-    /// parameter green:        amount of green (between 0 and 1)
-    /// parameter blue:         amount of blue (between 0 and 1)
-    /// parameter transparency: optional transparency value (default is 1)
-    public convenience init?(red: Int, green: Int, blue: Int, transparency: CGFloat = 1) {
-        guard red >= 0 && red <= 255 else { return nil }
-        guard green >= 0 && green <= 255 else { return nil }
-        guard blue >= 0 && blue <= 255 else { return nil }
+    /// parameter absoluteRed:          amount of red (between 0 and 255)
+    /// parameter absoluteGreen:        amount of green (between 0 and 255)
+    /// parameter absoluteBlue:         amount of blue (between 0 and 255)
+    /// parameter alpha:                optional alpha value (default is 1)
+    public convenience init?(absoluteRed: Int, absoluteGreen: Int, absoluteBlue: Int, alpha: CGFloat = 1) {
+        guard absoluteRed >= 0 && absoluteRed <= 255 else { return nil }
+        guard absoluteGreen >= 0 && absoluteGreen <= 255 else { return nil }
+        guard absoluteBlue >= 0 && absoluteBlue <= 255 else { return nil }
 
-        var trans = transparency
-        if trans < 0 { trans = 0 }
-        if trans > 1 { trans = 1 }
+        var alpha = alpha
+        if alpha < 0 { alpha = 0 }
+        if alpha > 1 { alpha = 1 }
 
-        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: trans)
+        self.init(red: CGFloat(absoluteRed) / 255.0, green: CGFloat(absoluteGreen) / 255.0, blue: CGFloat(absoluteBlue) / 255.0, alpha: alpha)
     }
 
     /// Create color from hexadecimal value with optional transparency.
     /// parameter hex:          hex Int (example: 0xDECEB5).
-    /// parameter transparency: optional transparency value (default is 1)
-    public convenience init?(hex: Int, transparency: CGFloat = 1) {
-        var trans = transparency
-        if trans < 0 { trans = 0 }
-        if trans > 1 { trans = 1 }
+    /// parameter alpha:        optional alpha value (default is 1)
+    public convenience init?(hex: Int, alpha: CGFloat = 1) {
+        var alpha = alpha
+        if alpha < 0 { alpha = 0 }
+        if alpha > 1 { alpha = 1 }
 
         let red = (hex >> 16) & 0xff
         let green = (hex >> 8) & 0xff
         let blue = hex & 0xff
-        self.init(red: red, green: green, blue: blue, transparency: trans)
+
+        self.init(absoluteRed: red, absoluteGreen: green, absoluteBlue: blue, alpha: alpha)
     }
 
     /// Create Color from hexadecimal string with optional transparency (if applicable).
     /// parameter hexString:    hexadecimal string (examples: EDE7F6, 0xEDE7F6, #EDE7F6, #0ff, 0xF0F, ..).
-    /// parameter transparency: optional transparency value (default is 1)
-    public convenience init?(hexString: String, transparency: CGFloat = 1) {
+    /// parameter alpha:        optional alpha value (default is 1)
+    public convenience init?(hexString: String, alpha: CGFloat = 1) {
         var string = ""
         if hexString.lowercased().hasPrefix("0x") {
             string =  hexString.replacingOccurrences(of: "0x", with: "")
@@ -81,14 +82,7 @@ extension UIColor
 
         guard let hexValue = Int(string, radix: 16) else { return nil }
 
-        var trans = transparency
-        if trans < 0 { trans = 0 }
-        if trans > 1 { trans = 1 }
-
-        let red = (hexValue >> 16) & 0xff
-        let green = (hexValue >> 8) & 0xff
-        let blue = hexValue & 0xff
-        self.init(red: red, green: green, blue: blue, transparency: trans)
+        self.init(hex: hexValue, alpha: alpha)
     }
 
     static public func colorBetweenColors(startColor: UIColor, endColor: UIColor, percentage: CGFloat) -> UIColor {

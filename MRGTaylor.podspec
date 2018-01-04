@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MRGTaylor"
-  s.version      = "1.4.0"
+  s.version      = "1.4.1"
   s.summary      = "A short description of Taylor."
 
   # This description is used to generate tags and improve search results.
