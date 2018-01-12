@@ -74,4 +74,37 @@ extension UIImage
         
         return tintedImage
     }
+
+    /**
+     Resizes a new instance of an image resized with the specified width and height ratio
+
+     - parameter widthRatio: The maximum desired image size in MB
+     - returns: New instance of UIImage
+     */
+    public func resize(maxMbSize : CGFloat) -> UIImage? {
+        guard let imageData: Data = UIImagePNGRepresentation(self) else { return nil }
+        let imageSize: CGFloat = imageData.count.f // return image size in Bytes
+        let desiredRatio: CGFloat = imageSize > maxMbSize ? maxMbSize / imageSize : 1
+        return resize(widthRatio: desiredRatio, heightRatio: desiredRatio)
+    }
+
+    /**
+     Resizes a new instance of an image resized with the specified width and height ratio
+
+     - parameter widthRatio: The desired width ratio
+     - parameter heightRatio: The desired height ratio
+     - returns: New instance of UIImage
+     */
+    public func resize(widthRatio: CGFloat, heightRatio: CGFloat) -> UIImage? {
+        let rect = CGRect(x: 0, y: 0, width: self.size.width * widthRatio, height: self.size.height * heightRatio)
+        return extractImage(in: rect)
+    }
+
+    private func extractImage(in rect: CGRect) -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(rect.size, false, 1.0)
+        self.draw(in: rect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage
+    }
 }
