@@ -78,13 +78,13 @@ extension UIImage
     /**
      Resizes a new instance of an image resized with the specified width and height ratio
 
-     - parameter widthRatio: The maximum desired image size in MB
+     - parameter widthRatio: The maximum desired image size in Bytes
      - returns: New instance of UIImage
      */
-    public func resize(maxMbSize : CGFloat) -> UIImage? {
+    public func resize(maxSize : CGFloat) -> UIImage? {
         guard let imageData: Data = UIImagePNGRepresentation(self) else { return nil }
         let imageSize: CGFloat = imageData.count.f // return image size in Bytes
-        let desiredRatio: CGFloat = imageSize > maxMbSize ? maxMbSize / imageSize : 1
+        let desiredRatio: CGFloat = imageSize > maxSize ? maxSize / imageSize : 1
         return resize(widthRatio: desiredRatio, heightRatio: desiredRatio)
     }
 
