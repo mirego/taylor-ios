@@ -81,12 +81,12 @@ extension UIImage
      - parameter ratio: The desired ratio
      - returns: New instance of UIImage
      */
-    func resize(ratio: CGFloat) -> UIImage? {
-        return resizeImage(to: size.applying(CGAffineTransform(scaleX: ratio, y: ratio)))
+    func resize(ratio: CGFloat, isOpaque: Bool) -> UIImage? {
+        return resizeImage(to: size.applying(CGAffineTransform(scaleX: ratio, y: ratio)), isOpaque: isOpaque)
     }
 
-    private func resizeImage(to size: CGSize) -> UIImage? {
-        UIGraphicsBeginImageContextWithOptions(size, false, scale)
+    private func resizeImage(to size: CGSize, isOpaque: Bool) -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(size, isOpaque, scale)
         draw(in: CGRect(origin: .zero, size: size))
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
