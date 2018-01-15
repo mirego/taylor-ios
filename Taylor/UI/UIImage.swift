@@ -76,33 +76,18 @@ extension UIImage
     }
 
     /**
-     Resizes a new instance of an image resized with the specified width and height ratio
+     Creates a new instance of an image resized with the specified ratio
 
-     - parameter widthRatio: The maximum desired image size in Bytes
+     - parameter ratio: The desired ratio
      - returns: New instance of UIImage
      */
-    public func resize(maxSize : CGFloat) -> UIImage? {
-        guard let imageData: Data = UIImagePNGRepresentation(self) else { return nil }
-        let imageSize: CGFloat = imageData.count.f // return image size in Bytes
-        let desiredRatio: CGFloat = imageSize > maxSize ? maxSize / imageSize : 1
-        return resize(widthRatio: desiredRatio, heightRatio: desiredRatio)
+    func resize(ratio: CGFloat) -> UIImage? {
+        return resizeImage(to: size.applying(CGAffineTransform(scaleX: ratio, y: ratio)))
     }
 
-    /**
-     Resizes a new instance of an image resized with the specified width and height ratio
-
-     - parameter widthRatio: The desired width ratio
-     - parameter heightRatio: The desired height ratio
-     - returns: New instance of UIImage
-     */
-    public func resize(widthRatio: CGFloat, heightRatio: CGFloat) -> UIImage? {
-        let rect = CGRect(x: 0, y: 0, width: self.size.width * widthRatio, height: self.size.height * heightRatio)
-        return extractImage(in: rect)
-    }
-
-    private func extractImage(in rect: CGRect) -> UIImage? {
-        UIGraphicsBeginImageContextWithOptions(rect.size, false, 1.0)
-        self.draw(in: rect)
+    private func resizeImage(to size: CGSize) -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(size, false, scale)
+        draw(in: CGRect(origin: .zero, size: size))
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return newImage

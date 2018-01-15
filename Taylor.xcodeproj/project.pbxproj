@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09DEA2A02009593B005001F6 /* SignedInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DEA29F2009593B005001F6 /* SignedInteger.swift */; };
 		7A3FC2B11CAC2ACC007A4063 /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3FC2B01CAC2ACC007A4063 /* UIEdgeInsets.swift */; };
 		7A3FC2B31CAC2B0B007A4063 /* UIEdgeInsetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3FC2B21CAC2B0B007A4063 /* UIEdgeInsetsTests.swift */; };
 		7A44D05C1C187E030063575B /* Taylor.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A44D05B1C187E030063575B /* Taylor.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -53,7 +52,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		09DEA29F2009593B005001F6 /* SignedInteger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignedInteger.swift; sourceTree = "<group>"; };
 		7A3FC2B01CAC2ACC007A4063 /* UIEdgeInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIEdgeInsets.swift; sourceTree = "<group>"; };
 		7A3FC2B21CAC2B0B007A4063 /* UIEdgeInsetsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIEdgeInsetsTests.swift; sourceTree = "<group>"; };
 		7A44D0581C187E030063575B /* Taylor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Taylor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,7 +161,6 @@
 				DFBFDA3E1CAEF4B600623836 /* Int.swift */,
 				DF45FE9C1CCFD1F90033F071 /* String.swift */,
 				DFC8727E1DCFB8790007AE43 /* CGFloat.swift */,
-				09DEA29F2009593B005001F6 /* SignedInteger.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -343,7 +340,6 @@
 				C82DD1DC1FE42012002C3942 /* UIControl+Actions.swift in Sources */,
 				DFC8727F1DCFB8790007AE43 /* CGFloat.swift in Sources */,
 				DFBC07B71CAC399700A7A665 /* UIImageView.swift in Sources */,
-				09DEA2A02009593B005001F6 /* SignedInteger.swift in Sources */,
 				C83EC37E1FFE8BAB009290C4 /* UIView+Coordinates.swift in Sources */,
 				DFBC07B91CAC399700A7A665 /* UIScreen.swift in Sources */,
 				DF45FE9D1CCFD1F90033F071 /* String.swift in Sources */,
