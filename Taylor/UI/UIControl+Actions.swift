@@ -42,7 +42,7 @@ private class ActionTrampoline<T>: NSObject {
 private var UIControlActionAssociatedObjectKeys: [UInt: UnsafeMutablePointer<Int8>] = [:]
 
 public protocol UIControlActionFunctionProtocol {}
-public extension UIControl: UIControlActionFunctionProtocol {}
+extension UIControl: UIControlActionFunctionProtocol {}
 
 public extension UIControlActionFunctionProtocol where Self: UIControl {
     public func addAction(events: UIControlEvents, _ action: @escaping (Self)  -> Void) {
