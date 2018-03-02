@@ -45,7 +45,7 @@ func +(lhs: UIColor, rhs: UIColor) -> UIColor {
     return lhs.add(overlay: rhs)
 }
 
-extension UIColor
+public extension UIColor
 {
     public var hsbaComponents: HSBAComponents {
         var hsba: (h: CGFloat, s: CGFloat, b: CGFloat, a: CGFloat) = (0, 0, 0, 0)

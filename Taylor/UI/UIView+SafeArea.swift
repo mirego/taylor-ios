@@ -59,7 +59,7 @@ public extension UIViewController {
     }
 }
 
-extension UIView {
+public extension UIView {
     private struct AssociatedKeys {
         static var compatibilitySafeAreaInsets = UnsafeMutablePointer<Int8>.allocate(capacity: 1)
     }

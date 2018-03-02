@@ -31,19 +31,19 @@ import UIKit
 // status bar appearance calls to their child. UIKit does not perform that
 // forwarding automatically.
 
-extension UINavigationController {
+public extension UINavigationController {
     open override var childViewControllerForStatusBarStyle: UIViewController? {
         return self.topViewController
     }
 }
 
-extension UITabBarController {
+public extension UITabBarController {
     open override var childViewControllerForStatusBarStyle: UIViewController? {
         return self.selectedViewController
     }
 }
 
-extension UISplitViewController {
+public extension UISplitViewController {
     open override var childViewControllerForStatusBarStyle: UIViewController? {
         return self.viewControllers.first
     }

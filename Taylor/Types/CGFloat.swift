@@ -29,7 +29,7 @@ import Foundation
 
 // swiftlint:disable variable_name
 
-extension CGFloat
+public extension CGFloat
 {
     public static var max = CGFloat.greatestFiniteMagnitude
 }

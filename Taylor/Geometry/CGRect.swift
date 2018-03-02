@@ -29,7 +29,7 @@ import Foundation
 
 // swiftlint:disable variable_name
 
-extension CGRect
+public extension CGRect
 {
     /// Expose the x origin of the `CGRect`
     public var x: CGFloat {

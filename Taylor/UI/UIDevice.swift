@@ -27,7 +27,7 @@
 
 import Foundation
 
-extension UIDevice
+public extension UIDevice
 {
     // Returns true if the current device is an iPad (or an iPhone for isIPhone())
     static public func isIPad() -> Bool

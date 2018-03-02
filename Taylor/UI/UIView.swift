@@ -27,7 +27,7 @@
 
 import UIKit
 
-extension UIView
+public extension UIView
 {
     public func convertViewToImage(opaque: Bool = true) -> UIImage?
     {
