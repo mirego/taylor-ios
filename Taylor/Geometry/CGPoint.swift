@@ -35,7 +35,7 @@ func += (left: inout CGPoint, right: CGPoint) {
     left = left + right
 }
 
-extension CGPoint
+public extension CGPoint
 {
     public mutating func round() {
         x = Darwin.round(x)

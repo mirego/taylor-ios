@@ -27,7 +27,7 @@
 
 import UIKit
 
-extension Date
+public extension Date
 {
     /**
      Returns true if the date mathches the specified date's day.

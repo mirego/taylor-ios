@@ -29,7 +29,7 @@ import Foundation
 
 // swiftlint:disable variable_name
 
-extension Int
+public extension Int
 {
     /// Converts an `Int` to a CGFloat
     /// 

@@ -27,7 +27,7 @@
 
 import UIKit
 
-extension UIImageView
+public extension UIImageView
 {
     public func setImageAndFit(_ image: UIImage?)
     {

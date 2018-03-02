@@ -27,7 +27,7 @@
 
 import UIKit
 
-extension UILabel
+public extension UILabel
 {
     /**
      Set multiple UILabel's properties. All parameters are optionals

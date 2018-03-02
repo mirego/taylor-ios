@@ -35,7 +35,7 @@ func += (left: inout CGSize, right: CGSize) {
     left = left + right
 }
 
-extension CGSize
+public extension CGSize
 {
     @available(*, deprecated, message: "This function was not performing an inset operation but had the effect of adding values to its components, you should use the + operator on two CGSize as a direct replacement. To perform a real inset operation, use insetBy provided by CoreGraphics.")
     public func inset(_ xOffset: CGFloat, yOffset: CGFloat) -> CGSize {

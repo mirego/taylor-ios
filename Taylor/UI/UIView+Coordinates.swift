@@ -47,7 +47,7 @@ import UIKit
  subview.width = view.width
  */
 // swiftlint:disable variable_name
-extension UIView {
+public extension UIView {
     public var width: CGFloat {
         set {
             bounds.size.width = newValue

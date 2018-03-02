@@ -27,7 +27,7 @@
 
 import UIKit
 
-extension UIScreen
+public extension UIScreen
 {
     // Returns the point size of one pixel for the current screen
     public class var onePixel: CGFloat

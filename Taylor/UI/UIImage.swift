@@ -27,7 +27,7 @@
 
 import UIKit
 
-extension UIImage
+public extension UIImage
 {
     @available(*, deprecated, message: "Use image(from: color) instead")
     public class func imageWithTintColor(_ color: UIColor) -> UIImage? {
