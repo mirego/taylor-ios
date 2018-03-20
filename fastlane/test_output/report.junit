@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='TaylorTests.xctest' tests='10' failures='0'>
+  <testsuite name='TaylorTests.CGFloatTest' tests='1' failures='0'>
+    <testcase classname='TaylorTests.CGFloatTest' name='testMax' time='0.005'/>
+  </testsuite>
+  <testsuite name='TaylorTests.ExtendedButtonTests' tests='1' failures='0'>
+    <testcase classname='TaylorTests.ExtendedButtonTests' name='testHitAreaIsExtended' time='0.132'/>
+  </testsuite>
+  <testsuite name='TaylorTests.NSDateTests' tests='1' failures='0'>
+    <testcase classname='TaylorTests.NSDateTests' name='testEarlierAndLater' time='0.012'/>
+  </testsuite>
+  <testsuite name='TaylorTests.StringTests' tests='4' failures='0'>
+    <testcase classname='TaylorTests.StringTests' name='testCapitalizeFirstLetter' time='0.012'/>
+    <testcase classname='TaylorTests.StringTests' name='testIsEmailAddress' time='0.008'/>
+    <testcase classname='TaylorTests.StringTests' name='testRegExp' time='0.001'/>
+    <testcase classname='TaylorTests.StringTests' name='testTrim' time='0.003'/>
+  </testsuite>
+  <testsuite name='TaylorTests.UIButtonTest' tests='2' failures='0'>
+    <testcase classname='TaylorTests.UIButtonTest' name='testSetImages' time='0.042'/>
+    <testcase classname='TaylorTests.UIButtonTest' name='testSetProperties' time='0.038'/>
+  </testsuite>
+  <testsuite name='TaylorTests.UIEdgeInsetsTests' tests='1' failures='0'>
+    <testcase classname='TaylorTests.UIEdgeInsetsTests' name='testShortcutsReturnsAValidInset' time='0.001'/>
+  </testsuite>
+</testsuites>
