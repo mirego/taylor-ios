@@ -29,7 +29,15 @@ platform :ios do
 
     xcodebuild(
       project: "Taylor.xcodeproj",
-      scheme: "Taylor",
+      scheme: "Taylor-iOS",
+      configuration: "Debug",
+      build: true,
+      clean: true
+    )
+
+    xcodebuild(
+      project: "Taylor.xcodeproj",
+      scheme: "Taylor-tvOS",
       configuration: "Debug",
       build: true,
       clean: true
@@ -37,7 +45,7 @@ platform :ios do
   end
 
   lane :tests do
-    scan(scheme: "Taylor", 
+    scan(scheme: "Taylor-iOS", 
          project: "Taylor.xcodeproj")
   end
 

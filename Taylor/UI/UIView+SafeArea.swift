@@ -45,11 +45,11 @@ public extension UIViewController {
 
     @objc private func swizzled_viewWillLayoutSubviews() {
         self.swizzled_viewWillLayoutSubviews()
-        if #available(iOS 11.0, *), !(self is IgnoreNewerSafeAreaInsets) {
+        if #available(iOS 11.0, tvOS 11, *), !(self is IgnoreNewerSafeAreaInsets) {
             // Do nothing, let the iOS 11+ safeAreaInsets mecanism do his thing
         } else {
             let safeAreaInsets: UIEdgeInsets
-            if #available(iOS 11.0, *) {
+            if #available(iOS 11.0, tvOS 11, *) {
                 safeAreaInsets = UIEdgeInsets(top: topLayoutGuide.length, left: additionalSafeAreaInsets.left, bottom: bottomLayoutGuide.length, right: additionalSafeAreaInsets.right)
             } else {
                 safeAreaInsets = UIEdgeInsets(top: topLayoutGuide.length, left: 0, bottom: bottomLayoutGuide.length, right: 0)
@@ -67,7 +67,7 @@ public extension UIView {
     @available(iOS 7.0, *)
     public private(set) var compatibilitySafeAreaInsets: UIEdgeInsets {
         get {
-            if #available(iOS 11.0, *), !(self is IgnoreNewerSafeAreaInsets) {
+            if #available(iOS 11.0, tvOS 11, *), !(self is IgnoreNewerSafeAreaInsets) {
                 return safeAreaInsets
             } else {
                 return objc_getAssociatedObject(self, &AssociatedKeys.compatibilitySafeAreaInsets) as? UIEdgeInsets ?? UIEdgeInsets.zero

@@ -19,6 +19,29 @@
 		C83EC37E1FFE8BAB009290C4 /* UIView+Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83EC37D1FFE8BAB009290C4 /* UIView+Coordinates.swift */; };
 		C8E5946B1FF515D4000C184D /* UIView+SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E5946A1FF515D4000C184D /* UIView+SafeArea.swift */; };
 		C8E5946D1FF5183E000C184D /* UIViewSafeAreaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E5946C1FF5183E000C184D /* UIViewSafeAreaTests.swift */; };
+		DF14FD9A20C18B6E00C5784B /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC079F1CAC399700A7A665 /* CGRect.swift */; };
+		DF14FD9B20C18B6E00C5784B /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC07A01CAC399700A7A665 /* CGSize.swift */; };
+		DF14FD9C20C18B6E00C5784B /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82DD1D71FE414B0002C3942 /* CGPoint.swift */; };
+		DF14FD9D20C18B7700C5784B /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC07A21CAC399700A7A665 /* Double.swift */; };
+		DF14FD9E20C18B7700C5784B /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBFDA3E1CAEF4B600623836 /* Int.swift */; };
+		DF14FD9F20C18B7700C5784B /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45FE9C1CCFD1F90033F071 /* String.swift */; };
+		DF14FDA020C18B7700C5784B /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC8727E1DCFB8790007AE43 /* CGFloat.swift */; };
+		DF14FDA120C18B7B00C5784B /* ExtendedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACD09741CBFC641000FAAA0 /* ExtendedButton.swift */; };
+		DF14FDA220C18B7B00C5784B /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC07A61CAC399700A7A665 /* UIButton.swift */; };
+		DF14FDA320C18B7B00C5784B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC07A71CAC399700A7A665 /* UIColor.swift */; };
+		DF14FDA420C18B7B00C5784B /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC07A81CAC399700A7A665 /* UIDevice.swift */; };
+		DF14FDA520C18B7B00C5784B /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3FC2B01CAC2ACC007A4063 /* UIEdgeInsets.swift */; };
+		DF14FDA620C18B7B00C5784B /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9F948A1CE35EF40008487F /* UIImage.swift */; };
+		DF14FDA720C18B7B00C5784B /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC07A91CAC399700A7A665 /* UIImageView.swift */; };
+		DF14FDA820C18B7B00C5784B /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC07AA1CAC399700A7A665 /* UILabel.swift */; };
+		DF14FDA920C18B7B00C5784B /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC07AB1CAC399700A7A665 /* UIScreen.swift */; };
+		DF14FDAA20C18B7B00C5784B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBFDA421CAF0B0900623836 /* UIView.swift */; };
+		DF14FDAB20C18B7B00C5784B /* UIViewControllerContainer+StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82DD1D91FE41FB1002C3942 /* UIViewControllerContainer+StatusBar.swift */; };
+		DF14FDAC20C18B7B00C5784B /* UIControl+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82DD1DB1FE42012002C3942 /* UIControl+Actions.swift */; };
+		DF14FDAD20C18B7B00C5784B /* UIView+SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E5946A1FF515D4000C184D /* UIView+SafeArea.swift */; };
+		DF14FDAE20C18B7B00C5784B /* UIView+Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83EC37D1FFE8BAB009290C4 /* UIView+Coordinates.swift */; };
+		DF14FDAF20C18B8B00C5784B /* NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC07A41CAC399700A7A665 /* NSDate.swift */; };
+		DF14FDB020C18BDD00C5784B /* Taylor.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A44D05B1C187E030063575B /* Taylor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DF42A5A81D3EB07A00C2FE9B /* NSDateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF42A5A71D3EB07A00C2FE9B /* NSDateTest.swift */; };
 		DF45FE9D1CCFD1F90033F071 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45FE9C1CCFD1F90033F071 /* String.swift */; };
 		DF9AE4C71DD0C1EE0061B155 /* CGFloatText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9AE4C61DD0C1EE0061B155 /* CGFloatText.swift */; };
@@ -57,7 +80,7 @@
 		7A44D0581C187E030063575B /* Taylor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Taylor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A44D05B1C187E030063575B /* Taylor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Taylor.h; sourceTree = "<group>"; };
 		7A44D05D1C187E030063575B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7A44D0621C187E030063575B /* TaylorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaylorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A44D0621C187E030063575B /* TaylorTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TaylorTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A44D0691C187E030063575B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7ACD09741CBFC641000FAAA0 /* ExtendedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendedButton.swift; sourceTree = "<group>"; };
 		7ACD098E1CC04264000FAAA0 /* ExtendedButtonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendedButtonTests.swift; sourceTree = "<group>"; };
@@ -67,6 +90,7 @@
 		C83EC37D1FFE8BAB009290C4 /* UIView+Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Coordinates.swift"; sourceTree = "<group>"; };
 		C8E5946A1FF515D4000C184D /* UIView+SafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SafeArea.swift"; sourceTree = "<group>"; };
 		C8E5946C1FF5183E000C184D /* UIViewSafeAreaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSafeAreaTests.swift; sourceTree = "<group>"; };
+		DF14FD8F20C18B2B00C5784B /* Taylor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Taylor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF42A5A71D3EB07A00C2FE9B /* NSDateTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateTest.swift; sourceTree = "<group>"; };
 		DF45FE9C1CCFD1F90033F071 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		DF9AE4C61DD0C1EE0061B155 /* CGFloatText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGFloatText.swift; path = Types/CGFloatText.swift; sourceTree = "<group>"; };
@@ -105,6 +129,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DF14FD8B20C18B2B00C5784B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -112,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				DF9F948F1CE37C7B0008487F /* .swiftlint.yml */,
+				DF14FD9020C18B2B00C5784B /* Taylor-tvOS */,
 				7A44D0591C187E030063575B /* Products */,
 				7A44D05A1C187E030063575B /* Taylor */,
 				7A44D0661C187E030063575B /* TaylorTests */,
@@ -122,7 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				7A44D0581C187E030063575B /* Taylor.framework */,
-				7A44D0621C187E030063575B /* TaylorTests.xctest */,
+				7A44D0621C187E030063575B /* TaylorTests-iOS.xctest */,
+				DF14FD8F20C18B2B00C5784B /* Taylor.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,6 +237,13 @@
 			path = Geometry;
 			sourceTree = "<group>";
 		};
+		DF14FD9020C18B2B00C5784B /* Taylor-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Taylor-tvOS";
+			sourceTree = "<group>";
+		};
 		DF9AE4C31DD0C0CB0061B155 /* Types */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,12 +264,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DF14FD8C20C18B2B00C5784B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF14FDB020C18BDD00C5784B /* Taylor.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7A44D0571C187E030063575B /* Taylor */ = {
+		7A44D0571C187E030063575B /* Taylor-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7A44D06C1C187E030063575B /* Build configuration list for PBXNativeTarget "Taylor" */;
+			buildConfigurationList = 7A44D06C1C187E030063575B /* Build configuration list for PBXNativeTarget "Taylor-iOS" */;
 			buildPhases = (
 				7A44D0531C187E030063575B /* Sources */,
 				7A44D0541C187E030063575B /* Frameworks */,
@@ -240,14 +288,14 @@
 			);
 			dependencies = (
 			);
-			name = Taylor;
+			name = "Taylor-iOS";
 			productName = Taylor;
 			productReference = 7A44D0581C187E030063575B /* Taylor.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7A44D0611C187E030063575B /* TaylorTests */ = {
+		7A44D0611C187E030063575B /* TaylorTests-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7A44D06F1C187E030063575B /* Build configuration list for PBXNativeTarget "TaylorTests" */;
+			buildConfigurationList = 7A44D06F1C187E030063575B /* Build configuration list for PBXNativeTarget "TaylorTests-iOS" */;
 			buildPhases = (
 				7A44D05E1C187E030063575B /* Sources */,
 				7A44D05F1C187E030063575B /* Frameworks */,
@@ -258,10 +306,28 @@
 			dependencies = (
 				7A44D0651C187E030063575B /* PBXTargetDependency */,
 			);
-			name = TaylorTests;
+			name = "TaylorTests-iOS";
 			productName = TaylorTests;
-			productReference = 7A44D0621C187E030063575B /* TaylorTests.xctest */;
+			productReference = 7A44D0621C187E030063575B /* TaylorTests-iOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DF14FD8E20C18B2B00C5784B /* Taylor-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF14FD9420C18B2B00C5784B /* Build configuration list for PBXNativeTarget "Taylor-tvOS" */;
+			buildPhases = (
+				DF14FD8A20C18B2B00C5784B /* Sources */,
+				DF14FD8B20C18B2B00C5784B /* Frameworks */,
+				DF14FD8C20C18B2B00C5784B /* Headers */,
+				DF14FD8D20C18B2B00C5784B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Taylor-tvOS";
+			productName = "Taylor-tvOS";
+			productReference = DF14FD8F20C18B2B00C5784B /* Taylor.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -270,7 +336,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Mirego;
 				TargetAttributes = {
 					7A44D0571C187E030063575B = {
@@ -280,6 +346,10 @@
 					7A44D0611C187E030063575B = {
 						CreatedOnToolsVersion = 7.1;
 						LastSwiftMigration = 0900;
+					};
+					DF14FD8E20C18B2B00C5784B = {
+						CreatedOnToolsVersion = 9.4;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -295,8 +365,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7A44D0571C187E030063575B /* Taylor */,
-				7A44D0611C187E030063575B /* TaylorTests */,
+				7A44D0571C187E030063575B /* Taylor-iOS */,
+				DF14FD8E20C18B2B00C5784B /* Taylor-tvOS */,
+				7A44D0611C187E030063575B /* TaylorTests-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -311,6 +382,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		7A44D0601C187E030063575B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF14FD8D20C18B2B00C5784B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -363,12 +441,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DF14FD8A20C18B2B00C5784B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF14FDAF20C18B8B00C5784B /* NSDate.swift in Sources */,
+				DF14FDAD20C18B7B00C5784B /* UIView+SafeArea.swift in Sources */,
+				DF14FD9F20C18B7700C5784B /* String.swift in Sources */,
+				DF14FDAC20C18B7B00C5784B /* UIControl+Actions.swift in Sources */,
+				DF14FD9B20C18B6E00C5784B /* CGSize.swift in Sources */,
+				DF14FDA720C18B7B00C5784B /* UIImageView.swift in Sources */,
+				DF14FDA520C18B7B00C5784B /* UIEdgeInsets.swift in Sources */,
+				DF14FDA020C18B7700C5784B /* CGFloat.swift in Sources */,
+				DF14FD9C20C18B6E00C5784B /* CGPoint.swift in Sources */,
+				DF14FDAE20C18B7B00C5784B /* UIView+Coordinates.swift in Sources */,
+				DF14FDA120C18B7B00C5784B /* ExtendedButton.swift in Sources */,
+				DF14FDA920C18B7B00C5784B /* UIScreen.swift in Sources */,
+				DF14FDA420C18B7B00C5784B /* UIDevice.swift in Sources */,
+				DF14FD9E20C18B7700C5784B /* Int.swift in Sources */,
+				DF14FD9D20C18B7700C5784B /* Double.swift in Sources */,
+				DF14FDA820C18B7B00C5784B /* UILabel.swift in Sources */,
+				DF14FD9A20C18B6E00C5784B /* CGRect.swift in Sources */,
+				DF14FDAA20C18B7B00C5784B /* UIView.swift in Sources */,
+				DF14FDA220C18B7B00C5784B /* UIButton.swift in Sources */,
+				DF14FDA620C18B7B00C5784B /* UIImage.swift in Sources */,
+				DF14FDAB20C18B7B00C5784B /* UIViewControllerContainer+StatusBar.swift in Sources */,
+				DF14FDA320C18B7B00C5784B /* UIColor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		7A44D0651C187E030063575B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7A44D0571C187E030063575B /* Taylor */;
+			target = 7A44D0571C187E030063575B /* Taylor-iOS */;
 			targetProxy = 7A44D0641C187E030063575B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -386,12 +493,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -443,12 +552,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -495,7 +606,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mirego.Taylor;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Taylor;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -516,7 +627,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mirego.Taylor;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Taylor;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
@@ -549,6 +660,70 @@
 			};
 			name = Release;
 		};
+		DF14FD9520C18B2B00C5784B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Taylor/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mirego.Taylor-tvOS";
+				PRODUCT_NAME = Taylor;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Debug;
+		};
+		DF14FD9620C18B2B00C5784B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Taylor/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mirego.Taylor-tvOS";
+				PRODUCT_NAME = Taylor;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -561,7 +736,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7A44D06C1C187E030063575B /* Build configuration list for PBXNativeTarget "Taylor" */ = {
+		7A44D06C1C187E030063575B /* Build configuration list for PBXNativeTarget "Taylor-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7A44D06D1C187E030063575B /* Debug */,
@@ -570,11 +745,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7A44D06F1C187E030063575B /* Build configuration list for PBXNativeTarget "TaylorTests" */ = {
+		7A44D06F1C187E030063575B /* Build configuration list for PBXNativeTarget "TaylorTests-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7A44D0701C187E030063575B /* Debug */,
 				7A44D0711C187E030063575B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF14FD9420C18B2B00C5784B /* Build configuration list for PBXNativeTarget "Taylor-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF14FD9520C18B2B00C5784B /* Debug */,
+				DF14FD9620C18B2B00C5784B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

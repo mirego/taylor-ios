@@ -31,6 +31,7 @@ import UIKit
 // status bar appearance calls to their child. UIKit does not perform that
 // forwarding automatically.
 
+#if os(iOS)
 public extension UINavigationController {
     open override var childViewControllerForStatusBarStyle: UIViewController? {
         return self.topViewController
@@ -48,3 +49,4 @@ public extension UISplitViewController {
         return self.viewControllers.first
     }
 }
+#endif
