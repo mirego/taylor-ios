@@ -10,7 +10,7 @@
 		7A3FC2B11CAC2ACC007A4063 /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3FC2B01CAC2ACC007A4063 /* UIEdgeInsets.swift */; };
 		7A3FC2B31CAC2B0B007A4063 /* UIEdgeInsetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3FC2B21CAC2B0B007A4063 /* UIEdgeInsetsTests.swift */; };
 		7A44D05C1C187E030063575B /* Taylor.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A44D05B1C187E030063575B /* Taylor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7A44D0631C187E030063575B /* Taylor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A44D0581C187E030063575B /* Taylor.framework */; };
+		7A44D0631C187E030063575B /* Taylor-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A44D0581C187E030063575B /* Taylor-iOS.framework */; };
 		7ACD09751CBFC641000FAAA0 /* ExtendedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACD09741CBFC641000FAAA0 /* ExtendedButton.swift */; };
 		7ACD098F1CC04264000FAAA0 /* ExtendedButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACD098E1CC04264000FAAA0 /* ExtendedButtonTests.swift */; };
 		C82DD1D81FE414B0002C3942 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82DD1D71FE414B0002C3942 /* CGPoint.swift */; };
@@ -77,10 +77,10 @@
 /* Begin PBXFileReference section */
 		7A3FC2B01CAC2ACC007A4063 /* UIEdgeInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIEdgeInsets.swift; sourceTree = "<group>"; };
 		7A3FC2B21CAC2B0B007A4063 /* UIEdgeInsetsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIEdgeInsetsTests.swift; sourceTree = "<group>"; };
-		7A44D0581C187E030063575B /* Taylor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Taylor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A44D0581C187E030063575B /* Taylor-iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Taylor-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A44D05B1C187E030063575B /* Taylor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Taylor.h; sourceTree = "<group>"; };
 		7A44D05D1C187E030063575B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7A44D0621C187E030063575B /* TaylorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaylorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A44D0621C187E030063575B /* TaylorTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TaylorTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A44D0691C187E030063575B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7ACD09741CBFC641000FAAA0 /* ExtendedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendedButton.swift; sourceTree = "<group>"; };
 		7ACD098E1CC04264000FAAA0 /* ExtendedButtonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendedButtonTests.swift; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A44D0631C187E030063575B /* Taylor.framework in Frameworks */,
+				7A44D0631C187E030063575B /* Taylor-iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,8 +155,8 @@
 		7A44D0591C187E030063575B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7A44D0581C187E030063575B /* Taylor.framework */,
-				7A44D0621C187E030063575B /* TaylorTests.xctest */,
+				7A44D0581C187E030063575B /* Taylor-iOS.framework */,
+				7A44D0621C187E030063575B /* TaylorTests-iOS.xctest */,
 				DF14FD8F20C18B2B00C5784B /* Taylor_tvOS.framework */,
 			);
 			name = Products;
@@ -277,9 +277,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7A44D0571C187E030063575B /* Taylor */ = {
+		7A44D0571C187E030063575B /* Taylor-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7A44D06C1C187E030063575B /* Build configuration list for PBXNativeTarget "Taylor" */;
+			buildConfigurationList = 7A44D06C1C187E030063575B /* Build configuration list for PBXNativeTarget "Taylor-iOS" */;
 			buildPhases = (
 				7A44D0531C187E030063575B /* Sources */,
 				7A44D0541C187E030063575B /* Frameworks */,
@@ -290,14 +290,14 @@
 			);
 			dependencies = (
 			);
-			name = Taylor;
+			name = "Taylor-iOS";
 			productName = Taylor;
-			productReference = 7A44D0581C187E030063575B /* Taylor.framework */;
+			productReference = 7A44D0581C187E030063575B /* Taylor-iOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7A44D0611C187E030063575B /* TaylorTests */ = {
+		7A44D0611C187E030063575B /* TaylorTests-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7A44D06F1C187E030063575B /* Build configuration list for PBXNativeTarget "TaylorTests" */;
+			buildConfigurationList = 7A44D06F1C187E030063575B /* Build configuration list for PBXNativeTarget "TaylorTests-iOS" */;
 			buildPhases = (
 				7A44D05E1C187E030063575B /* Sources */,
 				7A44D05F1C187E030063575B /* Frameworks */,
@@ -308,9 +308,9 @@
 			dependencies = (
 				7A44D0651C187E030063575B /* PBXTargetDependency */,
 			);
-			name = TaylorTests;
+			name = "TaylorTests-iOS";
 			productName = TaylorTests;
-			productReference = 7A44D0621C187E030063575B /* TaylorTests.xctest */;
+			productReference = 7A44D0621C187E030063575B /* TaylorTests-iOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		DF14FD8E20C18B2B00C5784B /* Taylor-tvOS */ = {
@@ -367,9 +367,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7A44D0571C187E030063575B /* Taylor */,
+				7A44D0571C187E030063575B /* Taylor-iOS */,
 				DF14FD8E20C18B2B00C5784B /* Taylor-tvOS */,
-				7A44D0611C187E030063575B /* TaylorTests */,
+				7A44D0611C187E030063575B /* TaylorTests-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -477,7 +477,7 @@
 /* Begin PBXTargetDependency section */
 		7A44D0651C187E030063575B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7A44D0571C187E030063575B /* Taylor */;
+			target = 7A44D0571C187E030063575B /* Taylor-iOS */;
 			targetProxy = 7A44D0641C187E030063575B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -734,7 +734,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7A44D06C1C187E030063575B /* Build configuration list for PBXNativeTarget "Taylor" */ = {
+		7A44D06C1C187E030063575B /* Build configuration list for PBXNativeTarget "Taylor-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7A44D06D1C187E030063575B /* Debug */,
@@ -743,7 +743,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7A44D06F1C187E030063575B /* Build configuration list for PBXNativeTarget "TaylorTests" */ = {
+		7A44D06F1C187E030063575B /* Build configuration list for PBXNativeTarget "TaylorTests-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7A44D0701C187E030063575B /* Debug */,
