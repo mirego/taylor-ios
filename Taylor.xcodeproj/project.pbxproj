@@ -10,7 +10,7 @@
 		7A3FC2B11CAC2ACC007A4063 /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3FC2B01CAC2ACC007A4063 /* UIEdgeInsets.swift */; };
 		7A3FC2B31CAC2B0B007A4063 /* UIEdgeInsetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3FC2B21CAC2B0B007A4063 /* UIEdgeInsetsTests.swift */; };
 		7A44D05C1C187E030063575B /* Taylor.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A44D05B1C187E030063575B /* Taylor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7A44D0631C187E030063575B /* Taylor-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A44D0581C187E030063575B /* Taylor-iOS.framework */; };
+		7A44D0631C187E030063575B /* Taylor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A44D0581C187E030063575B /* Taylor.framework */; };
 		7ACD09751CBFC641000FAAA0 /* ExtendedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACD09741CBFC641000FAAA0 /* ExtendedButton.swift */; };
 		7ACD098F1CC04264000FAAA0 /* ExtendedButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACD098E1CC04264000FAAA0 /* ExtendedButtonTests.swift */; };
 		C82DD1D81FE414B0002C3942 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82DD1D71FE414B0002C3942 /* CGPoint.swift */; };
@@ -77,7 +77,7 @@
 /* Begin PBXFileReference section */
 		7A3FC2B01CAC2ACC007A4063 /* UIEdgeInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIEdgeInsets.swift; sourceTree = "<group>"; };
 		7A3FC2B21CAC2B0B007A4063 /* UIEdgeInsetsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIEdgeInsetsTests.swift; sourceTree = "<group>"; };
-		7A44D0581C187E030063575B /* Taylor-iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Taylor-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A44D0581C187E030063575B /* Taylor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Taylor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A44D05B1C187E030063575B /* Taylor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Taylor.h; sourceTree = "<group>"; };
 		7A44D05D1C187E030063575B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A44D0621C187E030063575B /* TaylorTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TaylorTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,8 +90,7 @@
 		C83EC37D1FFE8BAB009290C4 /* UIView+Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Coordinates.swift"; sourceTree = "<group>"; };
 		C8E5946A1FF515D4000C184D /* UIView+SafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SafeArea.swift"; sourceTree = "<group>"; };
 		C8E5946C1FF5183E000C184D /* UIViewSafeAreaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSafeAreaTests.swift; sourceTree = "<group>"; };
-		DF14FD8920C18B0A00C5784B /* Taylor copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Taylor copy-Info.plist"; path = "/Users/lucdion/dev/taylor-ios/Taylor copy-Info.plist"; sourceTree = "<absolute>"; };
-		DF14FD8F20C18B2B00C5784B /* Taylor_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Taylor_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF14FD8F20C18B2B00C5784B /* Taylor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Taylor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF42A5A71D3EB07A00C2FE9B /* NSDateTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateTest.swift; sourceTree = "<group>"; };
 		DF45FE9C1CCFD1F90033F071 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		DF9AE4C61DD0C1EE0061B155 /* CGFloatText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGFloatText.swift; path = Types/CGFloatText.swift; sourceTree = "<group>"; };
@@ -126,7 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A44D0631C187E030063575B /* Taylor-iOS.framework in Frameworks */,
+				7A44D0631C187E030063575B /* Taylor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,16 +147,15 @@
 				7A44D0591C187E030063575B /* Products */,
 				7A44D05A1C187E030063575B /* Taylor */,
 				7A44D0661C187E030063575B /* TaylorTests */,
-				DF14FD8920C18B0A00C5784B /* Taylor copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
 		7A44D0591C187E030063575B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7A44D0581C187E030063575B /* Taylor-iOS.framework */,
+				7A44D0581C187E030063575B /* Taylor.framework */,
 				7A44D0621C187E030063575B /* TaylorTests-iOS.xctest */,
-				DF14FD8F20C18B2B00C5784B /* Taylor_tvOS.framework */,
+				DF14FD8F20C18B2B00C5784B /* Taylor.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -292,7 +290,7 @@
 			);
 			name = "Taylor-iOS";
 			productName = Taylor;
-			productReference = 7A44D0581C187E030063575B /* Taylor-iOS.framework */;
+			productReference = 7A44D0581C187E030063575B /* Taylor.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		7A44D0611C187E030063575B /* TaylorTests-iOS */ = {
@@ -328,7 +326,7 @@
 			);
 			name = "Taylor-tvOS";
 			productName = "Taylor-tvOS";
-			productReference = DF14FD8F20C18B2B00C5784B /* Taylor_tvOS.framework */;
+			productReference = DF14FD8F20C18B2B00C5784B /* Taylor.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -338,7 +336,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Mirego;
 				TargetAttributes = {
 					7A44D0571C187E030063575B = {
@@ -495,12 +493,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -552,12 +552,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -604,7 +606,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mirego.Taylor;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Taylor;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -625,7 +627,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mirego.Taylor;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Taylor;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
@@ -680,7 +682,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mirego.Taylor-tvOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = Taylor;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -712,7 +714,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mirego.Taylor-tvOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = Taylor;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

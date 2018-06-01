@@ -4,9 +4,9 @@ iOS Framework with a bunch of classes and helpers for Swift.
 
 ## Requirements
 
-- iOS 8.0+
-- Xcode 7.3
-- Swift 2.3 (use the `v1.1` tag if you need Swift < 2.3 support)
+- iOS 8.0+, tvOS 9.0+
+- Xcode 9.4
+- Swift 4 (use the `v1.1` tag if you need Swift < 2.3 support)
 
 ## Installation
 
@@ -20,8 +20,6 @@ github "mirego/taylor-ios"
 You can use [CocoaPods](http://cocoapods.org/) to install `Taylor` by adding it to your `Podfile`:
 
 ```ruby
-platform :ios, '8.0'
-use_frameworks!
 pod 'MRGTaylor'
 ```
 
