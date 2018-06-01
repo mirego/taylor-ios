@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7A44D0571C187E030063575B"
-               BuildableName = "Taylor-iOS.framework"
+               BuildableName = "Taylor.framework"
                BlueprintName = "Taylor-iOS"
                ReferencedContainer = "container:Taylor.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7A44D0571C187E030063575B"
-            BuildableName = "Taylor-iOS.framework"
+            BuildableName = "Taylor.framework"
             BlueprintName = "Taylor-iOS"
             ReferencedContainer = "container:Taylor.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7A44D0571C187E030063575B"
-            BuildableName = "Taylor-iOS.framework"
+            BuildableName = "Taylor.framework"
             BlueprintName = "Taylor-iOS"
             ReferencedContainer = "container:Taylor.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7A44D0571C187E030063575B"
-            BuildableName = "Taylor-iOS.framework"
+            BuildableName = "Taylor.framework"
             BlueprintName = "Taylor-iOS"
             ReferencedContainer = "container:Taylor.xcodeproj">
          </BuildableReference>

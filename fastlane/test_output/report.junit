@@ -1,25 +1,29 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testsuites name='TaylorTests.xctest' tests='10' failures='0'>
-  <testsuite name='TaylorTests.CGFloatTest' tests='1' failures='0'>
-    <testcase classname='TaylorTests.CGFloatTest' name='testMax' time='0.005'/>
+<testsuites name='TaylorTests-iOS.xctest' tests='12' failures='0'>
+  <testsuite name='TaylorTests_iOS.CGFloatTest' tests='1' failures='0'>
+    <testcase classname='TaylorTests_iOS.CGFloatTest' name='testMax' time='0.008'/>
   </testsuite>
-  <testsuite name='TaylorTests.ExtendedButtonTests' tests='1' failures='0'>
-    <testcase classname='TaylorTests.ExtendedButtonTests' name='testHitAreaIsExtended' time='0.132'/>
+  <testsuite name='TaylorTests_iOS.ExtendedButtonTests' tests='1' failures='0'>
+    <testcase classname='TaylorTests_iOS.ExtendedButtonTests' name='testHitAreaIsExtended' time='0.173'/>
   </testsuite>
-  <testsuite name='TaylorTests.NSDateTests' tests='1' failures='0'>
-    <testcase classname='TaylorTests.NSDateTests' name='testEarlierAndLater' time='0.012'/>
+  <testsuite name='TaylorTests_iOS.NSDateTests' tests='1' failures='0'>
+    <testcase classname='TaylorTests_iOS.NSDateTests' name='testEarlierAndLater' time='0.015'/>
   </testsuite>
-  <testsuite name='TaylorTests.StringTests' tests='4' failures='0'>
-    <testcase classname='TaylorTests.StringTests' name='testCapitalizeFirstLetter' time='0.012'/>
-    <testcase classname='TaylorTests.StringTests' name='testIsEmailAddress' time='0.008'/>
-    <testcase classname='TaylorTests.StringTests' name='testRegExp' time='0.001'/>
-    <testcase classname='TaylorTests.StringTests' name='testTrim' time='0.003'/>
+  <testsuite name='TaylorTests_iOS.StringTests' tests='4' failures='0'>
+    <testcase classname='TaylorTests_iOS.StringTests' name='testCapitalizeFirstLetter' time='0.014'/>
+    <testcase classname='TaylorTests_iOS.StringTests' name='testIsEmailAddress' time='0.007'/>
+    <testcase classname='TaylorTests_iOS.StringTests' name='testRegExp' time='0.002'/>
+    <testcase classname='TaylorTests_iOS.StringTests' name='testTrim' time='0.003'/>
   </testsuite>
-  <testsuite name='TaylorTests.UIButtonTest' tests='2' failures='0'>
-    <testcase classname='TaylorTests.UIButtonTest' name='testSetImages' time='0.042'/>
-    <testcase classname='TaylorTests.UIButtonTest' name='testSetProperties' time='0.038'/>
+  <testsuite name='TaylorTests_iOS.UIButtonTest' tests='2' failures='0'>
+    <testcase classname='TaylorTests_iOS.UIButtonTest' name='testSetImages' time='0.021'/>
+    <testcase classname='TaylorTests_iOS.UIButtonTest' name='testSetProperties' time='0.015'/>
   </testsuite>
-  <testsuite name='TaylorTests.UIEdgeInsetsTests' tests='1' failures='0'>
-    <testcase classname='TaylorTests.UIEdgeInsetsTests' name='testShortcutsReturnsAValidInset' time='0.001'/>
+  <testsuite name='TaylorTests_iOS.UIEdgeInsetsTests' tests='1' failures='0'>
+    <testcase classname='TaylorTests_iOS.UIEdgeInsetsTests' name='testShortcutsReturnsAValidInset' time='0.003'/>
+  </testsuite>
+  <testsuite name='TaylorTests_iOS.UIViewSafeAreaTests' tests='2' failures='0'>
+    <testcase classname='TaylorTests_iOS.UIViewSafeAreaTests' name='testOpaqueNavigationBar' time='1.034'/>
+    <testcase classname='TaylorTests_iOS.UIViewSafeAreaTests' name='testTranslucentNavigationBar' time='1.009'/>
   </testsuite>
 </testsuites>

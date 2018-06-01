@@ -5,42 +5,47 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: Verifying required fastlane version" time="0.021693">
+      <testcase classname="fastlane.lanes" name="0: Verifying fastlane version" time="0.026547">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: default_platform" time="0.005035">
+      <testcase classname="fastlane.lanes" name="1: default_platform" time="0.002596">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: Switch to ios build lane" time="0.002908">
+      <testcase classname="fastlane.lanes" name="2: Switch to ios build lane" time="0.002719">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="3: Switch to ios install lane" time="0.002512">
+      <testcase classname="fastlane.lanes" name="3: Switch to ios install lane" time="0.002624">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="4: bundle_install" time="0.449925">
+      <testcase classname="fastlane.lanes" name="4: bundle_install" time="0.374104">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="5: xcodebuild" time="4.315708">
+      <testcase classname="fastlane.lanes" name="5: xcodebuild" time="5.282373">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="6: Switch to ios tests lane" time="0.003198">
+      <testcase classname="fastlane.lanes" name="6: xcodebuild" time="4.289287">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="7: scan" time="20.219167">
+      <testcase classname="fastlane.lanes" name="7: Switch to ios tests lane" time="0.003882">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="8: scan" time="27.844534">
         
       </testcase>
     
