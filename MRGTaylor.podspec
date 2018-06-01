@@ -6,17 +6,20 @@
 #  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
 #
 
-Pod::Spec.new do |s|
-  s.name         = "MRGTaylor"
-  s.version      = "1.4.2"
-  s.summary      = "A short description of Taylor."
-  s.homepage     = "https://github.com/mirego/taylor-ios"
-  s.license      = "MIT"
+Pod::Spec.new do |spec|
+  spec.name         = "MRGTaylor"
+  spec.version      = "1.4.2"
+  spec.summary      = "A short description of Taylor."
+  spec.homepage     = "https://github.com/mirego/taylor-ios"
+  spec.license      = "MIT"
+  spec.author       = { 
+    "Mirego" => "it@irego.com"
+  }
 
   spec.ios.deployment_target  = '8.0'  
   spec.tvos.deployment_target = '9.0'
 
-  s.source       = { :git => "https://github.com/mirego/taylor-ios.git", :tag => "#{s.version}" }
-  s.source_files  = "Taylor/**/*.swift"
-  # s.public_header_files = "Taylor/*.h"
+  spec.source       = { :git => "https://github.com/mirego/taylor-ios.git", :tag => "#{spec.version}" }
+  spec.source_files  = "Taylor/**/*.swift"
+  # spec.public_header_files = "Taylor/*.h"
 end
