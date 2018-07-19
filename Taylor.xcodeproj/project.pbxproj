@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		092FC8B821012CE000E073CE /* InsetsLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092FC8B721012CE000E073CE /* InsetsLabel.swift */; };
+		092FC8B921012CE000E073CE /* InsetsLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092FC8B721012CE000E073CE /* InsetsLabel.swift */; };
 		7A3FC2B11CAC2ACC007A4063 /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3FC2B01CAC2ACC007A4063 /* UIEdgeInsets.swift */; };
 		7A3FC2B31CAC2B0B007A4063 /* UIEdgeInsetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3FC2B21CAC2B0B007A4063 /* UIEdgeInsetsTests.swift */; };
 		7A44D05C1C187E030063575B /* Taylor.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A44D05B1C187E030063575B /* Taylor.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -75,6 +77,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		092FC8B721012CE000E073CE /* InsetsLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetsLabel.swift; sourceTree = "<group>"; };
 		7A3FC2B01CAC2ACC007A4063 /* UIEdgeInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIEdgeInsets.swift; sourceTree = "<group>"; };
 		7A3FC2B21CAC2B0B007A4063 /* UIEdgeInsetsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIEdgeInsetsTests.swift; sourceTree = "<group>"; };
 		7A44D0581C187E030063575B /* Taylor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Taylor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +142,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		092FC8B521012C8500E073CE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7ACD09741CBFC641000FAAA0 /* ExtendedButton.swift */,
+				092FC8B721012CE000E073CE /* InsetsLabel.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		092FC8B621012C8F00E073CE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C83EC37D1FFE8BAB009290C4 /* UIView+Coordinates.swift */,
+				C82DD1D91FE41FB1002C3942 /* UIViewControllerContainer+StatusBar.swift */,
+				C82DD1DB1FE42012002C3942 /* UIControl+Actions.swift */,
+				C8E5946A1FF515D4000C184D /* UIView+SafeArea.swift */,
+				DFBC07AA1CAC399700A7A665 /* UILabel.swift */,
+				DFBC07AB1CAC399700A7A665 /* UIScreen.swift */,
+				DFBFDA421CAF0B0900623836 /* UIView.swift */,
+				7A3FC2B01CAC2ACC007A4063 /* UIEdgeInsets.swift */,
+				DF9F948A1CE35EF40008487F /* UIImage.swift */,
+				DFBC07A91CAC399700A7A665 /* UIImageView.swift */,
+				DFBC07A61CAC399700A7A665 /* UIButton.swift */,
+				DFBC07A71CAC399700A7A665 /* UIColor.swift */,
+				DFBC07A81CAC399700A7A665 /* UIDevice.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		7A44D04E1C187E030063575B = {
 			isa = PBXGroup;
 			children = (
@@ -201,20 +233,8 @@
 		7AAFBCD51CCA5B6E0030EF13 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				7ACD09741CBFC641000FAAA0 /* ExtendedButton.swift */,
-				DFBC07A61CAC399700A7A665 /* UIButton.swift */,
-				DFBC07A71CAC399700A7A665 /* UIColor.swift */,
-				DFBC07A81CAC399700A7A665 /* UIDevice.swift */,
-				7A3FC2B01CAC2ACC007A4063 /* UIEdgeInsets.swift */,
-				DF9F948A1CE35EF40008487F /* UIImage.swift */,
-				DFBC07A91CAC399700A7A665 /* UIImageView.swift */,
-				DFBC07AA1CAC399700A7A665 /* UILabel.swift */,
-				DFBC07AB1CAC399700A7A665 /* UIScreen.swift */,
-				DFBFDA421CAF0B0900623836 /* UIView.swift */,
-				C82DD1D91FE41FB1002C3942 /* UIViewControllerContainer+StatusBar.swift */,
-				C82DD1DB1FE42012002C3942 /* UIControl+Actions.swift */,
-				C8E5946A1FF515D4000C184D /* UIView+SafeArea.swift */,
-				C83EC37D1FFE8BAB009290C4 /* UIView+Coordinates.swift */,
+				092FC8B621012C8F00E073CE /* Extensions */,
+				092FC8B521012C8500E073CE /* Components */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -410,6 +430,7 @@
 				C82DD1D81FE414B0002C3942 /* CGPoint.swift in Sources */,
 				DFBC07B21CAC399700A7A665 /* NSDate.swift in Sources */,
 				DFBC07AD1CAC399700A7A665 /* CGRect.swift in Sources */,
+				092FC8B821012CE000E073CE /* InsetsLabel.swift in Sources */,
 				DFBC07B01CAC399700A7A665 /* Double.swift in Sources */,
 				DFBC07B81CAC399700A7A665 /* UILabel.swift in Sources */,
 				DFBC07B41CAC399700A7A665 /* UIButton.swift in Sources */,
@@ -453,6 +474,7 @@
 				DF14FDA720C18B7B00C5784B /* UIImageView.swift in Sources */,
 				DF14FDA520C18B7B00C5784B /* UIEdgeInsets.swift in Sources */,
 				DF14FDA020C18B7700C5784B /* CGFloat.swift in Sources */,
+				092FC8B921012CE000E073CE /* InsetsLabel.swift in Sources */,
 				DF14FD9C20C18B6E00C5784B /* CGPoint.swift in Sources */,
 				DF14FDAE20C18B7B00C5784B /* UIView+Coordinates.swift in Sources */,
 				DF14FDA120C18B7B00C5784B /* ExtendedButton.swift in Sources */,
