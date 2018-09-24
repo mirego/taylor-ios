@@ -51,7 +51,7 @@ public extension UILabel
                     paragraphStyle.alignment = textAlignment
                 }
                 paragraphStyle.lineBreakMode = .byTruncatingTail
-                attributedText = NSAttributedString(string: text, attributes: [NSAttributedStringKey.paragraphStyle: paragraphStyle])
+                attributedText = NSAttributedString(string: text, attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle])
             } else {
                 self.text = text
             }
