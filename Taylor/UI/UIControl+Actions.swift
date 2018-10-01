@@ -45,13 +45,13 @@ public protocol UIControlActionFunctionProtocol {}
 extension UIControl: UIControlActionFunctionProtocol {}
 
 public extension UIControlActionFunctionProtocol where Self: UIControl {
-    public func addAction(events: UIControlEvents, _ action: @escaping (Self)  -> Void) {
+    public func addAction(events: UIControl.Event, _ action: @escaping (Self)  -> Void) {
         let trampoline = ActionTrampoline(action: action)
         addTarget(trampoline, action: #selector(trampoline.performAction(sender:)), for: events)
         objc_setAssociatedObject(self, actionKey(forEvents: events), trampoline, .OBJC_ASSOCIATION_RETAIN)
     }
 
-    private func actionKey(forEvents events: UIControlEvents) -> UnsafeMutablePointer<Int8> {
+    private func actionKey(forEvents events: UIControl.Event) -> UnsafeMutablePointer<Int8> {
         if let key = UIControlActionAssociatedObjectKeys[events.rawValue] {
             return key
         } else {
