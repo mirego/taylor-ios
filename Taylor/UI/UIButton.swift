@@ -44,7 +44,7 @@ extension UIButton
                             textAlignment: NSTextAlignment? = nil, backgroundColor: UIColor? = nil, fit: Bool = false)
     {
         if let text = text {
-            setTitle(text, for: UIControlState())
+            setTitle(text, for: UIControl.State())
         }
 
         if let font = font {
@@ -52,7 +52,7 @@ extension UIButton
         }
 
         if let normalTextColor = normalTextColor {
-            setTitleColor(normalTextColor, for: UIControlState())
+            setTitleColor(normalTextColor, for: UIControl.State())
         }
 
         if let highlightedTextColor = highlightedTextColor {
@@ -92,9 +92,9 @@ extension UIButton
                           fit: Bool = false)
     {
         if let normalColor = normalColor {
-            setImage(image.imageWithTintColor(normalColor), for: UIControlState())
+            setImage(image.imageWithTintColor(normalColor), for: UIControl.State())
         } else {
-            setImage(image, for: UIControlState())
+            setImage(image, for: UIControl.State())
         }
 
         if let highlightedColor = highlightedColor {
@@ -117,7 +117,7 @@ extension UIButton
     /// Set the UIButton image and call sizeToFit() to adjust the button size.
     /// parameter image: New button's image
     /// parameter state: The state for which this image must be set.
-    public func setImageAndFit(_ image: UIImage?, forState state: UIControlState)
+    public func setImageAndFit(_ image: UIImage?, forState state: UIControl.State)
     {
         setImage(image, for: state)
         sizeToFit()
@@ -129,7 +129,7 @@ extension UIButton
      - parameter color: The background color to use for the specified state
      - parameter state: The state that uses the specified image. The values are described in UIControlState
      */
-    public func setBackgroundColor(_ color: UIColor?, for state: UIControlState) {
+    public func setBackgroundColor(_ color: UIColor?, for state: UIControl.State) {
         setBackgroundImage(UIImage.image(from: color), for: state)
     }
 }
