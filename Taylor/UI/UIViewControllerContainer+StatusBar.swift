@@ -33,19 +33,19 @@ import UIKit
 
 #if os(iOS)
 public extension UINavigationController {
-    open override var childViewControllerForStatusBarStyle: UIViewController? {
+    open override var childForStatusBarStyle: UIViewController? {
         return self.topViewController
     }
 }
 
 public extension UITabBarController {
-    open override var childViewControllerForStatusBarStyle: UIViewController? {
+    open override var childForStatusBarStyle: UIViewController? {
         return self.selectedViewController
     }
 }
 
 public extension UISplitViewController {
-    open override var childViewControllerForStatusBarStyle: UIViewController? {
+    open override var childForStatusBarStyle: UIViewController? {
         return self.viewControllers.first
     }
 }
