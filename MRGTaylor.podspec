@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "MRGTaylor"
-  spec.version      = "1.4.3"
+  spec.version      = "1.5.0"
   spec.summary      = "A short description of Taylor."
   spec.homepage     = "https://github.com/mirego/taylor-ios"
   spec.license      = "MIT"
