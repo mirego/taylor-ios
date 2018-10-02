@@ -18,6 +18,7 @@ Pod::Spec.new do |spec|
 
   spec.ios.deployment_target  = '8.0'  
   spec.tvos.deployment_target = '9.0'
+  spec.swift_version = '4.2'
 
   spec.source       = { :git => "https://github.com/mirego/taylor-ios.git", :tag => "#{spec.version}" }
   spec.source_files  = "Taylor/**/*.swift"
