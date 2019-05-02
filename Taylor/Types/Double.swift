@@ -39,7 +39,7 @@ public extension Double
     ///
     /// let padding = 10.f
     /// ```
-    public var f: CGFloat {
+    var f: CGFloat {
         return CGFloat(self)
     }
 }
