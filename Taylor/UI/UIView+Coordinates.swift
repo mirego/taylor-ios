@@ -48,7 +48,7 @@ import UIKit
  */
 // swiftlint:disable variable_name
 public extension UIView {
-    public var width: CGFloat {
+    var width: CGFloat {
         set {
             bounds.size.width = newValue
         }
@@ -57,7 +57,7 @@ public extension UIView {
         }
     }
 
-    public var height: CGFloat {
+    var height: CGFloat {
         set {
             bounds.size.height = newValue
         }
@@ -66,7 +66,7 @@ public extension UIView {
         }
     }
 
-    public var size: CGSize {
+    var size: CGSize {
         set {
             bounds.size = newValue
         }
@@ -75,7 +75,7 @@ public extension UIView {
         }
     }
 
-    public var origin: CGPoint {
+    var origin: CGPoint {
         set {
             frame.origin = newValue
         }
@@ -84,7 +84,7 @@ public extension UIView {
         }
     }
 
-    public var x: CGFloat {
+    var x: CGFloat {
         set {
             frame.origin.x = newValue
         }
@@ -93,7 +93,7 @@ public extension UIView {
         }
     }
 
-    public var y: CGFloat {
+    var y: CGFloat {
         set {
             frame.origin.y = newValue
         }
@@ -102,27 +102,27 @@ public extension UIView {
         }
     }
 
-    public var maxX: CGFloat {
+    var maxX: CGFloat {
         return frame.maxX
     }
 
-    public var maxY: CGFloat {
+    var maxY: CGFloat {
         return frame.maxY
     }
 
-    public var minX: CGFloat {
+    var minX: CGFloat {
         return frame.minX
     }
 
-    public var minY: CGFloat {
+    var minY: CGFloat {
         return frame.minY
     }
 
-    public var midX: CGFloat {
+    var midX: CGFloat {
         return frame.midX
     }
 
-    public var midY: CGFloat {
+    var midY: CGFloat {
         return frame.midY
     }
 }

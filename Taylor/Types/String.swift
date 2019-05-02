@@ -33,7 +33,7 @@ public extension String
     /// parameter regExp:        Regular expression
     /// parameter caseSensitive: Specify if the comparison must be case sensitive (Default is true).
     /// returns: true if the string matches the specified regular expression
-    public func matches(_ regExp: String, caseSensitive: Bool = true) -> Bool
+    func matches(_ regExp: String, caseSensitive: Bool = true) -> Bool
     {
         do {
             let regex = try NSRegularExpression(pattern:regExp, options: caseSensitive ? [] : .caseInsensitive)
@@ -45,7 +45,7 @@ public extension String
 
     /// Checks if the string contains a valid email address.
     /// returns: true if valid
-    public func isEmailAddress() -> Bool
+    func isEmailAddress() -> Bool
     {
         return matches("[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,63}$")
     }

@@ -29,22 +29,22 @@ import Foundation
 
 public extension UIEdgeInsets
 {
-    static public func top(_ margin: CGFloat) -> UIEdgeInsets
+    static func top(_ margin: CGFloat) -> UIEdgeInsets
     {
         return UIEdgeInsets(top: margin, left: 0, bottom: 0, right: 0)
     }
 
-    static public func left(_ margin: CGFloat) -> UIEdgeInsets
+    static func left(_ margin: CGFloat) -> UIEdgeInsets
     {
         return UIEdgeInsets(top: 0, left: margin, bottom: 0, right: 0)
     }
 
-    static public func bottom(_ margin: CGFloat) -> UIEdgeInsets
+    static func bottom(_ margin: CGFloat) -> UIEdgeInsets
     {
         return UIEdgeInsets(top: 0, left: 0, bottom: margin, right: 0)
     }
 
-    static public func right(_ margin: CGFloat) -> UIEdgeInsets
+    static func right(_ margin: CGFloat) -> UIEdgeInsets
     {
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: margin)
     }
@@ -70,7 +70,7 @@ public extension UIEdgeInsets
 
      - returns: UIEdgeInsets
      */
-    static public func margins(top: CGFloat = 0, left: CGFloat = 0, bottom: CGFloat = 0, right: CGFloat = 0) -> UIEdgeInsets
+    static func margins(top: CGFloat = 0, left: CGFloat = 0, bottom: CGFloat = 0, right: CGFloat = 0) -> UIEdgeInsets
     {
         return UIEdgeInsets(top: top, left: left, bottom: bottom, right: right)
     }

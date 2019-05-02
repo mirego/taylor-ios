@@ -29,14 +29,14 @@ import UIKit
 
 public extension UIImageView
 {
-    public func setImageAndFit(_ image: UIImage?)
+    func setImageAndFit(_ image: UIImage?)
     {
         self.image = image
         sizeToFit()
     }
 
     // Returns the maximum size to perfectly fit the contained image using ScaleAspectFit content mode
-    public func sizeThatFitsAspectFit(_ size: CGSize) -> CGSize
+    func sizeThatFitsAspectFit(_ size: CGSize) -> CGSize
     {
         if let image = self.image {
             if image.size.height / size.height > image.size.width / size.width {

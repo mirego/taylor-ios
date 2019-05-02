@@ -29,7 +29,7 @@ import UIKit
 
 public extension UIView
 {
-    public func convertViewToImage(opaque: Bool = true) -> UIImage?
+    func convertViewToImage(opaque: Bool = true) -> UIImage?
     {
         UIGraphicsBeginImageContextWithOptions(bounds.size, opaque, 0.0)
 
@@ -48,7 +48,7 @@ public extension UIView
      - parameter delay:
      - parameter completion:
      */
-    public func fadeIn(_ duration: TimeInterval = 0.4, delay: TimeInterval = 0.0, completion: ((Bool) -> Void)? = nil)
+    func fadeIn(_ duration: TimeInterval = 0.4, delay: TimeInterval = 0.0, completion: ((Bool) -> Void)? = nil)
     {
         UIView.animate(withDuration: duration, delay: delay, options: UIView.AnimationOptions.curveEaseIn, animations: {
             self.alpha = 1.0
@@ -62,7 +62,7 @@ public extension UIView
      - parameter delay:
      - parameter completion:
      */
-    public func fadeOut(_ duration: TimeInterval = 0.4, delay: TimeInterval = 0.0, completion: ((Bool) -> Void)? = nil)
+    func fadeOut(_ duration: TimeInterval = 0.4, delay: TimeInterval = 0.0, completion: ((Bool) -> Void)? = nil)
     {
         UIView.animate(withDuration: duration, delay: delay, options: UIView.AnimationOptions.curveEaseIn, animations: {
             self.alpha = 0.0
@@ -77,7 +77,7 @@ public extension UIView
      - parameter opacity:
      - parameter color:
      */
-    public func setShadow(radius: CGFloat = 3, offset: CGSize = CGSize(width: 1, height: 1), opacity: CGFloat = 0.5, color: UIColor = .black)
+    func setShadow(radius: CGFloat = 3, offset: CGSize = CGSize(width: 1, height: 1), opacity: CGFloat = 0.5, color: UIColor = .black)
     {
         layer.shadowRadius = radius
         layer.shadowOffset = offset
@@ -95,7 +95,7 @@ public extension UIView
      - parameter corners: List of rounded corners
      - parameter radius:  Corners radius.
      */
-    public func setRoundCornersMask(corners: UIRectCorner = .allCorners, radius: CGFloat = 3)
+    func setRoundCornersMask(corners: UIRectCorner = .allCorners, radius: CGFloat = 3)
     {
         let mask = CAShapeLayer()
         mask.path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius)).cgPath
@@ -108,7 +108,7 @@ public extension UIView
      - parameter width: border's width. (Optional)
      - parameter color: border's color. (Optional)
      */
-    public func setBorder(width: CGFloat? = nil, color: UIColor? = nil)
+    func setBorder(width: CGFloat? = nil, color: UIColor? = nil)
     {
         if let width = width {
             layer.borderWidth = width

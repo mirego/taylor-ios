@@ -65,7 +65,7 @@ public extension UIView {
     }
 
     @available(iOS 7.0, *)
-    public private(set) var compatibilitySafeAreaInsets: UIEdgeInsets {
+    private(set) var compatibilitySafeAreaInsets: UIEdgeInsets {
         get {
             if #available(iOS 11.0, tvOS 11, *), !(self is IgnoreNewerSafeAreaInsets) {
                 return safeAreaInsets

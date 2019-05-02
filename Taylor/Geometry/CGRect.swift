@@ -32,7 +32,7 @@ import Foundation
 public extension CGRect
 {
     /// Expose the x origin of the `CGRect`
-    public var x: CGFloat {
+    var x: CGFloat {
         set {
             origin.x = newValue
         }
@@ -43,7 +43,7 @@ public extension CGRect
     }
 
     /// Expose the y origin of the `CGRect`
-    public var y: CGFloat {
+    var y: CGFloat {
         set {
             origin.y = newValue
         }

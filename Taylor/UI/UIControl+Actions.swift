@@ -45,7 +45,7 @@ public protocol UIControlActionFunctionProtocol {}
 extension UIControl: UIControlActionFunctionProtocol {}
 
 public extension UIControlActionFunctionProtocol where Self: UIControl {
-    public func addAction(events: UIControl.Event, _ action: @escaping (Self)  -> Void) {
+    func addAction(events: UIControl.Event, _ action: @escaping (Self)  -> Void) {
         let trampoline = ActionTrampoline(action: action)
         addTarget(trampoline, action: #selector(trampoline.exectuteControlAction(sender:)), for: events)
         objc_setAssociatedObject(self, actionKey(forEvents: events), trampoline, .OBJC_ASSOCIATION_RETAIN)

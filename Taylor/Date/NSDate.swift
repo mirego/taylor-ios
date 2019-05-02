@@ -36,7 +36,7 @@ public extension Date
 
      - returns: Returns true if the date mathches the specified date's day
      */
-    public func isSameDay(_ anotherDate: Date) -> Bool
+    func isSameDay(_ anotherDate: Date) -> Bool
     {
         return isEqual(to: anotherDate, unitGranularity: .day)
     }
@@ -49,7 +49,7 @@ public extension Date
 
      - returns: Returns true if the date is equal to the specified date using the specified NSCalendarUnit
      */
-    public func isEqual(to toDate: Date, unitGranularity: NSCalendar.Unit = .second) -> Bool
+    func isEqual(to toDate: Date, unitGranularity: NSCalendar.Unit = .second) -> Bool
     {
         return (Calendar.current as NSCalendar).compare(self, to: toDate, toUnitGranularity: unitGranularity) == ComparisonResult.orderedSame
     }
@@ -62,7 +62,7 @@ public extension Date
 
      - returns: Returns true if the date is earlier than the specified date using the specified NSCalendarUnit
      */
-    public func isEarlier(than thanDate: Date, unitGranularity: NSCalendar.Unit = .second) -> Bool
+    func isEarlier(than thanDate: Date, unitGranularity: NSCalendar.Unit = .second) -> Bool
     {
         return (Calendar.current as NSCalendar).compare(self, to: thanDate, toUnitGranularity: unitGranularity) == ComparisonResult.orderedAscending
     }
@@ -75,23 +75,23 @@ public extension Date
 
      - returns: Returns true if the date is later than the specified date using the specified NSCalendarUnit
      */
-    public func isLater(than thanDate: Date, unitGranularity: NSCalendar.Unit = .second) -> Bool
+    func isLater(than thanDate: Date, unitGranularity: NSCalendar.Unit = .second) -> Bool
     {
         return (Calendar.current as NSCalendar).compare(self, to: thanDate, toUnitGranularity: unitGranularity) == ComparisonResult.orderedDescending
     }
 
-    public func daysBetween(toDate: Date) -> Int
+    func daysBetween(toDate: Date) -> Int
     {
         let components = (Calendar.current as NSCalendar).components(.day, from: self, to: toDate, options: [])
         return components.day!
     }
 
-    public func addDaysToDate(_ daysToAdd: Int) -> Date
+    func addDaysToDate(_ daysToAdd: Int) -> Date
     {
         return (Calendar.current as NSCalendar).date(byAdding: .day, value: daysToAdd, to: self, options: [])!
     }
 
-    public func getWeekDay() -> Int
+    func getWeekDay() -> Int
     {
         let components = (Calendar.current as NSCalendar).components(.weekday, from: self)
         return components.weekday!

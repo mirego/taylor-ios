@@ -47,13 +47,13 @@ func +(lhs: UIColor, rhs: UIColor) -> UIColor {
 
 public extension UIColor
 {
-    public var hsbaComponents: HSBAComponents {
+    var hsbaComponents: HSBAComponents {
         var hsba: (h: CGFloat, s: CGFloat, b: CGFloat, a: CGFloat) = (0, 0, 0, 0)
         getHue(&(hsba.h), saturation: &(hsba.s), brightness: &(hsba.b), alpha: &(hsba.a))
         return HSBAComponents(hue: hsba.h, saturation: hsba.s, brightness: hsba.b, alpha: hsba.a)
     }
 
-    public var rgbaComponents: RGBAComponents {
+    var rgbaComponents: RGBAComponents {
         var rgba: (r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat) = (0, 0, 0, 0)
         getRed(&(rgba.r), green: &(rgba.g), blue: &(rgba.b), alpha: &(rgba.a))
         return RGBAComponents(red: rgba.r, green: rgba.g, blue: rgba.b, alpha: rgba.a)
@@ -64,7 +64,7 @@ public extension UIColor
     /// parameter absoluteGreen:        amount of green (between 0 and 255)
     /// parameter absoluteBlue:         amount of blue (between 0 and 255)
     /// parameter alpha:                optional alpha value (default is 1)
-    public convenience init?(absoluteRed: Int, absoluteGreen: Int, absoluteBlue: Int, alpha: CGFloat = 1) {
+    convenience init?(absoluteRed: Int, absoluteGreen: Int, absoluteBlue: Int, alpha: CGFloat = 1) {
         guard absoluteRed >= 0 && absoluteRed <= 255 else { return nil }
         guard absoluteGreen >= 0 && absoluteGreen <= 255 else { return nil }
         guard absoluteBlue >= 0 && absoluteBlue <= 255 else { return nil }
@@ -79,7 +79,7 @@ public extension UIColor
     /// Create color from hexadecimal value with optional transparency.
     /// parameter hex:          hex Int (example: 0xDECEB5).
     /// parameter alpha:        optional alpha value (default is 1)
-    public convenience init?(hex: Int, alpha: CGFloat = 1) {
+    convenience init?(hex: Int, alpha: CGFloat = 1) {
         var alpha = alpha
         if alpha < 0 { alpha = 0 }
         if alpha > 1 { alpha = 1 }
@@ -94,7 +94,7 @@ public extension UIColor
     /// Create Color from hexadecimal string with optional transparency (if applicable).
     /// parameter hexString:    hexadecimal string (examples: EDE7F6, 0xEDE7F6, #EDE7F6, #0ff, 0xF0F, ..).
     /// parameter alpha:        optional alpha value (default is 1)
-    public convenience init?(hexString: String, alpha: CGFloat = 1) {
+    convenience init?(hexString: String, alpha: CGFloat = 1) {
         var string = ""
         if hexString.lowercased().hasPrefix("0x") {
             string =  hexString.replacingOccurrences(of: "0x", with: "")
@@ -117,19 +117,19 @@ public extension UIColor
 
     /// Create a color from its HSBA components
     /// parameter hsba:    HSBA components
-    public convenience init(hsba: HSBAComponents) {
+    convenience init(hsba: HSBAComponents) {
         self.init(hue: hsba.hue, saturation: hsba.saturation, brightness: hsba.brightness, alpha: hsba.alpha)
     }
 
     /// Create a color from its RGBA components
     /// parameter rgba:    RGBA components
-    public convenience init(rgba: RGBAComponents) {
+    convenience init(rgba: RGBAComponents) {
         self.init(red: rgba.red, green: rgba.green, blue: rgba.blue, alpha: rgba.alpha)
     }
 
     /// Create a lighter color by a given percentage
     /// parameter percentage:   percentage value (between 0 and 1)
-    public func lighterColor(by percentage: CGFloat = 0.15) -> UIColor {
+    func lighterColor(by percentage: CGFloat = 0.15) -> UIColor {
         var components = hsbaComponents
         components.saturation = min(components.saturation + percentage, 1)
         return UIColor(hsba: components)
@@ -137,7 +137,7 @@ public extension UIColor
 
     /// Create a darker color by a given percentage
     /// parameter percentage:   percentage value (between 0 and 1)
-    public func darkerColor(by percentage: CGFloat = 0.15) -> UIColor {
+    func darkerColor(by percentage: CGFloat = 0.15) -> UIColor {
         var components = hsbaComponents
         components.brightness = max(components.brightness - percentage, 0)
         return UIColor(hsba: components)
@@ -145,7 +145,7 @@ public extension UIColor
 
     /// Create a new color by adding another color as an overlay on it
     /// parameter overlay:    overlay color (alpha should be less than 1 or the resulting color is the overlay)
-    public func add(overlay: UIColor) -> UIColor {
+    func add(overlay: UIColor) -> UIColor {
         let bg = rgbaComponents
         let fg = overlay.rgbaComponents
         let result = RGBAComponents(red: fg.alpha * fg.red + (1 - fg.alpha) * bg.red,
@@ -156,7 +156,7 @@ public extension UIColor
         return UIColor(rgba: result)
     }
 
-    static public func colorBetweenColors(startColor: UIColor, endColor: UIColor, percentage: CGFloat) -> UIColor {
+    static func colorBetweenColors(startColor: UIColor, endColor: UIColor, percentage: CGFloat) -> UIColor {
         if percentage <= 0 {
             return startColor
         } else if percentage >= 1 {

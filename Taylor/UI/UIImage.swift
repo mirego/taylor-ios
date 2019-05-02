@@ -30,7 +30,7 @@ import UIKit
 public extension UIImage
 {
     @available(*, deprecated, message: "Use image(from: color) instead")
-    public class func imageWithTintColor(_ color: UIColor) -> UIImage? {
+    class func imageWithTintColor(_ color: UIColor) -> UIImage? {
         return UIImage.image(from: color)
     }
 
@@ -40,7 +40,7 @@ public extension UIImage
      - parameter color: The image tint color
      - returns: New instance of UIImage
      */
-    public class func image(from color: UIColor?) -> UIImage? {
+    class func image(from color: UIColor?) -> UIImage? {
         if let color = color {
             let rect = CGRect(origin: CGPoint.zero, size: CGSize(width: 1, height: 1))
 
@@ -63,7 +63,7 @@ public extension UIImage
      - parameter color: The image tint color
      - returns: New instance of UIImage
      */
-    public func imageWithTintColor(_ color: UIColor) -> UIImage? {
+    func imageWithTintColor(_ color: UIColor) -> UIImage? {
         let sourceImage = withRenderingMode(.alwaysTemplate)
 
         UIGraphicsBeginImageContextWithOptions(size, false, sourceImage.scale)
