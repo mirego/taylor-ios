@@ -8,17 +8,17 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "MRGTaylor"
-  spec.version      = "1.5.0"
+  spec.version      = "1.6.0"
   spec.summary      = "A short description of Taylor."
   spec.homepage     = "https://github.com/mirego/taylor-ios"
   spec.license      = "MIT"
-  spec.author       = { 
+  spec.author       = {
     "Mirego" => "it@irego.com"
   }
 
-  spec.ios.deployment_target  = '8.0'  
+  spec.ios.deployment_target  = '8.0'
   spec.tvos.deployment_target = '9.0'
-  spec.swift_version = '4.2'
+  spec.swift_version = '5.0'
 
   spec.source       = { :git => "https://github.com/mirego/taylor-ios.git", :tag => "#{spec.version}" }
   spec.source_files  = "Taylor/**/*.swift"
