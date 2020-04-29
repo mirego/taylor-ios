@@ -14,7 +14,6 @@
 		7ACD09751CBFC641000FAAA0 /* ExtendedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACD09741CBFC641000FAAA0 /* ExtendedButton.swift */; };
 		7ACD098F1CC04264000FAAA0 /* ExtendedButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACD098E1CC04264000FAAA0 /* ExtendedButtonTests.swift */; };
 		C82DD1D81FE414B0002C3942 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82DD1D71FE414B0002C3942 /* CGPoint.swift */; };
-		C82DD1DA1FE41FB1002C3942 /* UIViewControllerContainer+StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82DD1D91FE41FB1002C3942 /* UIViewControllerContainer+StatusBar.swift */; };
 		C82DD1DC1FE42012002C3942 /* UIControl+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82DD1DB1FE42012002C3942 /* UIControl+Actions.swift */; };
 		C83EC37E1FFE8BAB009290C4 /* UIView+Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83EC37D1FFE8BAB009290C4 /* UIView+Coordinates.swift */; };
 		C8E5946B1FF515D4000C184D /* UIView+SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E5946A1FF515D4000C184D /* UIView+SafeArea.swift */; };
@@ -36,7 +35,6 @@
 		DF14FDA820C18B7B00C5784B /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC07AA1CAC399700A7A665 /* UILabel.swift */; };
 		DF14FDA920C18B7B00C5784B /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC07AB1CAC399700A7A665 /* UIScreen.swift */; };
 		DF14FDAA20C18B7B00C5784B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBFDA421CAF0B0900623836 /* UIView.swift */; };
-		DF14FDAB20C18B7B00C5784B /* UIViewControllerContainer+StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82DD1D91FE41FB1002C3942 /* UIViewControllerContainer+StatusBar.swift */; };
 		DF14FDAC20C18B7B00C5784B /* UIControl+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82DD1DB1FE42012002C3942 /* UIControl+Actions.swift */; };
 		DF14FDAD20C18B7B00C5784B /* UIView+SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E5946A1FF515D4000C184D /* UIView+SafeArea.swift */; };
 		DF14FDAE20C18B7B00C5784B /* UIView+Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83EC37D1FFE8BAB009290C4 /* UIView+Coordinates.swift */; };
@@ -85,7 +83,6 @@
 		7ACD09741CBFC641000FAAA0 /* ExtendedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendedButton.swift; sourceTree = "<group>"; };
 		7ACD098E1CC04264000FAAA0 /* ExtendedButtonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendedButtonTests.swift; sourceTree = "<group>"; };
 		C82DD1D71FE414B0002C3942 /* CGPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
-		C82DD1D91FE41FB1002C3942 /* UIViewControllerContainer+StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewControllerContainer+StatusBar.swift"; sourceTree = "<group>"; };
 		C82DD1DB1FE42012002C3942 /* UIControl+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Actions.swift"; sourceTree = "<group>"; };
 		C83EC37D1FFE8BAB009290C4 /* UIView+Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Coordinates.swift"; sourceTree = "<group>"; };
 		C8E5946A1FF515D4000C184D /* UIView+SafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SafeArea.swift"; sourceTree = "<group>"; };
@@ -211,7 +208,6 @@
 				DFBC07AA1CAC399700A7A665 /* UILabel.swift */,
 				DFBC07AB1CAC399700A7A665 /* UIScreen.swift */,
 				DFBFDA421CAF0B0900623836 /* UIView.swift */,
-				C82DD1D91FE41FB1002C3942 /* UIViewControllerContainer+StatusBar.swift */,
 				C82DD1DB1FE42012002C3942 /* UIControl+Actions.swift */,
 				C8E5946A1FF515D4000C184D /* UIView+SafeArea.swift */,
 				C83EC37D1FFE8BAB009290C4 /* UIView+Coordinates.swift */,
@@ -406,7 +402,6 @@
 				DFBC07B61CAC399700A7A665 /* UIDevice.swift in Sources */,
 				7ACD09751CBFC641000FAAA0 /* ExtendedButton.swift in Sources */,
 				7A3FC2B11CAC2ACC007A4063 /* UIEdgeInsets.swift in Sources */,
-				C82DD1DA1FE41FB1002C3942 /* UIViewControllerContainer+StatusBar.swift in Sources */,
 				DFBC07AE1CAC399700A7A665 /* CGSize.swift in Sources */,
 				C82DD1D81FE414B0002C3942 /* CGPoint.swift in Sources */,
 				DFBC07B21CAC399700A7A665 /* NSDate.swift in Sources */,
@@ -466,7 +461,6 @@
 				DF14FDAA20C18B7B00C5784B /* UIView.swift in Sources */,
 				DF14FDA220C18B7B00C5784B /* UIButton.swift in Sources */,
 				DF14FDA620C18B7B00C5784B /* UIImage.swift in Sources */,
-				DF14FDAB20C18B7B00C5784B /* UIViewControllerContainer+StatusBar.swift in Sources */,
 				DF14FDA320C18B7B00C5784B /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
