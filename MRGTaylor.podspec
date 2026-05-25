@@ -16,11 +16,11 @@ Pod::Spec.new do |spec|
     "Mirego" => "it@irego.com"
   }
 
-  spec.ios.deployment_target  = '8.0'
-  spec.tvos.deployment_target = '9.0'
+  spec.ios.deployment_target  = '9.0'
+  spec.tvos.deployment_target = '12.0'
   spec.swift_version = '5.0'
 
   spec.source       = { :git => "https://github.com/mirego/taylor-ios.git", :tag => "#{spec.version}" }
-  spec.source_files  = "Taylor/**/*.swift"
+  spec.source_files  = "Sources/Taylor/**/*.swift"
   # spec.public_header_files = "Taylor/*.h"
 end
