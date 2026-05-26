@@ -26,13 +26,6 @@ Add the following dependency to your `Package.swift`:
 
 Or add it via Xcode: **File › Add Package Dependencies…** and enter the repository URL.
 
-### CocoaPods
-You can use [CocoaPods](http://cocoapods.org/) to install `Taylor` by adding it to your `Podfile`:
-
-```ruby
-pod 'MRGTaylor'
-```
-
 ### Manually
 
 1. Download and drop the Swift file you need in your project.  
