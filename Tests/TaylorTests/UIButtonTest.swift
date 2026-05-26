@@ -59,4 +59,3 @@ class UIButtonTest: XCTestCase {
         XCTAssertNotEqual(buttonWithoutFit.frame.width, buttonWithFit.frame.width)
     }
 }
-

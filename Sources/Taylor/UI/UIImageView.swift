@@ -49,4 +49,3 @@ public extension UIImageView
         return CGSize.zero
     }
 }
-

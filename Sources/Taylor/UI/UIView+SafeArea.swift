@@ -103,4 +103,3 @@ private let swizzleMethod: (AnyClass, Selector, Selector) -> () = { forClass, or
         method_exchangeImplementations(originalMethod, swizzledMethod)
     }
 }
-

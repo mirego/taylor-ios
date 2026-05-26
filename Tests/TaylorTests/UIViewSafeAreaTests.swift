@@ -124,4 +124,3 @@ fileprivate class TestView: UIView, CompatibilitySafeAreaInsetsUpdate, IgnoreNew
         safeAreaInsetsDidChangeCalled = true
     }
 }
-

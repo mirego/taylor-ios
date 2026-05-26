@@ -49,4 +49,3 @@ class NSDateTests: XCTestCase {
         XCTAssertTrue(oneDayLaterDate.isEqual(to: referenceDate, unitGranularity: .year))
     }
 }
-

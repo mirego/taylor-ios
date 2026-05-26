@@ -183,4 +183,3 @@ public extension UIColor
         return UIColor(red: middleRed, green: middleGreen, blue: middleBlue, alpha: middleAlpha)
     }
 }
-

@@ -45,4 +45,3 @@ public extension UIDevice
         return UIDevice.current.userInterfaceIdiom == .phone
     }
 }
-

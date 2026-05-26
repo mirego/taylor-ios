@@ -27,4 +27,3 @@ class UIEdgeInsetsTests: XCTestCase {
     }
     
 }
-

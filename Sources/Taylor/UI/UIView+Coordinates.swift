@@ -127,4 +127,3 @@ public extension UIView {
     }
 }
 // swiftlint:enable variable_name
-
