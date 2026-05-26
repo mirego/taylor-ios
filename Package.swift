@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "Taylor",
     platforms: [
-        .iOS(.v9),
+        .iOS(.v12),
         .tvOS(.v12)
     ],
     products: [

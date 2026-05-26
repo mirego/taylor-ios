@@ -4,7 +4,7 @@ iOS Framework with a bunch of classes and helpers for Swift.
 
 ## Requirements
 
-- iOS 9.0+, tvOS 12.0+
+- iOS 12.0+, tvOS 12.0+
 - Xcode 15+
 - Swift 5.0+
 
