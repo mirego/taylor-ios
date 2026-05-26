@@ -16,4 +16,3 @@ class CGFloatTest: XCTestCase {
         XCTAssertEqual(CGFloat.max, CGFloat.greatestFiniteMagnitude)
     }
 }
-

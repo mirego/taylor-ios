@@ -40,4 +40,3 @@ class LabelTests: XCTestCase {
         XCTAssertLessThanOrEqual(multiLineTextLabelSize.width, sizeFits.width)
     }
 }
-

@@ -46,4 +46,3 @@ public class Label: UILabel
         return CGSize(width: min(size.width, labelSize.width), height: min(size.height, labelSize.height))
     }
 }
-
