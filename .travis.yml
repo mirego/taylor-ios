@@ -1,8 +1,0 @@
-language: objective-c
-osx_image: xcode15.2
-
-before_install:
-  - gem install xcpretty-travis-formatter
-
-script:
-  - set -o pipefail && bundle exec fastlane travis
