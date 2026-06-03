@@ -4,9 +4,9 @@ iOS Framework with a bunch of classes and helpers for Swift.
 
 ## Requirements
 
-- iOS 8.0+, tvOS 9.0+
-- Xcode 9.4
-- Swift 4 (use the `v1.1` tag if you need Swift < 2.3 support)
+- iOS 12.0+, tvOS 12.0+
+- Xcode 15+
+- Swift 5.0+
 
 ## Installation
 
@@ -15,6 +15,16 @@ You can use [Carthage](//github.com/carthage/carthage) to install `Taylor` by ad
 ```
 github "mirego/taylor-ios"
 ```
+
+### Swift Package Manager
+
+Add the following dependency to your `Package.swift`:
+
+```swift
+.package(url: "https://github.com/mirego/taylor-ios.git", from: "1.7.0")
+```
+
+Or add it via Xcode: **File › Add Package Dependencies…** and enter the repository URL.
 
 ### CocoaPods
 You can use [CocoaPods](http://cocoapods.org/) to install `Taylor` by adding it to your `Podfile`:

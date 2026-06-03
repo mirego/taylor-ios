@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7A44D0571C187E030063575B"
+               BlueprintIdentifier = "DF14FD8E20C18B2B00C5784B"
                BuildableName = "Taylor.framework"
-               BlueprintName = "Taylor-iOS"
+               BlueprintName = "Taylor-tvOS"
                ReferencedContainer = "container:Taylor.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,23 +28,13 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7A44D0611C187E030063575B"
-               BuildableName = "TaylorTests-iOS.xctest"
-               BlueprintName = "TaylorTests-iOS"
-               ReferencedContainer = "container:Taylor.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7A44D0571C187E030063575B"
+            BlueprintIdentifier = "DF14FD8E20C18B2B00C5784B"
             BuildableName = "Taylor.framework"
-            BlueprintName = "Taylor-iOS"
+            BlueprintName = "Taylor-tvOS"
             ReferencedContainer = "container:Taylor.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -64,9 +54,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7A44D0571C187E030063575B"
+            BlueprintIdentifier = "DF14FD8E20C18B2B00C5784B"
             BuildableName = "Taylor.framework"
-            BlueprintName = "Taylor-iOS"
+            BlueprintName = "Taylor-tvOS"
             ReferencedContainer = "container:Taylor.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,9 +72,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7A44D0571C187E030063575B"
+            BlueprintIdentifier = "DF14FD8E20C18B2B00C5784B"
             BuildableName = "Taylor.framework"
-            BlueprintName = "Taylor-iOS"
+            BlueprintName = "Taylor-tvOS"
             ReferencedContainer = "container:Taylor.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
