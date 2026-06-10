@@ -21,7 +21,7 @@ github "mirego/taylor-ios"
 Add the following dependency to your `Package.swift`:
 
 ```swift
-.package(url: "https://github.com/mirego/taylor-ios.git", from: "1.7.0")
+.package(url: "https://github.com/mirego/taylor-ios.git", from: "1.7.1")
 ```
 
 Or add it via Xcode: **File › Add Package Dependencies…** and enter the repository URL.
